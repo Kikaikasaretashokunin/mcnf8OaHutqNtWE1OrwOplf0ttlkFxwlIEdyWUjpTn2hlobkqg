@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.4.3 Coordenadas polares. | MCN03 Programación de Fresadora </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-23"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN03 Programación de Fresadora</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MCN03 Programación de fresadora CNC - Caso práctico.</a></li>
+   <li class="current-page-parent"><a href="1_programacin_bsica_fresadora_cnc__caso_prctico.html" class="current-page-parent daddy">1 Programación básica fresadora CNC - Caso práctico.</a>
+   <ul>
+      <li><a href="11_introduccin_a_la_programacin_cnc.html" class="daddy">1.1 Introducción a la programación CNC.</a>
+      <ul class="other-section">
+         <li><a href="111_estructura_de_un_programa_cnc.html" class="no-ch">1.1.1 Estructura de un programa CNC.</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2 G Funciones preparatorias.</a></li>
+         <li><a href="113_ejes_y_coordenadas_de_la_fresadora.html" class="no-ch">1.1.3 Ejes y coordenadas de la fresadora.</a></li>
+         <li><a href="114_programacin_de_cotas_de_fresadora.html" class="no-ch">1.1.4 Programación de cotas de fresadora.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5 F Avance de Hta. y S Giro del cabezal.</a></li>
+         <li><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="no-ch">1.1.6 T Selección de Hta. y sus dimensiones.</a></li>
+         <li><a href="117_funciones_auxiliares_m_del_programa.html" class="no-ch">1.1.7 Funciones auxiliares: M del programa.</a></li>
+         <li><a href="118_funciones_auxiliares_m_del_cabezal.html" class="no-ch">1.1.8 Funciones auxiliares: M del cabezal.</a></li>
+         <li><a href="119_funciones_auxiliares_m_de_mquina.html" class="no-ch">1.1.9 Funciones auxiliares: M de máquina.</a></li>
+      </ul>
+      </li>
+      <li><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="daddy">1.2 Revisar y modificar datos de un PGM</a>
+      <ul class="other-section">
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2 Modificar T, F, S de un programa</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3 Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.3 Sistemas de referencia y coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="131_puntos_de_referencia_de_la_fresadora.html" class="no-ch">1.3.1 Puntos de referencia de la fresadora.</a></li>
+         <li><a href="132_establecimiento_de_orgenes_pieza.html" class="no-ch">1.3.2 Establecimiento de orígenes pieza.</a></li>
+         <li><a href="133_tabla_de_orgenes.html" class="no-ch">1.3.3 Tabla de orígenes.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="14_programacin_de_cotas.html" class="current-page-parent daddy">1.4 Programación de cotas.</a>
+      <ul>
+         <li><a href="141_cotas_absolutas.html" class="no-ch">1.4.1 Cotas absolutas.</a></li>
+         <li><a href="142_cotas_incrementales.html" class="no-ch">1.4.2 Cotas incrementales.</a></li>
+         <li id="active"><a href="143_coordenadas_polares.html" class="active no-ch">1.4.3 Coordenadas polares.</a></li>
+         <li><a href="144_programacin_de_coordenadas_polares.html" class="no-ch">1.4.4 Programación de coordenadas polares.</a></li>
+         <li><a href="145_establecer_el_origen_polar.html" class="no-ch">1.4.5 Establecer el origen polar.</a></li>
+         <li><a href="146_coordenadas_polares_absolutas.html" class="no-ch">1.4.6 Coordenadas polares absolutas.</a></li>
+         <li><a href="147_coordenadas_polares_incrementales.html" class="no-ch">1.4.7 Coordenadas polares incrementales.</a></li>
+      </ul>
+      </li>
+      <li><a href="15_programacin_de_movimiento_lineales.html" class="daddy">1.5 Programación de movimiento lineales.</a>
+      <ul class="other-section">
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1 G00 de posicionamiento rápido</a></li>
+         <li><a href="152_g01_movimiento_de_trabajo.html" class="no-ch">1.5.2 G01 movimiento de trabajo.</a></li>
+         <li><a href="153_movimientos_en_cotas_cartesianas.html" class="no-ch">1.5.3 Movimientos en cotas cartesianas.</a></li>
+         <li><a href="154_movimientos_en_cotas_polares.html" class="no-ch">1.5.4 Movimientos en cotas polares.</a></li>
+         <li><a href="155_combinacin_de_movimientos_y_cotas.html" class="no-ch">1.5.5 Combinación de movimientos y cotas.</a></li>
+         <li><a href="156_resumen.html" class="no-ch">1.5.6 Resumen.</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6 Programación de arcos dado su centro.</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_coordenadas_del_centro.html" class="no-ch">1.6.1 Calculo de coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_de_arcos.html" class="no-ch">1.6.2 Programación incremental de arcos.</a></li>
+         <li><a href="163_programacin_de_crculos_completos.html" class="no-ch">1.6.3 Programación de círculos completos.</a></li>
+         <li><a href="164_programacin_mediante_el_ngulo.html" class="no-ch">1.6.4 Programación mediante el ángulo.</a></li>
+         <li><a href="165_consideracin_sobre_el_origen_polar.html" class="no-ch">1.6.5 Consideración sobre el origen polar.</a></li>
+         <li><a href="166_programacin_de_arcos_en_polares.html" class="no-ch">1.6.6 Programación de arcos en polares.</a></li>
+         <li><a href="167_traslado_del_origen_polar.html" class="no-ch">1.6.7 Traslado del origen polar.</a></li>
+         <li><a href="168_programacin_incremental_en_polares.html" class="no-ch">1.6.8 Programación incremental en polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio.</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_interpolacines_helicoidales.html" class="daddy">1.8 Interpolaciónes helicoidales.</a>
+      <ul class="other-section">
+         <li><a href="181_con_programacin_de_centro.html" class="no-ch">1.8.1 Con programación de centro.</a></li>
+         <li><a href="182_con_ngulo_y_programacin_de_centro.html" class="no-ch">1.8.2 Con ángulo y programación de centro.</a></li>
+         <li><a href="183_en_polares.html" class="no-ch">1.8.3 En polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="19_resumen_todo_tipo_de_movimientos.html" class="no-ch">1.9 Resumen. Todo tipo de movimientos.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_funciones_adicionales_en_fresadora__caso_prctico.html" class="daddy">2 Funciones adicionales en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_herramienta.html" class="daddy">2.1 Compensación del radio de herramienta.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1 Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2 Errores frecuentes.</a></li>
+         <li><a href="213_modificacin_del_radios_de_herramienta_para_obtener_creces.html" class="no-ch">2.1.3 Modificación del radios de herramienta. para obtener creces.</a></li>
+         <li><a href="214_correcciones_de_radio_de_herramienta_o_desgaste_segn_medidas_obtenidas.html" class="no-ch">2.1.4 Correcciones de radio de herramienta, o desgaste según medidas obtenidas.</a></li>
+         <li><a href="215_compensacin_de_la_longitud_de_herramienta.html" class="no-ch">2.1.5 Compensación de la longitud de herramienta.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_mecanizado_de_aristas.html" class="daddy">2.2 Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_o_contorneado_en_aristas.html" class="no-ch">2.2.1 Parada exacta o contorneado en aristas.</a></li>
+         <li><a href="222_radios_de_acuerdo.html" class="no-ch">2.2.2 Radios de acuerdo.</a></li>
+         <li><a href="223_aristas_achaflanadas.html" class="no-ch">2.2.3 Aristas achaflanadas.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4 Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5 Errores frecuentes.</a></li>
+         <li><a href="226_programacin_de_aristas_en_polares.html" class="no-ch">2.2.6 Programación de aristas en polares.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7 Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="24_programacin_de_repeticiones.html" class="daddy">2.4 Programación de repeticiones.</a>
+      <ul class="other-section">
+         <li><a href="241_identificar_los_bloques_a_repetir.html" class="no-ch">2.4.1 Identificar los bloques a repetir.</a></li>
+         <li><a href="242_mecanizado_de_perfiles_en_pasadas.html" class="no-ch">2.4.2 Mecanizado de perfiles en pasadas.</a></li>
+         <li><a href="243_mecanizar_perfiles_en_diferentes_posiciones.html" class="no-ch">2.4.3 Mecanizar perfiles en diferentes posiciones.</a></li>
+         <li><a href="244_uso_en_emparrillados.html" class="no-ch">2.4.4 Uso en emparrillados.</a></li>
+      </ul>
+      </li>
+      <li><a href="25_subrutinas.html" class="daddy">2.5 Subrutinas.</a>
+      <ul class="other-section">
+         <li><a href="251_mecanizar_las_formas_desde_diferentes_programas.html" class="no-ch">2.5.1 Mecanizar las formas desde diferentes programas.</a></li>
+         <li><a href="252_uso_en_operaciones_frecuentes_de_mecanizado.html" class="no-ch">2.5.2 Uso en operaciones frecuentes de mecanizado.</a></li>
+      </ul>
+      </li>
+      <li><a href="26_resumen.html" class="no-ch">2.6 Resumen.</a></li>
+      <li><a href="27_temporizacin.html" class="no-ch">2.7 Temporización.</a></li>
+      <li><a href="28_simulacin_de_pgm.html" class="daddy">2.8 Simulación de PGM.</a>
+      <ul class="other-section">
+         <li><a href="281_deteccin_de_errores.html" class="no-ch">2.8.1 Detección de errores.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_trasformacin_de_coordenadas__caso_prctico.html" class="daddy">3 Trasformación de coordenadas - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="31_tipos_de_trasformacin_de_coordenadas.html" class="no-ch">3.1 Tipos de trasformación de coordenadas.</a></li>
+      <li><a href="32_traslados_programables_de_origen_pieza.html" class="daddy">3.2 Traslados programables de origen pieza.</a>
+      <ul class="other-section">
+         <li><a href="321_ceros_pieza_versus_traslados_de_origen.html" class="no-ch">3.2.1 Ceros pieza versus traslados de origen.</a></li>
+         <li><a href="322_uso_en_emparrillados.html" class="no-ch">3.2.2 Uso en emparrillados.</a></li>
+         <li><a href="323_repetir_formas_en_diferente_posicin.html" class="no-ch">3.2.3 Repetir formas en diferente posición.</a></li>
+         <li><a href="324_traslado_de_origen_y_origen_polar.html" class="no-ch">3.2.4 Traslado de origen y origen polar.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_giro_de_coordenadas.html" class="daddy">3.3 Giro de coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="331_giro_previo_segn_la_orientacin_del_perfil.html" class="no-ch">3.3.1 Giro previo según la orientación del perfil.</a></li>
+         <li><a href="332_repetir_formas_cerradas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.2 Repetir formas cerradas giradas con respecto a otra de partida.</a></li>
+         <li><a href="333_repetir_formas_abiertas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.3 Repetir formas abiertas giradas con respecto a otra de partida.</a></li>
+         <li><a href="334_giro_de_coordenadas_en_polares.html" class="no-ch">3.3.4 Giro de coordenadas en polares.</a></li>
+         <li><a href="335_combinacin_de_traslado_de_origen_y_giro_de_coordenadas.html" class="no-ch">3.3.5 Combinación de traslado de origen y giro de coordenadas.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_conclusin.html" class="no-ch">3.4 Conclusión.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_ciclos_fijos_de_agujeros_en_fresadora__caso_prctico.html" class="daddy">4 Ciclos fijos de agujeros en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="41_los_ciclos_fijos_en_fresadora.html" class="daddy">4.1 Los ciclos fijos en fresadora.</a>
+      <ul class="other-section">
+         <li><a href="411_definir_el_ciclo_y_su_zona_de_influencia.html" class="no-ch">4.1.1 Definir el ciclo y su zona de influencia.</a></li>
+         <li><a href="412_consideraciones_generales.html" class="no-ch">4.1.2 Consideraciones generales.</a></li>
+         <li><a href="413_parmetros_y_funcionamiento_comunes.html" class="no-ch">4.1.3 Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="42_ciclo_de_taladrado_simple.html" class="daddy">4.2 Ciclo de taladrado simple.</a>
+      <ul class="other-section">
+         <li><a href="421_programacin.html" class="no-ch">4.2.1 Programación.</a></li>
+         <li><a href="422_funcionamiento.html" class="no-ch">4.2.2 Funcionamiento.</a></li>
+         <li><a href="423_consideraciones_sobre_el_ciclo.html" class="no-ch">4.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="424_uso_en_punteados_y_taladrados_cortos.html" class="no-ch">4.2.4 Uso en punteados y taladrados cortos.</a></li>
+      </ul>
+      </li>
+      <li><a href="43_ciclo_de_avellanado.html" class="daddy">4.3 Ciclo de avellanado.</a>
+      <ul class="other-section">
+         <li><a href="431_programacin.html" class="no-ch">4.3.1 Programación.</a></li>
+         <li><a href="432_funcionamiento.html" class="no-ch">4.3.2 Funcionamiento.</a></li>
+         <li><a href="433_consideraciones_sobre_el_ciclo.html" class="no-ch">4.3.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="434_uso_en_avellanados_y_biselados.html" class="no-ch">4.3.4 Uso en avellanados y biselados.</a></li>
+      </ul>
+      </li>
+      <li><a href="44_taladrado_profundo.html" class="daddy">4.4 Taladrado profundo.</a>
+      <ul class="other-section">
+         <li><a href="441_programacin.html" class="no-ch">4.4.1 Programación.</a></li>
+         <li><a href="442_funcionamiento.html" class="no-ch">4.4.2 Funcionamiento.</a></li>
+         <li><a href="443_consideraciones_sobre_el_ciclo.html" class="no-ch">4.4.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="444_retroceso_para_rotura_de_viruta.html" class="no-ch">4.4.4 Retroceso para rotura de viruta.</a></li>
+         <li><a href="445_retroceso_total_de_la_broca.html" class="no-ch">4.4.5 Retroceso total de la broca.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_escariado__mandrinado.html" class="daddy">4.5 Escariado / Mandrinado</a>
+      <ul class="other-section">
+         <li><a href="451_programacin.html" class="no-ch">4.5.1 Programación.</a></li>
+         <li><a href="452_funcionamiento.html" class="no-ch">4.5.2 Funcionamiento.</a></li>
+         <li><a href="453_consideraciones_sobre_el_ciclo.html" class="no-ch">4.5.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="454_pretaladrado_previo_al_escariado.html" class="no-ch">4.5.4 Pre-taladrado previo al escariado.</a></li>
+         <li><a href="455_escariados_ciegos_y_pasantes.html" class="no-ch">4.5.5 Escariados ciegos y pasantes.</a></li>
+      </ul>
+      </li>
+      <li><a href="46_mandrinado_con_retirada_de_herramienta_en_el_fondo_del_agujero.html" class="daddy">4.6 Mandrinado con retirada de herramienta en el fondo del agujero.</a>
+      <ul class="other-section">
+         <li><a href="461_programacin.html" class="no-ch">4.6.1 Programación.</a></li>
+         <li><a href="462_funcionamiento.html" class="no-ch">4.6.2 Funcionamiento.</a></li>
+         <li><a href="463_consideraciones_sobre_el_ciclo.html" class="no-ch">4.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="464_pretaladrado_previo_al_mandrinado.html" class="no-ch">4.6.4 Pre-taladrado previo al mandrinado.</a></li>
+         <li><a href="465_mandrinado_con_fondo_tolerancia_de_perpendicularidad.html" class="no-ch">4.6.5 Mandrinado con fondo tolerancia de perpendicularidad.</a></li>
+      </ul>
+      </li>
+      <li><a href="47_roscado_con_macho_flexible_y_rgido.html" class="daddy">4.7 Roscado con macho flexible y rígido.</a>
+      <ul class="other-section">
+         <li><a href="471_programacin.html" class="no-ch">4.7.1 Programación.</a></li>
+         <li><a href="472_funcionamiento.html" class="no-ch">4.7.2 Funcionamiento.</a></li>
+         <li><a href="473_consideraciones_sobre_el_ciclo.html" class="no-ch">4.7.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="474_pretaladrado_previo_al_roscado.html" class="no-ch">4.7.4 Pre-taladrado previo al roscado.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_ciclos_fijos_de_fresado__caso_prctico.html" class="daddy">5 Ciclos fijos de fresado - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="51_cajera_rectangular.html" class="daddy">5.1 Cajera rectangular.</a>
+      <ul class="other-section">
+         <li><a href="511_programacin.html" class="no-ch">5.1.1 Programación.</a></li>
+         <li><a href="512_funcionamiento.html" class="no-ch">5.1.2 Funcionamiento.</a></li>
+         <li><a href="513_consideraciones_sobre_el_ciclo.html" class="no-ch">5.1.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="514_uso_de_cajera_cuadrada_como_desbaste.html" class="no-ch">5.1.4 Uso de cajera cuadrada como desbaste.</a></li>
+      </ul>
+      </li>
+      <li><a href="52_cajera_redonda.html" class="daddy">5.2 Cajera redonda.</a>
+      <ul class="other-section">
+         <li><a href="521_programacin.html" class="no-ch">5.2.1 Programación.</a></li>
+         <li><a href="522_funcionamiento.html" class="no-ch">5.2.2 Funcionamiento.</a></li>
+         <li><a href="523_consideraciones_sobre_el_ciclo.html" class="no-ch">5.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="524_uso_de_cajera_redonda_como_desbaste.html" class="no-ch">5.2.4 Uso de cajera redonda como desbaste.</a></li>
+         <li><a href="525_uso_de_cajera_redonda_como_desbaste_de_agujeros_a_mandrinar.html" class="no-ch">5.2.5 Uso de cajera redonda como desbaste de agujeros a mandrinar.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_resumen_de_los_ciclos_fijos.html" class="no-ch">6 Resumen de los ciclos fijos.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="142_cotas_incrementales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="144_programacin_de_coordenadas_polares.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.4.3 Coordenadas polares.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id91">
+<div class="iDevice emphasis0">
+<div id="ta91_77" class="block iDevice_content">
+
+<p>
+<u><b> R/Q Coordenadas polares.</b></u>
+</p>
+<p>
+Las coordenadas polares son aquellas que definen las cotas de un punto mediante su distancia al origen polar y el ángulo entre el segmento que une el punto con el origen polar y la horizontal en el origen polar. En la (Figura 1) se muestran las coordenadas cartesianas y polares del punto P.
+</p>
+<div class="elemento_izquierda">
+<div class="texto_centrado" align="center">
+<br />
+</div>
+<div>
+<br />
+</div>
+<a class="credenciales" title="Ver la descripción larga de la imagen" target="_self"> </a>
+</div>
+<div class="elemento_izquierda">
+<div class="titulo">
+Figura1<br />
+</div>
+<div>
+<a href="MCN03_CONT_R051_Coord_polar.jpg" title="Coordenadas polares"><img src="MCN03_CONT_R051_Coord_polar_mini.jpg" class="imagen_ampliable" alt="En la imagen puedes ver un sistema de coordenadas XY, el origen es W, y un punto P de coordenadas X60 Y60, ademas tiene una inclinación angular de 53,13º y un radio R de 100." title="Coordenadas polares" height="163" width="200" /></a> 
+<div class="separador">
+</div>
+<div class="separador">
+</div>
+</div>
+<a class="credenciales" title="Ver la descripción larga de la imagen" target="_self"> </a>
+</div>
+<div class="elemento_izquierda">
+<div class="titulo">
+Figura2<br />
+</div>
+<div>
+<a href="MCN03_CONT_R052_SentidoAngulo.jpg" title="Sentido angulo polar"><img src="MCN03_CONT_R052_SentidoAngulo_mini.jpg" class="imagen_ampliable" alt="En la imagen puedes ver un sistema de coordenadas XY, el origen es W, el radio R y el sentido de los ángulos Q+, Q- y Q0" title="Sentido angulo polar" height="155" width="200" /></a> <br />
+</div>
+</div>
+<br />
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<div align="left">
+</div>
+<div align="left">
+<div class="separador">
+</div>
+</div>
+<div align="left">
+En el ejemplo de la (Figura1) las coordenadas de P son:<br />
+</div>
+<p>
+<b>X60 Y80 ;Coord. Cartesianas<br />
+R100 Q53.13 ;Coord. Polares</b><br />
+La coordenada R es la distancia al origen polar y la Q es el ángulo (siempre en grados). <br />
+En Fagor 8055 por defecto el origen polar se situa siempre en el cero pieza activo (G54, G55 ...). Mas adelante se explicara como programar el translado de origen polar mediante la función G93.<br />
+En el caso del ángulo el sentido es positivo antihorario y negativo horario, como se muestra en la (Fgura2). Las coordenadas polares R Q se ven afectadas por el carácter absolutas o incrementales (G90/G91).
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id92">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta92_50" class="block iDevice_content">
+<b><font size="2">Relación entre polares y cartesianas.</font></b><br />
+<p>
+Estas 2 expresiones dan la conversión de coordenadas cartesianas a polares.
+</p>
+<p>
+<img src="MCN03_CONT_R053_Formulas_polar_cart_mini.jpg" alt="En la imagen puedes ver dos formulas Q=ARCTG(Y/X), R= la raíz cuadrada de X al cuadrado + Y al cuadrado." title="Conversión polares cartesianas" height="148" width="200" /> 
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="142_cotas_incrementales.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="144_programacin_de_coordenadas_polares.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

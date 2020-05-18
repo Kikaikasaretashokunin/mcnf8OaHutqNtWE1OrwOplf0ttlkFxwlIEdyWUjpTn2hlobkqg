@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>MCN06 Control de la ejecución de programas CNC </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<meta name="description" content="Orientaciones Alumnado" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN06 Control de la ejecución de programas CNC</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">MCN06.-Control de la ejecución de programas CNC</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">MCN06.-Control de la ejecución de programas CNC</h1></header>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Orientaciones Alumnado</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_75" class="block iDevice_content">
+
+EN esta unidad de trabajo que es la ultima del modulo MEC que se compone de seis unidades, aprenderás a realizar programas CNC para fresadora a partir del plano de una pieza.<br />
+Con esta unidad aprenderás los puntos esenciales en una máquina CNC, calibrar las herramientas y la secuencia de las operaciones para programar y mecanizar dicha pieza... En el desarrollo de la misma adquirirás los fundamentos básicos para poder realizar las diferentes actividades propuestas, siendo las más importantes:<br />
+<ul>
+	<li>Ejecución de operaciones de mecanizados en máquinas herramientas de control numérico: modos de operación; simulación en vacio.</li>
+	<li>Empleo de útiles de verificación y control.</li>
+	<li>Corrección de las desviaciones de las piezas mecanizadas (tolerancias dimensionales, geométricas y superficiales).</li>
+	<li>Correcciones de herramientas, de saltos de decalaje, de trayectorias, de velocidad y avance.</li>
+	<li>Identificación y resolución de problemas.</li>
+	<li>Valoración del orden y limpieza durante las fases del proceso.</li>
+	<li>Actitud ordenada y metódica en la realización de las tareas.</li>
+	<li>Perseverancia ante las dificultades.</li>
+	<li>Seguridad e higiene en el puesto de trabajo y entorno.</li>
+	<li>Compromiso con los plazos establecidos en la ejecución de las tareas.</li>
+	<li>Responsabilidad en la calidad del trabajo efectuado. </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_77" class="block iDevice_content">
+<table class="tabla" summary="En esta tabla se muestran datos generales de la UT útiles para el alumnado 
+	(índice, objetivos, temporalización y consejos)">
+	<caption>Datos generales de la Unidad de Trabajo</caption>
+	<tbody>
+		<tr>
+			<th class="texto_centrado" id="mp" width="25%">
+			Nombre completo del MP
+			</th>
+			<td class="texto_centrado" headers="mp" width="50%">
+			<div>
+			<div>
+			MECANIZADO POR CONTROL NUMERICO
+			</div>
+			 
+			</div>
+			</td>
+			<th class="texto_centrado" id="sig" width="15%">
+			Siglas MP
+			</th>
+			<td class="texto_centrado" headers="sig" width="10%"> MEC
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" scope="row">
+			Nº y título de la UT
+			</th>
+			<td class="texto_centrado" colspan="3"> UT06. Control de la ejecución de programas.  <br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Índice o tabla de contenidos
+			</div>
+			</th>
+			<td colspan="3">
+			<ol class="lista_esquema">
+				<li><strong>Modos de operación de la máquina. Presentación – Caso práctico.</strong></li>
+				<li><strong>Check list antes del mecanizado. Presentación – Caso práctico</strong>
+				<ol>
+					<li>Comprobar que el PGM.
+					<ol>
+						<li>El PGM y subprogramas están cargados en el CNC y se corresponden a la pieza a fabricar.</li>
+						<li>En caso de cambio tipo de material de partida modificar las condiciones de corte.</li>
+						<li>La documentación necesaria esta preparada; planos, proceso, listados PGM, pautas de control.. </li>
+					</ol>
+					</li>
+					<li>Comprobar las herramienta.
+					<ol>
+						<li>Comprobar el estado de los filos.</li>
+						<li>Porta-herramientas, conos y tirantes son los adecuados para la máquina.</li>
+						<li>Las herramientas del almacén y las del PGM se corresponden.</li>
+						<li>Se disponen de suficientes htas y consumibles que eviten paradas de máquina.</li>
+					</ol>
+					</li>
+					<li>Comprobar piezas y amarres.
+					<ol>
+						<li>Decalajes de origen.</li>
+						<li>Alineamientos de pieza.</li>
+						<li>Rigidez de los amarres.</li>
+						<li>Los amarres u otros útiles no colisionan contra las defensas de la máquina.</li>
+						<li>Consideran los riesgos durante el amarre y desamarre de pieza.</li>
+					</ol>
+					</li>
+					<li>Comprobación de trayectorias.
+					<ol>
+						<li> Efectuar la simulación en vacío.</li>
+						<li>Colisiones con elementos de amarre.</li>
+						<li>Asegurar los posicionamiento y alejamientos de herramienta son correctos.</li>
+					</ol>
+					</li>
+					<li>Comprobación de máquina.
+					<ol>
+						<li>Estado de los aceites de corte;  Concentración, Presiones, Posición lanzas.</li>
+						<li>Viruta u otros elementos que impidan el movimiento de los ejes.</li>
+						<li>Situación de protecciones y defensas.</li>
+					</ol>
+					</li>
+					<li>Comprobación de piezas de partida.
+					<ol>
+						<li>El material a mecanizar y recibido coinciden; en tipo y dimensiones.</li>
+						<li>Se previsto una aprovisionamiento de piezas que cubra posibles defectivos.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><strong>Primera pieza. Presentación – Caso práctico.</strong>
+				<ol>
+					<li>Considerar los riesgos en operaciones de preparación manual dentro de máquina.
+					<ol>
+						<li>EPI necesarios.</li>
+						<li>Limitaciones de giro y avance.</li>
+					</ol>
+					</li>
+					<li>Prever paradas en la ejecución.
+					<ol>
+						<li>Para verificar medidas intermedias.</li>
+						<li>Comprobar acabados superficiales.</li>
+						<li>Tolerancias geométricas.</li>
+						<li>Toma de medidas correctivas contra las desviaciones.</li>
+						<li>Lanzamiento de producción, aceptación primera pieza buena.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><strong>Durante el mecanizado. Presentación - Caso práctico.</strong>
+				<ol>
+					<li>Establecer duración prevista de herramienta.</li>
+					<li>Pautas a seguir en parada de emergencia.</li>
+					<li>Comprobación de medidas fuera de máquinas según pautas de verificación.</li>
+					<li>Corrección desgastes de herramienta.</li>
+				</ol>
+				</li>
+				<li><strong>Fin de serie. Presentación – Caso práctico </strong>
+				<ol>
+					<li>Almacenar material acabado, retirar piezas no conformes.</li>
+					<li>Rellenar documentación de gestión producción y sistema de calidad.</li>
+					<li>Limpiar y ordenar útiles y herramientas.</li>
+					<li>Retirar y limpiar virutas y residuos del mecanizado.</li>
+					<li>Comprobar existencias de consumibles y herramientas.</li>
+				</ol>
+				</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Objetivos
+			</div>
+			</th>
+			<td colspan="3">
+			Los  Objetivos que lograrás al finalizar el estudio de la unidad son los siguientes:   
+			<br />
+			<ul class="lista_verificacion">
+				<li>
+				<div>
+				Ejecución de operaciones de mecanizados en máquinas herramientas de control numérico.<br />
+				</div>
+				</li>
+				<li>
+				<div>
+				Empleo de útiles de verificación y control.
+				</div>
+				</li>
+				<li>
+				<div>
+				Corrección de las desviaciones de las piezas mecanizadas.
+				</div>
+				</li>
+				<li>
+				<div>
+				Identificación y resolución de problemas.
+				</div>
+				</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" id="temp" rowspan="5" scope="rowgroup">
+			Temporalización<br />
+			(estimación)
+			</th>
+			<th class="texto_centrado" colspan="2" id="temp1" scope="row">
+			Tiempo
+			necesario para estudiar los contenidos (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp1">20
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp2" scope="row">
+			Tiempo
+			necesario para completar la tarea (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp2">4<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp3" scope="row">
+			Tiempo
+			necesario para  completar el examen (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp3"> 1<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp4" scope="row">
+			Nº
+			de días que se recomienda dedicar a esta unidad
+			</th>
+			<td class="texto_centrado" headers="temp temp4"> 10<br />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" headers="temp">
+			La
+			temporalización  anterior no deja de ser una estimación media,
+			ya que el tiempo a invertir va a depender
+			mucho de las circunstancias personales de cada cual.
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Consejos y recomendaciones
+			</div>
+			</th>
+			<td colspan="3">
+			Con el fin de que puedas llegar a comprender y valorar la importancia de esta unidad que completamente presencial para tu futura vida laboral, es recomendable que: <br />
+			<ul class="lista_verificacion">
+				<li>Es muy importante que entiendas bien los conceptos de esta unidad ya que son básicos para este módulo.</li>
+				<li>Una vez realizadas las actividades tienes que incidir en aquellos puntos en los que hayas encontrado
+				dificultades y anotando todas las dudas para consultarlas con tu
+				profesor o profesora.</li>
+				<li>Cuando vayas a realizar la tarea correspondiente a la unidad,
+				primero lee atentamente el enunciado y asegúrate de haber entendido lo
+				que has de hacer.</li>
+				<li>Además cuentas siempre con la colaboración de tu profesor o profesora, no dudes en formularle cualquier cuestión o duda que te surja.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

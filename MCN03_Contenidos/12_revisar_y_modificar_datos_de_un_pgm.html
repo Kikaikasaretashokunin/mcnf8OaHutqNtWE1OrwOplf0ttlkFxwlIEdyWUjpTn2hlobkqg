@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.2 Revisar y modificar datos de un PGM | MCN03 Programación de Fresadora </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-175"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN03 Programación de Fresadora</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MCN03 Programación de fresadora CNC - Caso práctico.</a></li>
+   <li class="current-page-parent"><a href="1_programacin_bsica_fresadora_cnc__caso_prctico.html" class="current-page-parent daddy">1 Programación básica fresadora CNC - Caso práctico.</a>
+   <ul>
+      <li><a href="11_introduccin_a_la_programacin_cnc.html" class="daddy">1.1 Introducción a la programación CNC.</a>
+      <ul class="other-section">
+         <li><a href="111_estructura_de_un_programa_cnc.html" class="no-ch">1.1.1 Estructura de un programa CNC.</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2 G Funciones preparatorias.</a></li>
+         <li><a href="113_ejes_y_coordenadas_de_la_fresadora.html" class="no-ch">1.1.3 Ejes y coordenadas de la fresadora.</a></li>
+         <li><a href="114_programacin_de_cotas_de_fresadora.html" class="no-ch">1.1.4 Programación de cotas de fresadora.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5 F Avance de Hta. y S Giro del cabezal.</a></li>
+         <li><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="no-ch">1.1.6 T Selección de Hta. y sus dimensiones.</a></li>
+         <li><a href="117_funciones_auxiliares_m_del_programa.html" class="no-ch">1.1.7 Funciones auxiliares: M del programa.</a></li>
+         <li><a href="118_funciones_auxiliares_m_del_cabezal.html" class="no-ch">1.1.8 Funciones auxiliares: M del cabezal.</a></li>
+         <li><a href="119_funciones_auxiliares_m_de_mquina.html" class="no-ch">1.1.9 Funciones auxiliares: M de máquina.</a></li>
+      </ul>
+      </li>
+      <li id="active"><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="active daddy">1.2 Revisar y modificar datos de un PGM</a>
+      <ul>
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2 Modificar T, F, S de un programa</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3 Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.3 Sistemas de referencia y coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="131_puntos_de_referencia_de_la_fresadora.html" class="no-ch">1.3.1 Puntos de referencia de la fresadora.</a></li>
+         <li><a href="132_establecimiento_de_orgenes_pieza.html" class="no-ch">1.3.2 Establecimiento de orígenes pieza.</a></li>
+         <li><a href="133_tabla_de_orgenes.html" class="no-ch">1.3.3 Tabla de orígenes.</a></li>
+      </ul>
+      </li>
+      <li><a href="14_programacin_de_cotas.html" class="daddy">1.4 Programación de cotas.</a>
+      <ul class="other-section">
+         <li><a href="141_cotas_absolutas.html" class="no-ch">1.4.1 Cotas absolutas.</a></li>
+         <li><a href="142_cotas_incrementales.html" class="no-ch">1.4.2 Cotas incrementales.</a></li>
+         <li><a href="143_coordenadas_polares.html" class="no-ch">1.4.3 Coordenadas polares.</a></li>
+         <li><a href="144_programacin_de_coordenadas_polares.html" class="no-ch">1.4.4 Programación de coordenadas polares.</a></li>
+         <li><a href="145_establecer_el_origen_polar.html" class="no-ch">1.4.5 Establecer el origen polar.</a></li>
+         <li><a href="146_coordenadas_polares_absolutas.html" class="no-ch">1.4.6 Coordenadas polares absolutas.</a></li>
+         <li><a href="147_coordenadas_polares_incrementales.html" class="no-ch">1.4.7 Coordenadas polares incrementales.</a></li>
+      </ul>
+      </li>
+      <li><a href="15_programacin_de_movimiento_lineales.html" class="daddy">1.5 Programación de movimiento lineales.</a>
+      <ul class="other-section">
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1 G00 de posicionamiento rápido</a></li>
+         <li><a href="152_g01_movimiento_de_trabajo.html" class="no-ch">1.5.2 G01 movimiento de trabajo.</a></li>
+         <li><a href="153_movimientos_en_cotas_cartesianas.html" class="no-ch">1.5.3 Movimientos en cotas cartesianas.</a></li>
+         <li><a href="154_movimientos_en_cotas_polares.html" class="no-ch">1.5.4 Movimientos en cotas polares.</a></li>
+         <li><a href="155_combinacin_de_movimientos_y_cotas.html" class="no-ch">1.5.5 Combinación de movimientos y cotas.</a></li>
+         <li><a href="156_resumen.html" class="no-ch">1.5.6 Resumen.</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6 Programación de arcos dado su centro.</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_coordenadas_del_centro.html" class="no-ch">1.6.1 Calculo de coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_de_arcos.html" class="no-ch">1.6.2 Programación incremental de arcos.</a></li>
+         <li><a href="163_programacin_de_crculos_completos.html" class="no-ch">1.6.3 Programación de círculos completos.</a></li>
+         <li><a href="164_programacin_mediante_el_ngulo.html" class="no-ch">1.6.4 Programación mediante el ángulo.</a></li>
+         <li><a href="165_consideracin_sobre_el_origen_polar.html" class="no-ch">1.6.5 Consideración sobre el origen polar.</a></li>
+         <li><a href="166_programacin_de_arcos_en_polares.html" class="no-ch">1.6.6 Programación de arcos en polares.</a></li>
+         <li><a href="167_traslado_del_origen_polar.html" class="no-ch">1.6.7 Traslado del origen polar.</a></li>
+         <li><a href="168_programacin_incremental_en_polares.html" class="no-ch">1.6.8 Programación incremental en polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio.</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_interpolacines_helicoidales.html" class="daddy">1.8 Interpolaciónes helicoidales.</a>
+      <ul class="other-section">
+         <li><a href="181_con_programacin_de_centro.html" class="no-ch">1.8.1 Con programación de centro.</a></li>
+         <li><a href="182_con_ngulo_y_programacin_de_centro.html" class="no-ch">1.8.2 Con ángulo y programación de centro.</a></li>
+         <li><a href="183_en_polares.html" class="no-ch">1.8.3 En polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="19_resumen_todo_tipo_de_movimientos.html" class="no-ch">1.9 Resumen. Todo tipo de movimientos.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_funciones_adicionales_en_fresadora__caso_prctico.html" class="daddy">2 Funciones adicionales en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_herramienta.html" class="daddy">2.1 Compensación del radio de herramienta.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1 Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2 Errores frecuentes.</a></li>
+         <li><a href="213_modificacin_del_radios_de_herramienta_para_obtener_creces.html" class="no-ch">2.1.3 Modificación del radios de herramienta. para obtener creces.</a></li>
+         <li><a href="214_correcciones_de_radio_de_herramienta_o_desgaste_segn_medidas_obtenidas.html" class="no-ch">2.1.4 Correcciones de radio de herramienta, o desgaste según medidas obtenidas.</a></li>
+         <li><a href="215_compensacin_de_la_longitud_de_herramienta.html" class="no-ch">2.1.5 Compensación de la longitud de herramienta.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_mecanizado_de_aristas.html" class="daddy">2.2 Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_o_contorneado_en_aristas.html" class="no-ch">2.2.1 Parada exacta o contorneado en aristas.</a></li>
+         <li><a href="222_radios_de_acuerdo.html" class="no-ch">2.2.2 Radios de acuerdo.</a></li>
+         <li><a href="223_aristas_achaflanadas.html" class="no-ch">2.2.3 Aristas achaflanadas.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4 Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5 Errores frecuentes.</a></li>
+         <li><a href="226_programacin_de_aristas_en_polares.html" class="no-ch">2.2.6 Programación de aristas en polares.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7 Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="24_programacin_de_repeticiones.html" class="daddy">2.4 Programación de repeticiones.</a>
+      <ul class="other-section">
+         <li><a href="241_identificar_los_bloques_a_repetir.html" class="no-ch">2.4.1 Identificar los bloques a repetir.</a></li>
+         <li><a href="242_mecanizado_de_perfiles_en_pasadas.html" class="no-ch">2.4.2 Mecanizado de perfiles en pasadas.</a></li>
+         <li><a href="243_mecanizar_perfiles_en_diferentes_posiciones.html" class="no-ch">2.4.3 Mecanizar perfiles en diferentes posiciones.</a></li>
+         <li><a href="244_uso_en_emparrillados.html" class="no-ch">2.4.4 Uso en emparrillados.</a></li>
+      </ul>
+      </li>
+      <li><a href="25_subrutinas.html" class="daddy">2.5 Subrutinas.</a>
+      <ul class="other-section">
+         <li><a href="251_mecanizar_las_formas_desde_diferentes_programas.html" class="no-ch">2.5.1 Mecanizar las formas desde diferentes programas.</a></li>
+         <li><a href="252_uso_en_operaciones_frecuentes_de_mecanizado.html" class="no-ch">2.5.2 Uso en operaciones frecuentes de mecanizado.</a></li>
+      </ul>
+      </li>
+      <li><a href="26_resumen.html" class="no-ch">2.6 Resumen.</a></li>
+      <li><a href="27_temporizacin.html" class="no-ch">2.7 Temporización.</a></li>
+      <li><a href="28_simulacin_de_pgm.html" class="daddy">2.8 Simulación de PGM.</a>
+      <ul class="other-section">
+         <li><a href="281_deteccin_de_errores.html" class="no-ch">2.8.1 Detección de errores.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_trasformacin_de_coordenadas__caso_prctico.html" class="daddy">3 Trasformación de coordenadas - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="31_tipos_de_trasformacin_de_coordenadas.html" class="no-ch">3.1 Tipos de trasformación de coordenadas.</a></li>
+      <li><a href="32_traslados_programables_de_origen_pieza.html" class="daddy">3.2 Traslados programables de origen pieza.</a>
+      <ul class="other-section">
+         <li><a href="321_ceros_pieza_versus_traslados_de_origen.html" class="no-ch">3.2.1 Ceros pieza versus traslados de origen.</a></li>
+         <li><a href="322_uso_en_emparrillados.html" class="no-ch">3.2.2 Uso en emparrillados.</a></li>
+         <li><a href="323_repetir_formas_en_diferente_posicin.html" class="no-ch">3.2.3 Repetir formas en diferente posición.</a></li>
+         <li><a href="324_traslado_de_origen_y_origen_polar.html" class="no-ch">3.2.4 Traslado de origen y origen polar.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_giro_de_coordenadas.html" class="daddy">3.3 Giro de coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="331_giro_previo_segn_la_orientacin_del_perfil.html" class="no-ch">3.3.1 Giro previo según la orientación del perfil.</a></li>
+         <li><a href="332_repetir_formas_cerradas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.2 Repetir formas cerradas giradas con respecto a otra de partida.</a></li>
+         <li><a href="333_repetir_formas_abiertas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.3 Repetir formas abiertas giradas con respecto a otra de partida.</a></li>
+         <li><a href="334_giro_de_coordenadas_en_polares.html" class="no-ch">3.3.4 Giro de coordenadas en polares.</a></li>
+         <li><a href="335_combinacin_de_traslado_de_origen_y_giro_de_coordenadas.html" class="no-ch">3.3.5 Combinación de traslado de origen y giro de coordenadas.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_conclusin.html" class="no-ch">3.4 Conclusión.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_ciclos_fijos_de_agujeros_en_fresadora__caso_prctico.html" class="daddy">4 Ciclos fijos de agujeros en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="41_los_ciclos_fijos_en_fresadora.html" class="daddy">4.1 Los ciclos fijos en fresadora.</a>
+      <ul class="other-section">
+         <li><a href="411_definir_el_ciclo_y_su_zona_de_influencia.html" class="no-ch">4.1.1 Definir el ciclo y su zona de influencia.</a></li>
+         <li><a href="412_consideraciones_generales.html" class="no-ch">4.1.2 Consideraciones generales.</a></li>
+         <li><a href="413_parmetros_y_funcionamiento_comunes.html" class="no-ch">4.1.3 Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="42_ciclo_de_taladrado_simple.html" class="daddy">4.2 Ciclo de taladrado simple.</a>
+      <ul class="other-section">
+         <li><a href="421_programacin.html" class="no-ch">4.2.1 Programación.</a></li>
+         <li><a href="422_funcionamiento.html" class="no-ch">4.2.2 Funcionamiento.</a></li>
+         <li><a href="423_consideraciones_sobre_el_ciclo.html" class="no-ch">4.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="424_uso_en_punteados_y_taladrados_cortos.html" class="no-ch">4.2.4 Uso en punteados y taladrados cortos.</a></li>
+      </ul>
+      </li>
+      <li><a href="43_ciclo_de_avellanado.html" class="daddy">4.3 Ciclo de avellanado.</a>
+      <ul class="other-section">
+         <li><a href="431_programacin.html" class="no-ch">4.3.1 Programación.</a></li>
+         <li><a href="432_funcionamiento.html" class="no-ch">4.3.2 Funcionamiento.</a></li>
+         <li><a href="433_consideraciones_sobre_el_ciclo.html" class="no-ch">4.3.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="434_uso_en_avellanados_y_biselados.html" class="no-ch">4.3.4 Uso en avellanados y biselados.</a></li>
+      </ul>
+      </li>
+      <li><a href="44_taladrado_profundo.html" class="daddy">4.4 Taladrado profundo.</a>
+      <ul class="other-section">
+         <li><a href="441_programacin.html" class="no-ch">4.4.1 Programación.</a></li>
+         <li><a href="442_funcionamiento.html" class="no-ch">4.4.2 Funcionamiento.</a></li>
+         <li><a href="443_consideraciones_sobre_el_ciclo.html" class="no-ch">4.4.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="444_retroceso_para_rotura_de_viruta.html" class="no-ch">4.4.4 Retroceso para rotura de viruta.</a></li>
+         <li><a href="445_retroceso_total_de_la_broca.html" class="no-ch">4.4.5 Retroceso total de la broca.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_escariado__mandrinado.html" class="daddy">4.5 Escariado / Mandrinado</a>
+      <ul class="other-section">
+         <li><a href="451_programacin.html" class="no-ch">4.5.1 Programación.</a></li>
+         <li><a href="452_funcionamiento.html" class="no-ch">4.5.2 Funcionamiento.</a></li>
+         <li><a href="453_consideraciones_sobre_el_ciclo.html" class="no-ch">4.5.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="454_pretaladrado_previo_al_escariado.html" class="no-ch">4.5.4 Pre-taladrado previo al escariado.</a></li>
+         <li><a href="455_escariados_ciegos_y_pasantes.html" class="no-ch">4.5.5 Escariados ciegos y pasantes.</a></li>
+      </ul>
+      </li>
+      <li><a href="46_mandrinado_con_retirada_de_herramienta_en_el_fondo_del_agujero.html" class="daddy">4.6 Mandrinado con retirada de herramienta en el fondo del agujero.</a>
+      <ul class="other-section">
+         <li><a href="461_programacin.html" class="no-ch">4.6.1 Programación.</a></li>
+         <li><a href="462_funcionamiento.html" class="no-ch">4.6.2 Funcionamiento.</a></li>
+         <li><a href="463_consideraciones_sobre_el_ciclo.html" class="no-ch">4.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="464_pretaladrado_previo_al_mandrinado.html" class="no-ch">4.6.4 Pre-taladrado previo al mandrinado.</a></li>
+         <li><a href="465_mandrinado_con_fondo_tolerancia_de_perpendicularidad.html" class="no-ch">4.6.5 Mandrinado con fondo tolerancia de perpendicularidad.</a></li>
+      </ul>
+      </li>
+      <li><a href="47_roscado_con_macho_flexible_y_rgido.html" class="daddy">4.7 Roscado con macho flexible y rígido.</a>
+      <ul class="other-section">
+         <li><a href="471_programacin.html" class="no-ch">4.7.1 Programación.</a></li>
+         <li><a href="472_funcionamiento.html" class="no-ch">4.7.2 Funcionamiento.</a></li>
+         <li><a href="473_consideraciones_sobre_el_ciclo.html" class="no-ch">4.7.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="474_pretaladrado_previo_al_roscado.html" class="no-ch">4.7.4 Pre-taladrado previo al roscado.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_ciclos_fijos_de_fresado__caso_prctico.html" class="daddy">5 Ciclos fijos de fresado - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="51_cajera_rectangular.html" class="daddy">5.1 Cajera rectangular.</a>
+      <ul class="other-section">
+         <li><a href="511_programacin.html" class="no-ch">5.1.1 Programación.</a></li>
+         <li><a href="512_funcionamiento.html" class="no-ch">5.1.2 Funcionamiento.</a></li>
+         <li><a href="513_consideraciones_sobre_el_ciclo.html" class="no-ch">5.1.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="514_uso_de_cajera_cuadrada_como_desbaste.html" class="no-ch">5.1.4 Uso de cajera cuadrada como desbaste.</a></li>
+      </ul>
+      </li>
+      <li><a href="52_cajera_redonda.html" class="daddy">5.2 Cajera redonda.</a>
+      <ul class="other-section">
+         <li><a href="521_programacin.html" class="no-ch">5.2.1 Programación.</a></li>
+         <li><a href="522_funcionamiento.html" class="no-ch">5.2.2 Funcionamiento.</a></li>
+         <li><a href="523_consideraciones_sobre_el_ciclo.html" class="no-ch">5.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="524_uso_de_cajera_redonda_como_desbaste.html" class="no-ch">5.2.4 Uso de cajera redonda como desbaste.</a></li>
+         <li><a href="525_uso_de_cajera_redonda_como_desbaste_de_agujeros_a_mandrinar.html" class="no-ch">5.2.5 Uso de cajera redonda como desbaste de agujeros a mandrinar.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_resumen_de_los_ciclos_fijos.html" class="no-ch">6 Resumen de los ciclos fijos.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="119_funciones_auxiliares_m_de_mquina.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="121_modificar_la_tabla_de_correctores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.2 Revisar y modificar datos de un PGM</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id47">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta47_69" class="block iDevice_content">
+
+<div class="elemento_izquierda">
+<div>
+<img src="MCN03_CONT_R02_Rosa_mini.JPG" alt="En la foto se aprecia a una joven con gafas  llamada Rosa, sonriente, de pelo rubio y vestida de una bata verde de taller" title="Rosa" style="margin-right: 20px" height="200" width="138" />
+</div>
+</div>
+<p>
+<font face="helvetica" size="2">El CNC es una disciplina para la cual Rosa, también se ha preparado en el periodo de formación en su centro educativo. Rosa se encuentra ahora preparada y motivada par llevar a efecto su teoría a la práctica, y con muchas ganas de ver como se trabaja realmente en los talleres. Por este motivo ha llamado a un amigo para que le deje ver las máquinas CNC y programas... de la empresa en que trabaja, y realizar unos días de prácticas.<br />
+En esa empresa se trabaja en series largas de pieza para el sector del automóvil. Los programas-pieza se escribieron hace tiempo y raramente se escriben nuevos porque las referencias de piezas no cambian en años. Sin embargo es frecuente tener que introducir pequeñas modificaciones en los programas CNC.<br />
+En esta empresa tiene que realizar las siguientes modificaciones:</font> 
+</p>
+<ul>
+	<li>Modificar la tabla de dimensiones.</li>
+	<li>Modificar las  información tecnológica</li>
+	<li>Mover programas entre el directorio de piezas y otro directorio o a un ordenador. </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id48">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta48_73" class="block iDevice_content">
+Aunque estas pequeñas modificaciones pueden paracer de poca cualificación, son tareas  importantes  para operarios de  máquinas CNC, y que implican unos conocimientos mínimos de programación CNC.
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id39">
+<div class="iDevice emphasis0">
+<div id="ta39_77" class="block iDevice_content">
+<div align="justify">
+<a href="MCN03_CONT_R028_Tabla_de_correctores.jpg" title="Tabla de correctores"><img align="left" alt="Esta tabla almacena las dimensiones de cada una de las herramientas." class="imagen_ampliable" height="181" src="MCN03_CONT_R028_Tabla_de_correctores_mini.jpg" style="margin-right: 20px" title="Tabla de correctores" width="200" /></a><span style="font-size: x-small; font-family: helvetica">
+El control dispone de una tabla de hasta 100 parejas de valores para
+compensación de radio y la logitud de la herramienta (TxxD00-TxxD99). <strong>R</strong>
+indica el radio de la herramienta et <strong>I</strong> indica el valor que se suma o
+resta al valor de R para corregir pequeñas variaciones del radio de la
+herramienta. <strong>L</strong> indica la longitud de la herramienta y <strong>K </strong>el valor que
+suma ó se resta al valor de L para corregir pequeñas variaciones de la
+longitud de la herramienta.</span>
+</div>
+<p>
+<span style="font-size: x-small; font-family: helvetica">Los valores máximos de compensacíon son:</span>
+</p>
+<ul>
+	<li>
+	<em><strong><span style="font-size: x-small; font-family: helvetica">R+/-1000 mm ó +/-39,3699 pulgadas. L+/-1000 mm ó +/-39,3699 pulgadas</span></strong></em></li>
+	<li><em><strong><span style="font-size: x-small; font-family: helvetica">I+/-32,766 mm ó +/-1,2900 pulgadas. K+/-32,766 mm ó +/-1,2900 pulgadas</span></strong></em></li>
+</ul>
+<p>
+<span style="font-size: x-small; font-family: helvetica">
+<div class="separador">
+</div>
+No hay que confundir la compensación de radio y en longitud que veremos
+más adelante en otro apartado y la compensación del desgaste de la
+herramienta del radio y en longitud. A través del siguiente ejemplo
+veremos en que consiste la corrección del desgaste del radio y en
+longitud cuando se trabaja con una pieza con tolerancias. Se puede
+verificar y modificar los valores de <strong>I</strong> y <strong>K</strong>
+sin detener la ejecución de un ciclo, es decir cuando la herramienta
+este en estado de mecanización aplicara las correcciones indicadas
+cuando se cargara la próxima vez. En la imagen puedes ver una tabla de correctores del fabricante (Fagor).  </span>
+</p>
+<div align="justify">
+</div>
+<p>
+<a href="MCN03_CONT_R027_Desgastes.jpg" title="Desgastes"><img align="left" alt="Es un plano de una pieza que muestra varias cajeras  rectangulares dos grandes y ocho pequeñas y están  todas perfectamente acotadas. Se aprecia una vista plana y otra de sección. Puedes la palabra sección A-A." class="imagen_ampliable" height="127" src="MCN03_CONT_R027_Desgastes_mini.jpg" style="margin-right: 20px" title="Desgastes " width="200" /></a><span style="font-size: x-small; font-family: helvetica">En este ejemplo </span><span style="font-size: x-small; font-family: helvetica">La pieza de dibujo tiene una <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Tolerancia%20%20%28MEC_MCN03%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Tolerancia%20%20(MEC_MCN03)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Tolerancia &quot; (Se abre en una nueva ventana)">tolerancia </a>  dimensional de las cajeras rectangulares de</span><span style="font-size: x-small; font-family: helvetica"><img src="eXe_LaTeX_math_5.gif"   />y la profundidad Z</span><span style="font-size: x-small; font-family: helvetica"><img src="eXe_LaTeX_math_6.gif"   />. Por ejemplo cojamos el caso de la
+cajera de 40 mm de ancho y 40 mm de alto. Una vez mecanizada la pieza
+se obtiene una medida de alto y ancho de 40,5 mm. Por lo tanto 0.3 mm
+fuera de tolerancias.</span>
+</p>
+<p>
+<span style="font-size: x-small; font-family: helvetica">Si el acabado de la pieza se realiza con la herramienta T05, para que
+esta herramienta mecanice 40 mm de ancho se debe disminuir el corrector
+D05 en el plano XY en 0.5 mm<strong> </strong>del valor que tiene el radio en este momento<strong>.</strong> En la tabla de correctores debemos buscar el corrector D05 en este caso correspondiente a la herramienta T05 y al valor actual de <strong>I</strong> restamos 0.5 mm.</span>
+</p>
+<p>
+<span style="font-size: x-small; font-family: helvetica">Si la herramienta T05 D05 deja esta vez una profundidad de 21.8 mm, por lo tanto 0.2 mm </span><span style="font-size: x-small; font-family: helvetica">fuera de tolerancias</span><span style="font-size: x-small; font-family: helvetica"> ya que la medida sobre el plano es de 22 mm. En este caso la herramienta queda 0.2
+mm mas corta en Z. En la taba de correctores esta vez al valor K de la
+herramienta le sumamos 0.2 mm.</span>
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id80">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-80_58">
+<form name="multi-select-form-80_58" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_58" class="block question iDevice_content">
+
+<p>
+<font size="2"><br />
+</font>
+</p>
+<table class="tabla" border="0">
+	<tbody>
+		<tr>
+			<td><font size="2">Selecciona cual o cuáles de las funciones del programa que se muestran permanecen activas en cada uno de los bloques de programación indicados.</font></td>
+			<td><font size="2">N0010 G54<br />
+			N0020 T01 D01</font><font size="2">N0030 M06<br />
+			N0040 G94 G97 F500 S3000 M03 M08<br />
+			N0050 G90 G00 X-20 Y0 Z5<br />
+			N0060 G01 Z-3; DESBASTE<br />
+			N0070 X57;<br />
+			N0080 G00 Z50<br />
+			N0090 T03 D03<br />
+			N0100 G94 G97 F400 S3500 M03 M08<br />
+			N0110 G00 X-28 Y0 Z5<br />
+			N0120 G01 Z-4; ACABADO<br />
+			N0130 X65<br />
+			N0140 G91 X5<br />
+			N0150 Y5<br />
+			N0160 G90 X-28<br />
+			N0170 G00 Z50 M09<br />
+			N0180 M30</font> <br />
+			</td>
+		</tr>
+	</tbody>
+</table>
+<font size="2"><b>Bloque N40.</b><br />
+</font>
+<p>
+<font size="2"></font> 
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_580" class="sr-av"><a href="#answer-80_61">Opción 1</a></label><input type="checkbox" id="op80_580" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_61"><div id="taans80_61" class="block iDevice_content">
+<font size="2">G54</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_580" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_581" class="sr-av"><a href="#answer-80_123">Opción 2</a></label><input type="checkbox" id="op80_581" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_123"><div id="taans80_123" class="block iDevice_content">
+<font size="2">G97</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_581" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_582" class="sr-av"><a href="#answer-80_125">Opción 3</a></label><input type="checkbox" id="op80_582" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_125"><div id="taans80_125" class="block iDevice_content">
+<font size="2">M09</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_582" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_583" class="sr-av"><a href="#answer-80_127">Opción 4</a></label><input type="checkbox" id="op80_583" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_127"><div id="taans80_127" class="block iDevice_content">
+<font size="2">G00</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_583" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_584" class="sr-av"><a href="#answer-80_129">Opción 5</a></label><input type="checkbox" id="op80_584" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_129"><div id="taans80_129" class="block iDevice_content">
+<font size="2">M03</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_584" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-80_58" /> 
+</p>
+</div>
+<section id="f80_58" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_58" class="feedback iDevice_content">
+<font size="2">    El cero pieza G54 se activa en el bloque N10 y sigue activo en el bloque N40.<br />
+G97 se programa en el bloque N040 por lo que está activa<br />
+M09 está activa por defecto pero en el bloque N40 se activa la función contraria M08.<br />
+G00 no se indica en el bloque N40, ni en ningún bloque anterior pero se supone que en el bloque N40 está activa, ya que normalmente es una de las funciones que se activan por defecto al encender la máquina.<br />
+El giro de cabezal M03 se activa en el N40.</font><br />
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_61" class="right">Correcto</a></li>
+<li><a href="#answer-80_123" class="right">Correcto</a></li>
+<li><a href="#answer-80_125" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_127" class="right">Correcto</a></li>
+<li><a href="#answer-80_129" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<br/><section class="question">
+<div id="actitity-80_131">
+<form name="multi-select-form-80_131" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_131" class="block question iDevice_content">
+<b>BLOQUE N170.</b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1310" class="sr-av"><a href="#answer-80_134">Opción 1</a></label><input type="checkbox" id="op80_1310" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_134"><div id="taans80_134" class="block iDevice_content">
+<font size="2">G00</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1310" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1311" class="sr-av"><a href="#answer-80_136">Opción 2</a></label><input type="checkbox" id="op80_1311" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_136"><div id="taans80_136" class="block iDevice_content">
+<font size="2">G95</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1311" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1312" class="sr-av"><a href="#answer-80_138">Opción 3</a></label><input type="checkbox" id="op80_1312" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_138"><div id="taans80_138" class="block iDevice_content">
+<font size="2">G96</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1312" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1313" class="sr-av"><a href="#answer-80_140">Opción 4</a></label><input type="checkbox" id="op80_1313" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_140"><div id="taans80_140" class="block iDevice_content">
+<font size="2">G01</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1313" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1314" class="sr-av"><a href="#answer-80_142">Opción 5</a></label><input type="checkbox" id="op80_1314" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_142"><div id="taans80_142" class="block iDevice_content">
+<font size="2">M05</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1314" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-80_131" /> 
+</p>
+</div>
+<section id="f80_131" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_131" class="feedback iDevice_content">
+
+<div align="justify">
+<font size="2">    Se activa al principio del bloque N170 la función de movimiento lineal rápido.</font><br />
+<font size="2">    En el bloque N100 se activa la función G97, que es incompatible con G96, permaneciendo activa en el bloque N240.</font><br />
+<font size="2">    Se activa la programación del avance en mm por minuto en el bloque N100, y al no anularse por la función contraria G95 permanece activo en el bloque N170.</font><br />
+<font size="2">    Desde el bloque N120 al N160 esta activa la programación lineal de movimiento de trabajo, pero el bloque N170 se anula esta función por G00, movimiento lineal de posicionamiento rápido.</font><br />
+<font size="2">    En bloque N100 el cabezal empieza a girar a derechas, debido a la función preparatoria M03 (se ha convenido que el giro a derechas corresponde a un M03, pero a tener en cuenta que no todas las fresadoras CNC siguen este criterio), por ello la función preparatoria parada de cabezal M05, no esta activa en el bloque N170.</font><br />
+</div>
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_134" class="right">Correcto</a></li>
+<li><a href="#answer-80_136" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_138" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_140" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_142" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<br/><section class="question">
+<div id="actitity-80_144">
+<form name="multi-select-form-80_144" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion80_144" class="block question iDevice_content">
+<font size="2"><b>BLOQUE N180.</b></font>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1440" class="sr-av"><a href="#answer-80_147">Opción 1</a></label><input type="checkbox" id="op80_1440" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_147"><div id="taans80_147" class="block iDevice_content">
+<font size="2">M03</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1440" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1441" class="sr-av"><a href="#answer-80_149">Opción 2</a></label><input type="checkbox" id="op80_1441" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_149"><div id="taans80_149" class="block iDevice_content">
+<font size="2">M08</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1441" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1442" class="sr-av"><a href="#answer-80_151">Opción 3</a></label><input type="checkbox" id="op80_1442" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_151"><div id="taans80_151" class="block iDevice_content">
+<font size="2">G00</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1442" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1443" class="sr-av"><a href="#answer-80_153">Opción 4</a></label><input type="checkbox" id="op80_1443" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_153"><div id="taans80_153" class="block iDevice_content">
+<font size="2">G90</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1443" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op80_1444" class="sr-av"><a href="#answer-80_155">Opción 5</a></label><input type="checkbox" id="op80_1444" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-80_155"><div id="taans80_155" class="block iDevice_content">
+<font size="2">M09</font>
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-80_1444" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-5-80_144" /> 
+</p>
+</div>
+<section id="f80_144" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<div id="tafeedback80_144" class="feedback iDevice_content">
+<font size="2">    El giro a derechas M03 es anulado por la función M30, cuando termina un programa es lógico que el cabezal debe dejar de girar.<br />
+La función final del programa M30 activa una serie de funciones por defecto; entre otras la función preparatoria desactivación de refrigerante M09, el movimiento lineal de posicionamiento rápido G00 y la programación en coordenadas absolutas G90.</font><br />
+
+</div>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-80_147" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_149" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-80_151" class="right">Correcto</a></li>
+<li><a href="#answer-80_153" class="right">Correcto</a></li>
+<li><a href="#answer-80_155" class="right">Correcto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="119_funciones_auxiliares_m_de_mquina.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="121_modificar_la_tabla_de_correctores.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

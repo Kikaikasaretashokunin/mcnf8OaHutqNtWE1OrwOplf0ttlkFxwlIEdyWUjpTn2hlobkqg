@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>MCN02 PROGRAMACION DE TORNO CNC </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<meta name="description" content="ORIENTACIONES ALUMNO" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN02 PROGRAMACION DE TORNO CNC</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">MCN02.-PROGRAMACIÓN DE TORNO CNC.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">MCN02.-PROGRAMACIÓN DE TORNO CNC.</h1></header>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Orientaciones Alumnado</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_75" class="block iDevice_content">
+
+<p>
+&nbsp;
+</p>
+EN esta unidad de trabajo que es la segunda del modulo MEC que se compone de cinco unidades, aprenderás a realizar programas CNC para tornoa partir del plano de una pieza.<br />
+Con esta unidad vas a comenzar a familiarizarte con el código ISO para programar las diferentes piezas en el torno, el tipo de control usado en esta unidad es el Fagor 8050/8055 y Fanuc OT, aprenderás los puntos esenciales en el torno, los sistemas de coordenadas, en esta unidad se programa en 2D, las diferentes maneras de acotar, ciclos fijo, calibrar las herramientas y la secuencia de las operaciones para programar y mecanizar dicha pieza... En el desarrollo de la misma adquirirás los fundamentos básicos para poder realizar las diferentes actividades propuestas y descubrirás la necesidad de la programación CNC torno como herramienta imprescindible para conseguir el aseguramiento de la calidad en las empresas. En efecto las ventajas de  implementar el CNC en una empresa frente al mecanizado manual es obvia, siendo las mas importantes: <br />
+<ul>
+	<li>Mayor precisión y mejor calidad de productos. </li>
+	<li>Mayor uniformidad en los productos producidos. </li>
+	<li>Un operario puede operar varias máquinas a la vez. </li>
+	<li>Fácil procesamiento de productos de apariencia complicada. </li>
+	<li>Flexibilidad para el cambio en el diseño y en modelos en un tiempo corto. </li>
+	<li>Fácil control de calidad. </li>
+	<li>Es posible satisfacer pedidos urgentes. </li>
+	<li>Se reduce la fatiga del operador. </li>
+	<li>Mayor seguridad en las labores. </li>
+	<li>Aumento del tiempo de trabajo en corte por maquinaria. </li>
+	<li>Permite simular el proceso de corte a fin de verificar que este sea correcto.</li>
+</ul>
+Aunque también existen algunas desventajas:<br />
+<ul>
+	<li>Alto costo de la maquinaria. </li>
+	<li>Es necesario programar de forma correcta la selección de las herramientas de corte y la secuencia de operación para un eficiente funcionamiento. </li>
+	<li>Los costos de mantenimiento aumentan, ya que el sistema de control es más complicado y surge la necesidad de formar al personal de servicio y operación. </li>
+	<li>Es necesario mantener un gran volumen de producción a fin de lograr una mayor eficiencia de la capacidad instalada.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_77" class="block iDevice_content">
+
+<table class="tabla" summary="En esta tabla se muestran datos generales de la UT útiles para el alumnado 
+	(índice, objetivos, temporalización y consejos)">
+	<caption>Datos generales de la Unidad de Trabajo</caption>
+	<tbody>
+		<tr>
+			<th class="texto_centrado" id="mp" width="25%">
+			Nombre completo del MP
+			</th>
+			<td class="texto_centrado" headers="mp" width="50%"> Mecanizado por control numérico</td>
+			<th class="texto_centrado" id="sig" width="15%">
+			Siglas MP
+			</th>
+			<td class="texto_centrado" headers="sig" width="10%"> MEC
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" scope="row">
+			Nº y título de la UT
+			</th>
+			<td class="texto_centrado" colspan="3"> UT02. Programación de torno CNC.<br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Índice o tabla de contenidos
+			</div>
+			</th>
+			<td colspan="3">
+			<ol class="lista_esquema">
+				<li><b>Programación básica de torno CNC. Presentación - caso práctico.</b>
+				<ol>
+					<li>Introducción a la programación CNC.
+					<ol>
+						<li>Estructura de un programa de CNC.</li>
+						<li>G Funciones preparatorias.</li>
+						<li>Ejes y coordenadas del torno.</li>
+						<li>Programación cotas en torno.</li>
+						<li>F Avance de Hta y S Giro del cabezal.</li>
+						<li>T Selección de Hta y sus dimensiones.</li>
+						<li>Información geométrica y tecnológica.</li>
+						<li>Cambio de hta y proceso de mecanizado.</li>
+					</ol>
+					</li>
+					<li>Revisar y modificar datos de un PGM.
+					<ol>
+						<li>Modificar la tabla de correctores.</li>
+						<li>Modificar T, F, S en un PGM.</li>
+						<li>Guardar un PGM en otro directorio.</li>
+					</ol>
+					</li>
+					<li>Funciones auxiliares.
+					<ol>
+						<li>M del programa.</li>
+						<li>M del cabezal.</li>
+						<li>M de la máquina.</li>
+					</ol>
+					</li>
+					<li>Sistemas de referencia y coordenadas.
+					<ol>
+						<li>Puntos de referencia del torno.</li>
+						<li>Establecimiento de orígenes pieza.</li>
+						<li>Tablas de orígenes.</li>
+						<li>Programación de cotas.</li>
+						<li>Cotas absolutas e incrementales.</li>
+						<li>Cotas incrementales.</li>
+					</ol>
+					</li>
+					<li>Movimientos de lineales.
+					<ol>
+						<li>G00 de posicionamiento rápido.</li>
+						<li>G01 de trabajo.</li>
+						<li>Programación movimientos.</li>
+						<li>Combinación de movimientos.</li>
+						<li>Programación con coordenadas mixtas.</li>
+						<li>Sentido positivo del ángulo.</li>
+						<li>Resumen.</li>
+					</ol>
+					</li>
+					<li>Programación arcos dado su centro.
+					<ol>
+						<li>Calculo de las coordenadas del centro.</li>
+						<li>Programación incremental en arcos.</li>
+					</ol>
+					</li>
+					<li>Programación arcos por su radio.
+					<ol>
+						<li> Valor de R negativo.</li>
+						<li>Combinación de arcos.</li>
+					</ol>
+					</li>
+					<li>Simulación de PGM.
+					<ol>
+						<li>A pie de torno.</li>
+						<li>Uso de simuladores.</li>
+						<li>Detección de errores.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><b>Funciones adicionales de torno. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Compensación del radio de herramienta.
+					<ol>
+						<li>Operaciones con compensación.</li>
+						<li>Errores frecuentes.</li>
+					</ol>
+					</li>
+					<li>Mecanizado de aristas.
+					<ol>
+						<li>Parada exacta o contorneado en aristas.</li>
+						<li>Radios de acuerdo.</li>
+						<li>Aristas achaflanadas.</li>
+						<li>Combinación de aristas y chaflanes.</li>
+						<li>Errores frecuentes.</li>
+						<li>Programación de aristas en polares.</li>
+						<li>Chaflanes y redondeos en arcos.</li>
+					</ol>
+					</li>
+					<li>Temporización.
+					<ol>
+					</ol>
+					</li>
+					<li>Simulación de PGM.
+					<ol>
+						<li>Detección de errores.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><b>Programación de ciclos fijos de torno. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Los ciclos fijos de torno.
+					<ol>
+						<li>Parámetros y funcionamiento comunes.li&gt;
+						</li>
+					</ol>
+					</li>
+					<li>Ciclo fijo de taladrado axial.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Pre-desbaste secuenciando taladrados.</li>
+						<li>Taladrados mediante broca de placa.</li>
+					</ol>
+					</li> 
+					<li>Desbaste de perfiles por torneados.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Sintaxis de programación de perfiles.</li>
+						<li>Perfiles exteriores y monótonos.</li>
+						<li>Perfiles interiores y monótonos.</li>
+						<li>Perfiles exteriores con cuellos.</li>
+						<li>Perfiles interiores con cuellos.</li>
+					</ol>
+					</li>
+					<li>Desbaste de perfiles por refrentados.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Sintaxis de programación de perfiles.</li>
+						<li>Perfiles exteriores y monótonos.</li>
+						<li> Perfiles interiores y monótonos.</li>
+						<li>Perfiles exteriores con cuellos.</li>
+						<li>Perfiles interiores con cuellos.</li>
+					</ol>
+					</li>
+					<li>Ciclo fijo de roscado axial con macho.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Roscado axial - Agujeros previos.</li>
+						<li>Roscado rígido.</li>
+					</ol>
+					</li>
+					<li>Ciclo fijo de ranurado radial.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Ranurado exterior.</li>
+						<li>Ranurado interior.</li>
+						<li> Disposiciones de ranuras, casos.</li>
+						<li>Acabado de ranuras radiales.</li>
+					</ol>
+					</li>
+					<li>Ciclo fijo de ranurado frontales.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Acabado de ranuras frontales.</li>
+					</ol>
+					</li>
+					<li>Ciclo fijo de roscado longitudinal 
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Roscas a derechas.</li>
+						<li>Roscas a izquierdas.</li>
+						<li>Roscas cilíndricas exteriores.</li>
+						<li>Roscas cilíndricas interiores.</li>
+						<li> Roscas cónicas.</li>
+					</ol>
+					</li>
+					<li>Secuencia de operaciones en torno.
+					<ol>
+						<li>Dobles atadas.</li>
+						<li>Resumen.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Objetivos
+			</div>
+			</th>
+			<td colspan="3">
+			Los  Objetivos que lograrás al finalizar el estudio de la unidad son los siguientes:   
+			<ul class="lista_verificacion">
+				<li>Conocer las ventajas que ofrece una máquina controlada mediante CNC en relación a los sistemas de fabricación manuales.</li>
+				<li>Disponer de una serie de conceptos básicos sobre mecanizado, así como conocer el lenguaje para poder efectuar un programa de mecanizado</li>
+				<li>Conocer la ubicación y denominación de los diferentes puntos de referencia y orígenes necesarios en una máquina CNC, así como la utilidad de los mismos y su cálculo si procede.</li>
+				<li>Proporcionar los conocimientos necesarios para desarrollar habilidades y destrezas requeridas en la Ocupación de Mecanizado por C.N.C, a fin de cumplir con los procedimientos establecidos en ésta área de trabajo.</li>
+				<li>Conocer adecuadamente los modos de asignar los datos necesarios para gestionar el uso de las herramientas implicadas en el proceso, haciendo especial hincapié en el porqué del requerimiento de dichos datos y el modo de introducción de los mismos.</li>
+				<li>Conocer la programación ISO mediante la utilización del control numérico (FAGOR 8050-8055) y FANUC) de amplia implantación en el mercado, aportando una base que pueda servir para asumir la programación mediante otros controles.</li>
+				<li>Estudiar las funciones que requieren cada máquina y los parámetros que utilizan para su funcionamiento.</li>
+				<li>Programar manualmente las máquinas-herramienta.</li>
+				<li>Identificar los ciclos fijos y los subprogramas.</li>
+				<li>Compensar los datos de las herramienta o en las trayectorias para corregir las desviaciones observadas en la verificación de la pieza.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" id="temp" rowspan="5" scope="rowgroup">
+			Temporalización<br />
+			(estimación)
+			</th>
+			<th class="texto_centrado" colspan="2" id="temp1" scope="row">
+			Tiempo
+			necesario para estudiar los contenidos (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp1"> 55	<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp2" scope="row">
+			Tiempo
+			necesario para completar la tarea (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp2">4<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp3" scope="row">
+			Tiempo
+			necesario para  completar el examen (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp3"> 1<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp4" scope="row">
+			Nº
+			de días que se recomienda dedicar a esta unidad
+			</th>
+			<td class="texto_centrado" headers="temp temp4"> 45<br />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" headers="temp">
+			La
+			temporalización  anterior no deja de ser una estimación media,
+			ya que el tiempo a invertir va a depender
+			mucho de las circunstancias personales de cada cual.
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Consejos y recomendaciones
+			</div>
+			</th>
+			<td colspan="3">
+			Con el fin de que puedas llegar a comprender y valorar la importancia de los contenidos tratados en esta unidad para tu futura vida laboral, es recomendable que: <br />
+			<ul class="lista_verificacion">
+				<li>Es muy importante que entiendas bien los conceptos de esta unidad ya que son básicos para este módulo.</li>
+				<li>Haz una primera lectura de los contenidos del tema y continúa con una
+				lectura detallada de cada apartado realizando los ejercicios de auto
+				evaluación.</li>
+				<li>Una vez realizadas las actividades anteriores vuelve a repasar el
+				módulo, incidiendo en aquellos puntos en los que hayas encontrado
+				dificultades y anotando todas las dudas para consultarlas con tu
+				profesor o profesora.</li>
+				<li>Aunque puedes acceder a los contenidos en cualquier orden se recominda seguir estos en el orden en son expuestos.</li>
+				<li>También puedes profundizar en alguna materia a través de los recursos y enlaces que se facilitan bajo el epígrafe &quot;Para Saber Más...&quot;.</li>
+				<li>Cuando vayas a realizar la tarea correspondiente a la unidad,
+				primero lee atentamente el enunciado y asegúrate de haber entendido lo
+				que has de hacer.</li>
+				<li>Por último realiza el examen.</li>
+				<li>Recuerda que con este tipo de enseñanza tienes flexibilidad de horario y tú marcas el ritmo de estudio que más te interese, aunque te aconsejamos que te ajustes al calendario de aparición de las unidades didácticas y participes activamente en los foros de las respectivas unidades.</li>
+				<li>Además cuentas siempre con la colaboración de tu profesor o profesora, no dudes en formularle cualquier cuestión o duda que te surja.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

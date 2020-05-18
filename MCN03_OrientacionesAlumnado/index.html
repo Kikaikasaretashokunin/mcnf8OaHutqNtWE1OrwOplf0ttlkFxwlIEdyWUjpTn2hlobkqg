@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>MCN03 Programación de Fresadora </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<meta name="description" content="Orientaciones alumno" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-0"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN03 Programación de Fresadora</div></header>
+<nav id="siteNav">
+<ul>
+   <li id="active"><a href="index.html" class="active no-ch main-node">MCN03.-Programación de fresadora CNC.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">MCN03.-Programación de fresadora CNC.</h1></header>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id0">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Orientaciones Alumnado</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta0_75" class="block iDevice_content">
+
+<p>
+&nbsp;
+</p>
+EN esta unidad de trabajo que es la tercera del modulo MEC que se compone de cinco unidades, aprenderás a realizar programas CNC para fresadora a partir del plano de una pieza.<br />
+Con esta unidad vas a comenzar a familiarizarte con código ISO para programar las diferentes piezas en la fresadora, el tipo de control usado en esta unidad es el Fagor 8050/8055, aprenderás los puntos esenciales en una fresadora, los sistemas de coordenadas, a diferencia de la unidad anterior en esta unidad se programa en 3D, las diferentes maneras de acotar, ciclos fijo, calibrar las herramientas y la secuencia de las operaciones para programar y mecanizar dicha pieza... En el desarrollo de la misma adquirirás los fundamentos básicos para poder realizar las diferentes actividades propuestas y descubrirás la necesidad de la programación CNC fresadora como herramienta imprescindible para conseguir el aseguramiento de la calidad en las empresas. En efecto las ventajas de  implementar el CNC en una empresa frente al mecanizado manual es obvia, siendo las mas importantes: <br />
+<ul>
+	<li>Mayor precisión y mejor calidad de productos. </li>
+	<li>Mayor uniformidad en los productos producidos. </li>
+	<li>Un operario puede operar varias máquinas a la vez. </li>
+	<li>Fácil procesamiento de productos de apariencia complicada. </li>
+	<li>Flexibilidad para el cambio en el diseño y en modelos en un tiempo corto. </li>
+	<li>Fácil control de calidad. </li>
+	<li>Es posible satisfacer pedidos urgentes. </li>
+	<li>Se reduce la fatiga del operador. </li>
+	<li>Mayor seguridad en las labores. </li>
+	<li>Aumento del tiempo de trabajo en corte por maquinaria. </li>
+	<li>Permite simular el proceso de corte a fin de verificar que este sea correcto.</li>
+</ul>
+Aunque también existen algunas desventajas:<br />
+<ul>
+	<li>Alto costo de la maquinaria. </li>
+	<li>Es necesario programar de forma correcta la selección de las herramientas de corte y la secuencia de operación para un eficiente funcionamiento. </li>
+	<li>Los costos de mantenimiento aumentan, ya que el sistema de control es más complicado y surge la necesidad de formar al personal de servicio y operación. </li>
+	<li>Es necesario mantener un gran volumen de producción a fin de lograr una mayor eficiencia de la capacidad instalada.</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id2">
+<div class="iDevice emphasis0">
+<div id="ta2_77" class="block iDevice_content">
+
+<table class="tabla" summary="En esta tabla se muestran datos generales de la UT útiles para el alumnado 
+	(índice, objetivos, temporalización y consejos)">
+	<caption>Datos generales de la Unidad de Trabajo</caption>
+	<tbody>
+		<tr>
+			<th class="texto_centrado" id="mp" width="25%">
+			Nombre completo del MP
+			</th>
+			<td class="texto_centrado" headers="mp" width="50%"> Mecanizado por control numérico</td>
+			<th class="texto_centrado" id="sig" width="15%">
+			Siglas MP
+			</th>
+			<td class="texto_centrado" headers="sig" width="10%"> MEC
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" scope="row">
+			Nº y título de la UT
+			</th>
+			<td class="texto_centrado" colspan="3"> UT03. Programación de fresadora CNC.<br />
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Índice o tabla de contenidos
+			</div>
+			</th>
+			<td colspan="3">
+			<ol class="lista_esquema">
+				<li><b>Programación básica fresadora CNC. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Introducción a la programación CNC. Presentación – Caso práctico.
+					<ol>
+						<li>Estructura de un programa CNC.</li>
+						<li>G Funciones preparatorias.</li>
+						<li>Ejes y coordenadas de la fresadora.</li>
+						<li>Programación de cotas de fresadora.</li>
+						<li>F Avance de Hta. y S Giro del cabezal.</li>
+						<li>T Selección de Hta. y sus dimensiones.</li>
+						<li>Funciones auxiliares: M del programa.</li>
+						<li>Funciones auxiliares: M del cabezal.</li>
+						<li>Funciones auxiliares: M de máquina.</li>
+					</ol>
+					</li>
+					<li>Revisar y modificar datos de un PGM.
+					<ol>
+						<li>Modificar la tabla de correctores.</li>
+						<li>Modificar T, F, S en un PGM.</li>
+						<li>Guardar un PGM en otro directorio.</li>
+					</ol>
+					</li>
+					<li>Sistemas de referencia y coordenadas.
+					<ol>
+						<li>Puntos de referencia de la fresadora.</li>
+						<li>Establecimiento de orígenes pieza.</li>
+						<li>Tabla de orígenes.</li>
+					</ol>
+					</li>
+					<li>Programación de cotas.
+					<ol>
+						<li>Cotas absolutas.</li>
+						<li>Cotas incrementales.</li>
+						<li>Coordenadas polares.</li>
+						<li>Programación de coordenadas polares.</li>
+						<li>Establecer el origen polar.</li>
+						<li>Coordenadas polares absolutas.</li>
+						<li>Coordenadas polares incrementales.</li>
+					</ol>
+					</li>
+					<li>Programación de movimientos lineales.
+					<ol>
+						<li>G00 de posicionamiento rápido.</li>
+						<li>G01 movimiento de trabajo.</li>
+						<li>Movimientos en cotas cartesianas.</li>
+						<li>Movimientos en cotas polares.</li>
+						<li>Combinación de movimientos y cotas.</li>
+						<li>Resumen.</li>
+					</ol>
+					</li>
+					<li>Programación de arcos dado su centro.
+					<ol>
+						<li>Calculo de coordenadas del centro.</li>
+						<li>Programación incremental de arcos.</li>
+						<li>Programación de círculos completos.</li>
+						<li>Programación mediante el ángulo.</li>
+						<li>Consideración sobre el origen polar.</li>
+						<li>Programación de arcos en polares.</li>
+						<li>Traslado del origen polar.</li>
+						<li>Programación incremental en polares.</li>
+					</ol>
+					</li>
+					<li>Programación de arcos por su radio.
+					<ol>
+						<li>Valor de R positivo.</li>
+						<li>Valor del R negativo.</li>
+					</ol>
+					</li>
+					<li>Interpolaciónes helicoidales.
+					<ol>
+						<li>Con programación de centro.</li>
+						<li>Con ángulo y programación de centro.</li>
+						<li>En polares.</li>
+					</ol>
+					</li>
+					<li>Resumen. Todo tipo de movimientos.</li>
+				</ol>
+				</li>
+				<li><b>Funciones adicionales en fresadora.</b>
+				<ol>
+					<li>Compensación del radio de herramienta.
+					<ol>
+						<li>Operaciones con compensación.</li>
+						<li>Errores frecuentes.</li>
+						<li>Modificación del radio de herramienta para obtener creces.</li>
+						<li>Correcciones de radio de herramienta, o desgaste según medidas obtenidas.</li>
+						<li>Compensación de la longitud de herramienta.</li>
+					</ol>
+					</li>
+					<li>Mecanizado de aristas.
+					<ol>
+						<li>Parada exacta o contorneado en aristas.</li>
+						<li>Radios de acuerdo.</li>
+						<li>Aristas achaflanadas.</li>
+						<li>Combinación de aristas y chaflanes.</li>
+						<li>Errores frecuentes.</li>
+						<li>Programación de aristas en polares.</li>
+						<li>Chaflanes y redondeos en arcos.</li>
+					</ol>
+					</li>
+					<li>Programación de repeticiones.
+					<ol>
+						<li>Identificar los bloques a repetir.</li>
+						<li>Mecanizado de perfiles en pasadas.</li>
+						<li>Mecanizar perfiles en diferentes posiciones. </li>
+						<li>Uso en emparrillados.</li>
+					</ol>
+					</li>
+					<li>Subrutinas.
+					<ol>
+						<li>Mecanizar de formas desde diferentes programas.</li>
+						<li>Uso en operaciones frecuentes de mecanizado.</li>
+					</ol>
+					</li>
+					<li>Resumen.</li>
+					<li>Temporización.</li>
+					<li>Simulación de PGM.
+					<ol>
+						<li>Detección de errores.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><b>Trasformación de coordenadas. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Tipos de trasformación de coordenadas.</li>
+					<li>Traslados programables de origen pieza.
+					<ol>
+						<li>Ceros pieza versus traslados de origen.</li>
+						<li>Uso en emparrillados.</li>
+						<li>Repetir formas en diferente posición.</li>
+						<li>Traslado de origen y origen polar.</li>
+					</ol>
+					</li>
+					<li>Giro de coordenadas.
+					<ol>
+						<li>Giro previo según la orientación del perfil.</li>
+						<li>Repetir formas cerradas giradas con respecto a otra de partida.</li>
+						<li>Repetir formas abiertas giradas con respecto a otra de partida.</li>
+						<li>Giro de coordenadas en polares.</li>
+						<li>Combinación de traslado de origen y giro de coordenadas.</li>
+					</ol>
+					</li>
+					<li>Conclusión.</li>
+				</ol>
+				</li>
+				<li><b>Ciclos fijos de agujeros en fresadora. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Los ciclos fijos en fresadora.
+					<ol>
+						<li>Definir el ciclo y su zona de influencia.</li>
+						<li>Consideraciones generales.</li>
+						<li>Parámetros y funcionamiento comunes.</li>
+					</ol>
+					</li>
+					<li>Ciclo de taladrado simple.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Uso en punteados y taladrados cortos.</li>
+					</ol>
+					</li>
+					<li>Ciclo de avellanado.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Uso en avellanados y biselados.</li>
+					</ol>
+					</li>
+					<li>Taladrado profundo.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Retroceso para rotura de viruta.</li>
+						<li>Retroceso total de la broca.</li>
+					</ol>
+					</li>
+					<li>Escariado / Mandrinado
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Pre-taladrado previo al escariado.</li>
+						<li>Escariados ciegos y pasantes.</li>
+					</ol>
+					</li>
+					<li>Mandrinado con retirada de herramienta en el fondo del agujero.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Pre-taladrado previo al mandrinado.</li>
+						<li>Mandrinado con fondo tolerancia de perpendicularidad.</li>
+					</ol>
+					</li>
+					<li>Roscado con macho y rígido.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Pre-taladrado previo al roscado.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><b>Ciclos fijos de fresado. Presentación – Caso práctico.</b>
+				<ol>
+					<li>Cajera rectangular.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Uso de cajera cuadrada como desbaste.</li>
+					</ol>
+					</li>
+					<li>Cajera redonda.
+					<ol>
+						<li>Programación.</li>
+						<li>Funcionamiento.</li>
+						<li>Consideraciones sobre el ciclo.</li>
+						<li>Uso de cajera redonda como desbaste.</li>
+						<li>Uso de cajera redonda como desbaste de agujeros a mandrinar.</li>
+					</ol>
+					</li>
+				</ol>
+				</li>
+				<li><b>Resumen de los ciclos fijos</b></li>
+			</ol>
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Objetivos
+			</div>
+			</th>
+			<td colspan="3">
+			Los  Objetivos que lograrás al finalizar el estudio de la unidad son los siguientes:   
+			<ul class="lista_verificacion">
+				<li>Conocer las ventajas que ofrece una máquina controlada mediante CNC en relación a los sistemas de fabricación manuales.</li>
+				<li>Disponer de una serie de conceptos básicos sobre mecanizado, así como conocer el lenguaje para poder efectuar un programa de mecanizado</li>
+				<li>Conocer la ubicación y denominación de los diferentes puntos de referencia y orígenes necesarios en una máquina CNC, así como la utilidad de los mismos y su cálculo si procede.</li>
+				<li>Proporcionar los conocimientos necesarios para desarrollar habilidades y destrezas requeridas en la Ocupación de Mecanizado por C.N.C, a fin de cumplir con los procedimientos establecidos en ésta área de trabajo.</li>
+				<li>Conocer adecuadamente los modos de asignar los datos necesarios para gestionar el uso de las herramientas implicadas en el proceso, haciendo especial hincapié en el porqué del requerimiento de dichos datos y el modo de introducción de los mismos.</li>
+				<li>Conocer la programación ISO mediante la utilización del control numérico (FAGOR 8050-8055) de amplia implantación en el mercado, aportando una base que pueda servir para asumir la programación mediante otros controles.</li>
+				<li>Estudiar las funciones que requieren cada máquina y los parámetros que utilizan para su funcionamiento.</li>
+				<li>Programar manualmente las máquinas-herramienta.</li>
+				<li>Identificar los ciclos fijos y los subprogramas.</li>
+				<li>Compensar los datos de las herramienta o en las trayectorias para corregir las desviaciones observadas en la verificación de la pieza.</li>
+			</ul>
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" id="temp" rowspan="5" scope="rowgroup">
+			Temporalización<br />
+			(estimación)
+			</th>
+			<th class="texto_centrado" colspan="2" id="temp1" scope="row">
+			Tiempo
+			necesario para estudiar los contenidos (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp1"> 65
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp2" scope="row">
+			Tiempo
+			necesario para completar la tarea (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp2">3.5<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp3" scope="row">
+			Tiempo
+			necesario para  completar el examen (h)
+			</th>
+			<td class="texto_centrado" headers="temp temp3"> 1<br />
+			</td>
+		</tr>
+		<tr>
+			<th class="texto_centrado" colspan="2" id="temp4" scope="row">
+			Nº
+			de días que se recomienda dedicar a esta unidad
+			</th>
+			<td class="texto_centrado" headers="temp temp4"> 45<br />
+			</td>
+		</tr>
+		<tr>
+			<td colspan="3" headers="temp">
+			La
+			temporalización  anterior no deja de ser una estimación media,
+			ya que el tiempo a invertir va a depender
+			mucho de las circunstancias personales de cada cual.
+			</td>
+		</tr>
+		<tr>
+			<th scope="row">
+			<div class="elemento_centrado">
+			Consejos y recomendaciones
+			</div>
+			</th>
+			<td colspan="3">
+			Con el fin de que puedas llegar a comprender y valorar la importancia de los contenidos tratados en esta unidad para tu futura vida laboral, es recomendable que: <br />
+			<ul class="lista_verificacion">
+				<li>Es muy importante que entiendas bien los conceptos de esta unidad ya que son básicos para este módulo.</li>
+				<li>Haz una primera lectura de los contenidos del tema y continúa con una
+				lectura detallada de cada apartado realizando los ejercicios de auto
+				evaluación.</li>
+				<li>Una vez realizadas las actividades anteriores vuelve a repasar el
+				módulo, incidiendo en aquellos puntos en los que hayas encontrado
+				dificultades y anotando todas las dudas para consultarlas con tu
+				profesor o profesora.</li>
+				<li>Aunque puedes acceder a los contenidos en cualquier orden se recominda seguir estos en el orden en son expuestos.</li>
+				<li>También puedes profundizar en alguna materia a través de los recursos y enlaces que se facilitan bajo el epígrafe &quot;Para Saber Más...&quot;.</li>
+				<li>Cuando vayas a realizar la tarea correspondiente a la unidad,
+				primero lee atentamente el enunciado y asegúrate de haber entendido lo
+				que has de hacer.</li>
+				<li>Por último realiza el examen.</li>
+				<li>Recuerda que con este tipo de enseñanza tienes flexibilidad de horario y tú marcas el ritmo de estudio que más te interese, aunque te aconsejamos que te ajustes al calendario de aparición de las unidades didácticas y participes activamente en los foros de las respectivas unidades.</li>
+				<li>Además cuentas siempre con la colaboración de tu profesor o profesora, no dudes en formularle cualquier cuestión o duda que te surja.</li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

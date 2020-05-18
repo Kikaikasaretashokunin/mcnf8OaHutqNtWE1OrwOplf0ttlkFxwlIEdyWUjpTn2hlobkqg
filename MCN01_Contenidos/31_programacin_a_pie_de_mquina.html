@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.1. Programación a pie de máquina | MEC_MCN01 Progrmacion CNC y CAM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-10"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MEC_MCN01 Progrmacion CNC y CAM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN01 Programación CNC y CAM</a></li>
+   <li><a href="1_mquinas_herramienta_dotadas_de_cnc.html" class="daddy">1. Máquinas herramienta dotadas de CNC</a>
+   <ul class="other-section">
+      <li><a href="11_qu_es_el_cnc.html" class="no-ch">1.1. ¿Qué es el CNC?</a></li>
+      <li><a href="12_ventajas_de_uso_del_cnc.html" class="no-ch">1.2. Ventajas de uso del CNC</a></li>
+      <li><a href="13_tipos_de_mquinas_con_cnc.html" class="no-ch">1.3. Tipos de máquinas con CNC</a></li>
+   </ul>
+   </li>
+   <li><a href="2_clasificacin_de_los_ejes_en_maqhta.html" class="daddy">2. Clasificación de los ejes en Maq-Hta</a>
+   <ul class="other-section">
+      <li><a href="21_nomenclatura.html" class="no-ch">2.1. Nomenclatura</a></li>
+      <li><a href="22_tipos_de_control_de_ejes.html" class="no-ch">2.2. Tipos de control de ejes</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_mtodos_de_generacin_de_programas.html" class="current-page-parent daddy">3. Métodos de generación de programas</a>
+   <ul>
+      <li id="active"><a href="31_programacin_a_pie_de_mquina.html" class="active no-ch">3.1. Programación a pie de máquina</a></li>
+      <li><a href="32_programacin_conversacional_y_cam.html" class="no-ch">3.2. Programación conversacional y CAM</a></li>
+      <li><a href="33_sistemas_cam.html" class="no-ch">3.3. Sistemas CAM</a></li>
+   </ul>
+   </li>
+   <li><a href="4_pasos_en_la_programacin_cnc.html" class="no-ch">4. Pasos en la programación CNC</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="3_mtodos_de_generacin_de_programas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_programacin_conversacional_y_cam.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.1. Programación a pie de máquina</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id28">
+<div class="iDevice emphasis0">
+<div id="ta28_77" class="block iDevice_content">
+<p>
+<img align="left" alt="Una mano va  usando el teclado del CNC de una maquina de elctroerosión " height="200" src="MCN01_CONT_R031_Edicion_de_un_PGM_a_pie_de_maquina_min.gif" style="margin-right: 20px" title="Edición de un PGM a pie de una máquina de electroesión" width="196" />El operario escribe el <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Programa%20CNC%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Programa%20CNC%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Programa CNC&quot; (Se abre en una nueva ventana)">programa CNC</a> a pie de máquina. Según el fabricante del control la simulación de la
+pieza y corrección de la sintaxis de programación se pueden realiza al
+mismo tiempo. También en algunos controles se puede introducir un
+programa CNC al mismo tiempo que otro programa está en ejecución. 
+</p>
+<p>
+El
+programa también puede escribirse en un ordenador para después mediante
+un software llamado DNC transmitirlo a la unidad CNC. En este caso el
+programador no dispone de las ayudas de la unidad de control numérico.
+</p>
+<div class="separador">
+</div>
+<p>
+&nbsp;
+</p>
+<p>
+<a href="MCN01_CONT_R032_Introduccion_de_un_programa_CNC_ISO.gif" title="Ampliar imagen"><img align="right" alt="Pantalla donde se ve el código de programación CNC, el fondo es azul, la letras en blanco y la linea activa en fondo amarillo." class="imagen_ampliable" height="172" src="MCN01_CONT_R032_Introduccion_de_un_programa_CNC_ISO_mini.gif" style="margin-left: 20px" title="Introducción de un programa CNC ISO" width="200" /></a>La programación a pie de máquina se
+denomina de códigos ISO y su aprendizaje es objeto del presente manual.
+</p>
+<p style="margin-bottom: 0cm">
+La
+mayoría de los controles antes de añadir una linea al programa o cuando
+se modifica comprueban la sintaxis del código escrito. Si es incorrecto
+la pantalla muestra un mensaje de error. Esto no se produce cuando se
+escribe el programa en un ordenador y se envía a través del DNC.
+</p>
+<p style="margin-bottom: 0cm">
+&nbsp;
+</p>
+<p>
+En
+la figura se muestra la pantalla de edición de un programa de fresadora
+CNC en un control Fagor 8055. Vemos que debajo de la pantalla aparece
+una teclas, estas se corresponden con los rectángulos de la parte
+inferior de la pantalla, se denominan Softkey y dan diferentes
+funciones de ayuda a la edición.
+</p>
+<div class="separador">
+</div>
+<a href="MCN01_CONT_R033_Pantalla_de_edicion_torno_CNC_Fanuc_OT.gif" title="Ampliar imagen"><img align="left" alt="Pantalla de edición de un torno CNC, fondo azul claro, letras negras" class="imagen_ampliable" height="150" src="MCN01_CONT_R033_Pantalla_de_edicion_torno_CNC_Fanuc_OT_mini.gif" style="margin-right: 20px" title="Pantalla de edición torno CNC Fanuc OT" width="200" /></a>Las
+pantallas de edición cambian de apariencia de un control a otro, por el
+de la foto corresponde a un control de torno CNC Fanuc OT, observa que
+permite la edición de un programa en 2 columnas. También se pueden
+abrir 2 programas para su modificación uno en cada columna. Cada vez
+que en la pantalla de edición se introduce un dato este queda
+almacenado en la memoria del CNC.
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id66">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta66_73" class="block iDevice_content">
+La selección y de un sistema CAM aporta las siguientes ventajas frente a la programación a pie de máquina.<br />
+<ul>
+	<li>Entorno de trabajo</li>
+	<li>Introducción de la geometría de la pieza</li>
+	<li>Posibilidades de simulación</li>
+	<li>Condiciones tecnológicas</li>
+	<li>Cálculo de recorrido de la herramienta</li>
+</ul>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id30">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-30_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion30_63" class="block question iDevice_content">
+<a href="MCN01_CONT_R034_Panel_de_un_CNC.gif" title="Ampliar imagen"><img align="left" alt="Imagen frontal de un CNC, pantalla, panel de programación y botonera de máquina" class="imagen_ampliable" height="150" hspace="0" src="MCN01_CONT_R034_Panel_de_un_CNC_mini.gif" style="margin-right: 20px" title="Panel de un CNC" width="200" /></a> <span class="tamano"></span>
+<div class="separador">
+</div>
+Amplia la imágen y observa con atención. ¿A qué tipo de máquina corresponde el control  de la foto?
+<div class="separador">
+</div>
+
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint30_63" class="block iDevice_content">
+<span style="font-size: x-small; font-family: helvetica">Fijate en la pantalla del CNC y cuales son los ejes...</span> 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_66" class="sr-av"><a href="#answer-30_66">Opción 1</a></label><input type="radio" name="option30_63" id="i30_66" class="exe-radio-option exe-radio-option-0-4-30_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_66"><div id="taans30_66" class="block iDevice_content">
+Torno 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_90" class="sr-av"><a href="#answer-30_90">Opción 2</a></label><input type="radio" name="option30_63" id="i30_90" class="exe-radio-option exe-radio-option-1-4-30_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_90"><div id="taans30_90" class="block iDevice_content">
+Fresadora  
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_95" class="sr-av"><a href="#answer-30_95">Opción 3</a></label><input type="radio" name="option30_63" id="i30_95" class="exe-radio-option exe-radio-option-2-4-30_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_95"><div id="taans30_95" class="block iDevice_content">
+Sierra de cinta 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_98" class="sr-av"><a href="#answer-30_98">Opción 4</a></label><input type="radio" name="option30_63" id="i30_98" class="exe-radio-option exe-radio-option-3-4-30_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_98"><div id="taans30_98" class="block iDevice_content">
+Máquina de corte por láser.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b30_63" class="feedback js-hidden">
+<div id="taf30_66" class=" iDevice_content">
+Los tornos  tienen  como ejes  lineales  solo el  X  y  Z.
+
+</div>
+</section>
+<section id="sa1b30_63" class="feedback js-hidden">
+<div id="taf30_90" class=" iDevice_content">
+Los ejes lineales de las fresadoras  son 3 espaciales. (opción C O R R E C T A )
+
+</div>
+</section>
+<section id="sa2b30_63" class="feedback js-hidden">
+<div id="taf30_95" class=" iDevice_content">
+La sierra de cinta solo tiene un movimiento , que es perpendicular a la barra que se quiere cortar.
+
+</div>
+</section>
+<section id="sa3b30_63" class="feedback js-hidden">
+<div id="taf30_98" class=" iDevice_content">
+Se usa para cortar chapa , por lo tanto el moviento del láser  es a lo largo del plano ,  solo ejes X e Y.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-30_66">Incorrecto</a><span> (<a href="#sa0b30_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-30_90">Opción correcta</a><span> (<a href="#sa1b30_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-30_95">Incorrecto</a><span> (<a href="#sa2b30_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-30_98">Incorrecto</a><span> (<a href="#sa3b30_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<br/><section class="question">
+<form name="multi-choice-form-30_101" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion30_101" class="block question iDevice_content">
+<span style="font-size: x-small; font-family: helvetica">En la pantalla aparecen los ejes X, Y, Z, U, V. Indica de la afirmaciones siguientes cual es cierta..</span> 
+
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+<div id="tahint30_101" class="block iDevice_content">
+Los ejes son de 2 tipo lineales y rotativos... en algunos fabricantes estos últimos no siguen la denominación ISO de ejes.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_104" class="sr-av"><a href="#answer-30_104">Opción 1</a></label><input type="radio" name="option30_101" id="i30_104" class="exe-radio-option exe-radio-option-0-3-30_101-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_104"><div id="taans30_104" class="block iDevice_content">
+Z, U, V son ejes rotativos ... el resto lineales.<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_110" class="sr-av"><a href="#answer-30_110">Opción 2</a></label><input type="radio" name="option30_101" id="i30_110" class="exe-radio-option exe-radio-option-1-3-30_101-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_110"><div id="taans30_110" class="block iDevice_content">
+Imposible un torno CNC no puede tener más de  2 ejes  lineales.
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i30_113" class="sr-av"><a href="#answer-30_113">Opción 3</a></label><input type="radio" name="option30_101" id="i30_113" class="exe-radio-option exe-radio-option-2-3-30_101-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-30_113"><div id="taans30_113" class="block iDevice_content">
+X,  Y son ejes lineales  , U y V rotativos <br />
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b30_101" class="feedback js-hidden">
+<div id="taf30_104" class=" iDevice_content">
+Los ejes que corresponden a las coordenadas cartesianas son siempre ejes lineales.
+
+</div>
+</section>
+<section id="sa1b30_101" class="feedback js-hidden">
+<div id="taf30_110" class=" iDevice_content">
+La presencia de herramienta motorizada en un torno  va acompañado de  1 a 3 ejes suplementarios.
+
+</div>
+</section>
+<section id="sa2b30_101" class="feedback js-hidden">
+<div id="taf30_113" class=" iDevice_content">
+Los ejes U, V corresponden al divisor  que aparece en la imagen de  la actividad <a href="MCN01_CONT_R84_0865_Plato_divisor_CNC_mini.gif" title="Plato divisor CNC de 2 ejes">21 Nomenclatura</a> <span class="tamano">(23 kb) </span>(opción C O R R E C T A ) 
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-30_104">Incorrecto</a><span> (<a href="#sa0b30_101">Retroalimentación</a>)</span></li>
+<li><a href="#answer-30_110">Incorrecto</a><span> (<a href="#sa1b30_101">Retroalimentación</a>)</span></li>
+<li><a href="#answer-30_113">Opción correcta</a><span> (<a href="#sa2b30_101">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="3_mtodos_de_generacin_de_programas.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="32_programacin_conversacional_y_cam.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

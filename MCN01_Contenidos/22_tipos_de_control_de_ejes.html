@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>2.2. Tipos de control de ejes | MEC_MCN01 Progrmacion CNC y CAM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MEC_MCN01 Progrmacion CNC y CAM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN01 Programación CNC y CAM</a></li>
+   <li><a href="1_mquinas_herramienta_dotadas_de_cnc.html" class="daddy">1. Máquinas herramienta dotadas de CNC</a>
+   <ul class="other-section">
+      <li><a href="11_qu_es_el_cnc.html" class="no-ch">1.1. ¿Qué es el CNC?</a></li>
+      <li><a href="12_ventajas_de_uso_del_cnc.html" class="no-ch">1.2. Ventajas de uso del CNC</a></li>
+      <li><a href="13_tipos_de_mquinas_con_cnc.html" class="no-ch">1.3. Tipos de máquinas con CNC</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="2_clasificacin_de_los_ejes_en_maqhta.html" class="current-page-parent daddy">2. Clasificación de los ejes en Maq-Hta</a>
+   <ul>
+      <li><a href="21_nomenclatura.html" class="no-ch">2.1. Nomenclatura</a></li>
+      <li id="active"><a href="22_tipos_de_control_de_ejes.html" class="active no-ch">2.2. Tipos de control de ejes</a></li>
+   </ul>
+   </li>
+   <li><a href="3_mtodos_de_generacin_de_programas.html" class="daddy">3. Métodos de generación de programas</a>
+   <ul class="other-section">
+      <li><a href="31_programacin_a_pie_de_mquina.html" class="no-ch">3.1. Programación a pie de máquina</a></li>
+      <li><a href="32_programacin_conversacional_y_cam.html" class="no-ch">3.2. Programación conversacional y CAM</a></li>
+      <li><a href="33_sistemas_cam.html" class="no-ch">3.3. Sistemas CAM</a></li>
+   </ul>
+   </li>
+   <li><a href="4_pasos_en_la_programacin_cnc.html" class="no-ch">4. Pasos en la programación CNC</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="21_nomenclatura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_mtodos_de_generacin_de_programas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">2.2. Tipos de control de ejes</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id24">
+<div class="iDevice emphasis0">
+<div id="ta24_77" class="block iDevice_content">
+
+<p>
+<font face="helvetica" size="2">Como consecuencia de las diferencias entre las
+máquinas a automatizar, de las dificultades técnicas en el diseño
+de las unidades de control y de condicionamientos económicos, se han
+originado diversos tipos de control numérico, que pueden ser
+clasificados en tres tipos:</font>
+</p>
+<ul>
+	<li><font face="helvetica" size="2"></font><font face="helvetica" size="2">Control numérico &quot;Punto a punto&quot;</font></li>
+	<li><font face="helvetica" size="2">Control numérico &quot;Paraxial&quot;</font>
+	</li>
+	<li><font face="helvetica" size="2">Control numérico &quot;Continuo&quot;</font></li>
+</ul>
+<h2><font face="helvetica" size="2"> Control
+numérico Punto a punto</font></h2>
+<p align="justify">
+<img src="MCN01_CONT_R026_CN-punto-a-punto_mini.gif" style="margin-right: 20px" alt="dibujo de una broca que se posiciona en diferentes puntos de una pieza" title="Control numerico punto a punto" align="left" height="200" width="170" /><font face="helvetica" size="2">
+Este
+sistema controla el posicionamiento de la herramienta en los
+sucesivos puntos donde deben efectuarse una o varias operaciones de
+mecanizado, no tiene importancia la trayectoria sino el
+posicionamiento final.</font><b><font face="helvetica" size="2">
+<div class="separador">
+</div>
+Control numérico Paraxial</font></b>
+</p>
+<p align="justify">
+<img src="MCN01_CONT_R027_CN-Paraxial_mini.gif" style="margin-right: 20px" alt="Dibujo de una fresa cilindrcia con una trayectoria cerrada formada por movimientos paralelos a los ejes" title="control numerico paraxial" align="left" height="200" width="164" /><font face="helvetica" size="2">
+Con
+este sistema, es posible controlar, además de la posición del
+elemento desplazable, la trayectoria seguida por el mismo según la
+dirección de algunos de los ejes coordenados.</font><font face="helvetica" size="2">
+<div class="separador">
+</div>
+<b>Control numérico Continuo</b></font>
+</p>
+<p align="justify">
+<img src="MCN01_CONT_R028_CN-Continuo_mini.gif" style="margin-right: 20px" alt="Fresa cilindrica que reccorre un ranura con un perfil sinuoso" title="Control numerico continua" align="left" height="200" width="163" /><font face="helvetica" size="2">
+En
+los sistemas de posicionamiento continuo, los desplazamientos del
+elemento desplazable son controlados en todo momento, de manera que
+las posiciones sucesivas del mismo deben corresponder siempre a la
+trayectoria preestablecida. 
+</font>
+</p>
+<p align="justify">
+&nbsp;
+</p>
+<p align="justify">
+&nbsp;
+</p>
+<p align="justify">
+&nbsp;
+</p>
+<p align="justify">
+<font face="helvetica" size="2"> 
+</font>
+</p>
+<br />
+<p align="justify">
+<font face="helvetica" size="2"> </font>
+</p>
+<font face="helvetica" size="2"></font>
+<p align="right">
+&nbsp;
+</p>
+<p align="justify">
+<font face="helvetica" size="2"> </font>
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice" id="id62">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta62_53" class="block iDevice_content">
+CLASIFICACIÓN DE LAS MÁQUINAS-HERRAMIENTAS.<br />
+Las máquinas-herramientas tienen la misión fundamental de dar forma a las piezas por arranque de material.<br />
+El arranque de material se realiza gracias a una fuerte presión de la herramienta sobre la superficie de la pieza, estando:<br />
+<ul>
+	<li>bien la PIEZA,</li>
+	<li>bien la HERRAMIENTA</li>
+	<li>o bien la PIEZA y la HERRAMIENTA</li>
+</ul>
+animadas de movimiento.<br />
+Según sea la naturaleza del movimiento de corte, las máquinas-herramientas se clasifican en:<br />
+<u>Máquinas-herramientas de movimiento circular.</u><br />
+<ul>
+	<li>Con el movimiento de corte en la pieza: Torno paralelo, torno vertical, ...</li>
+	<li>Con el movimiento de corte en la herramienta: Fresadora, taladradora, mandrinadora, ... </li>
+</ul>
+<p>
+<u>Máquinas-herramientas de movimiento rectilíneo:</u> Cepillo, mortajadora, brochadora,
+</p>
+<p>
+Las máquinas-herramientas de movimiento circular tienen una mayor aplicación en la industria debido a que su capacidad de arranque de material es superior a las máquinas con movimiento de corte rectilíneo y por tanto su rendimiento.<br />
+Lo mismo las máquinas de movimiento rectilíneo que las de movimiento circular se pueden &quot;controlar&quot;:
+</p>
+<ul>
+	<li>Por un operario (máquinas manuales).</li>
+	<li>Neumática, hidráulica o eléctricamente.</li>
+	<li>Mecánicamente (por ej. Mediante levas).</li>
+	<li>Por computadora (Control numérico: CN)</li>
+</ul>
+<p>
+
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper VerdaderofalsofpdIdevice em_iDevice" id="id63">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta63_57" class="block iDevice_content">
+
+
+</div>
+<section class="question">
+<form name="true-false-form-0b63" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 1</h1>
+<div id="taquestion0b63" class="block iDevice_content">
+1) ¿Las máquinas que tienen control de ejes punto a punto no necesitan un CNC?
+
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+
+</div>
+</section>
+<p class="iDevice_answer js-required">
+<label for="true0b63"><input type="radio" name="option0b63" id="true0b63" class="exe-radio-option exe-radio-option-0-2-0b63-truefalse" /> Verdadero</label> 
+<label for="false0b63"><input type="radio" name="option0b63" id="false0b63" class="exe-radio-option exe-radio-option-1-2-0b63-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s0b63" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s0b63-result" class="wrong">Falso</strong></p>
+
+
+</section>
+</section>
+<section class="question">
+<form name="true-false-form-1b63" action="#" class="activity-form">
+<h1 class="js-sr-av">Pregunta 2</h1>
+<div id="taquestion1b63" class="block iDevice_content">
+2) Todas las máquinas dotadas con CNC disponen de los ejes rotativos A, B, C 
+
+</div>
+<section class="iDevice_hint">
+<h1 class="iDevice_hint_title">Sugerencia</h1>
+<div class="iDevice_hint_content js-hidden">
+
+</div>
+</section>
+<p class="iDevice_answer js-required">
+<label for="true1b63"><input type="radio" name="option1b63" id="true1b63" class="exe-radio-option exe-radio-option-0-2-1b63-truefalse" /> Verdadero</label> 
+<label for="false1b63"><input type="radio" name="option1b63" id="false1b63" class="exe-radio-option exe-radio-option-1-2-1b63-truefalse" /> Falso</label>
+</p>
+</form>
+<section id="s1b63" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<p><strong id="s1b63-result" class="wrong">Falso</strong></p>
+
+
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="21_nomenclatura.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="3_mtodos_de_generacin_de_programas.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

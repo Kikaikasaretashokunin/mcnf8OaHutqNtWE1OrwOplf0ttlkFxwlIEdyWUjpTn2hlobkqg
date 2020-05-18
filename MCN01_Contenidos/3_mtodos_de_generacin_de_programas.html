@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3. Métodos de generación de programas | MEC_MCN01 Progrmacion CNC y CAM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-9"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MEC_MCN01 Progrmacion CNC y CAM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN01 Programación CNC y CAM</a></li>
+   <li><a href="1_mquinas_herramienta_dotadas_de_cnc.html" class="daddy">1. Máquinas herramienta dotadas de CNC</a>
+   <ul class="other-section">
+      <li><a href="11_qu_es_el_cnc.html" class="no-ch">1.1. ¿Qué es el CNC?</a></li>
+      <li><a href="12_ventajas_de_uso_del_cnc.html" class="no-ch">1.2. Ventajas de uso del CNC</a></li>
+      <li><a href="13_tipos_de_mquinas_con_cnc.html" class="no-ch">1.3. Tipos de máquinas con CNC</a></li>
+   </ul>
+   </li>
+   <li><a href="2_clasificacin_de_los_ejes_en_maqhta.html" class="daddy">2. Clasificación de los ejes en Maq-Hta</a>
+   <ul class="other-section">
+      <li><a href="21_nomenclatura.html" class="no-ch">2.1. Nomenclatura</a></li>
+      <li><a href="22_tipos_de_control_de_ejes.html" class="no-ch">2.2. Tipos de control de ejes</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="3_mtodos_de_generacin_de_programas.html" class="active daddy">3. Métodos de generación de programas</a>
+   <ul>
+      <li><a href="31_programacin_a_pie_de_mquina.html" class="no-ch">3.1. Programación a pie de máquina</a></li>
+      <li><a href="32_programacin_conversacional_y_cam.html" class="no-ch">3.2. Programación conversacional y CAM</a></li>
+      <li><a href="33_sistemas_cam.html" class="no-ch">3.3. Sistemas CAM</a></li>
+   </ul>
+   </li>
+   <li><a href="4_pasos_en_la_programacin_cnc.html" class="no-ch">4. Pasos en la programación CNC</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="22_tipos_de_control_de_ejes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_programacin_a_pie_de_mquina.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3. Métodos de generación de programas</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id54">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta54_69" class="block iDevice_content">
+<p>
+<img align="left" alt="Jacinto panteando la cuestión de esta actividad" height="200" src="MCN01_CONT_R87_Jacinto_(1024)_mini.gif" style="margin-right: 20px" title="Jacinto - Jefe de taller" width="150" />
+</p>
+<p>
+Jacinto
+se entrevisto con Luis para recibir ofertas de maquinas dotadas de CNC,
+pero le surge una duda que quiere discutir con Rosa y Manu.<br />
+Ya que
+piensa que al estar más cualificados pueden ayudarle mejor en esta
+decisión. Además en el futuro si hay que formar a alguien en CNC u
+otros estos serían los primeros.<br />
+<br />
+<strong>Jacinto</strong>:
+Para programar máquinas CNC en la actualidad se dispone de varios
+métodos de programación que ofrecen menor o mayor ayuda en la
+programación. Pero ¿Cual nos conviene usar?
+</p>
+<div class="separador">
+</div>
+<p>
+&nbsp;
+</p>
+<p>
+<img align="right" alt="Rosa Operario, chica adolescente con cincha negra en el pelo y melena recojida con coleta" height="200" src="MCN01_CONT_R029_Rosa_mini.JPG" style="margin-left: 20px" title="Rosa " width="142" /><strong>Rosa: </strong>Podemos elegir entre
+programación ISO, ayudas a la programación tipo conversacional, o
+hacer los programas en el ordenador (CAM). Con  software CAM se
+pueden mecanizar todo tipo de piezas, y además el mismo software te
+vale para torno y fresadora ..
+</p>
+<p style="margin-bottom: 0cm">
+<br />
+</p>
+<p>
+<strong>Manu: </strong>Tendremos que elegir un
+método de trabajo estableciendo unos criterios mínimos. Los
+software CAM son caros y se precisa muchos conocimientos. Por otro
+lado nuestras piezas son sencillas.. no me parece que necesiten
+requisitos muy específicos.
+</p>
+<p>
+Además como en este momento
+desconocemos la programación CNC empezar con programar CAM es
+excesivo... pero quizás con la experiencia en CNC que tomaremos en
+unos años nos podemos platear otros métodos de trabajo.
+</p>
+<div class="separador">
+</div>
+<p>
+&nbsp;
+</p>
+<p>
+<img align="left" alt="Manu Operario, con cierta experiencia y que trabaja de manera autónoma." height="200" src="MCN01_CONT_R030_Manu_mini.gif" style="margin-right: 20px" title="Manu operario" width="144" /><strong>Rosa</strong>: Si por el momento nuestras piezas son sencillas, de hecho las estamos mecanizando en fresadoras y tornos <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Convencionales%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Convencionales%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Convencionales&quot; (Se abre en una nueva ventana)">convencionales</a>, pero no considerar en el futuro otras alternativas puede ser un error.<br />
+<br />
+<strong>Jacinto</strong>:
+Hay que tener también en cuenta el costo final, la adquisición de
+máquinas CNC y software hoy en día no es viable para APARDOA.. por el
+momento es prioritario la adquisición de máquinas CNC con ayudas en
+pantalla para la programación.<br />
+<br />
+<strong>Manu</strong>: Eso, eso ... que la programación a pie de máquina sea sencilla y rápida. Vale.
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper DestacadofpdIdevice" id="id27">
+<div class="iDevice emphasis0" >
+<div class="iDevice_destacadofpd">
+<div id="ta27_73" class="block iDevice_content">
+
+<p>
+Existe tres métodos para generar un programa CNC; Escribirlo en el panel de control, utilizar pantallas de ayuda y dejar que el CAM (software para ordenador) genere el programa CNC.
+</p>
+<p>
+De estos tres el presente curso tiene como objetivo el primer método, aprender la programación de programación CNC para escribir el código directamente en el panel. 
+</p>
+
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice" id="id65">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta65_53" class="block iDevice_content">
+<img src="MCN01_CONT_R030_1_MasterCam_mini.png" alt="En la imagen puedes apreciar el dibujo de una fresa y una pieza mecanizada según el programa CAM." title="Programa CAM" style="margin-right: 20px" align="left" height="194" width="200" /> La ingeniería CAM hace referencia concretamente a aquellos sistemas informáticos que ayudan a generar los programas de Control Numérico necesarios para fabricar las piezas en máquinas con CNC. A partir de la información de la geometría de la pieza, del tipo de operación deseada, de la herramienta escogida y de las condiciones de corte definidas, el sistema calcula las trayectorias de la herramienta para conseguir el mecanizado correcto, y a través de un postprocesado genera los correspondientes programas de CN con la codificación especifica del CNC donde se ejecutarán. En general, la información geométrica de la pieza proviene de un sistema CAD, que puede estar o no integrado con el sistema CAM . Si no está integrado, dicha información geométrica se pasa a través de un formato común de intercambio gráfico. Como alternativa, algunos sistemas CAM disponen de herramientas CAD que permiten al usuario introducir directamente la geometría de la pieza, si bien en general no son tan ágiles como las herramientas de un sistema propiamente de CAD .
+<p>
+Algunos sistemas CAM permiten introducir la información geométrica de la pieza partiendo de una nube de puntos correspondientes a la superficie de la pieza, obtenidos mediante un proceso de digitalizado previo . La calidad de las superficies mecanizadas depende de la densidad de puntos digitalizados. Si bien este método acorta el tiempo necesario para fabricar el prototipo, en principio no permite el rediseño de la pieza inicial.
+</p>
+
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="22_tipos_de_control_de_ejes.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="31_programacin_a_pie_de_mquina.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

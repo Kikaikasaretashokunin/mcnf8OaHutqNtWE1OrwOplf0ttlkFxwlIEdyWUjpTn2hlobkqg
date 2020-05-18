@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.5.7. Resumen | MCN02 PROGRAMACION DE TORNO CNC </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-59"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN02 PROGRAMACION DE TORNO CNC</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN02 Programación de torno CNC</a></li>
+   <li class="current-page-parent"><a href="1_programacin_bsica.html" class="current-page-parent daddy">1. Programación básica</a>
+   <ul>
+      <li><a href="11_introduccin_a_la_programacin_cnc.html" class="daddy">1.1. Introducción a la programación CNC</a>
+      <ul class="other-section">
+         <li><a href="111_estructura_de_un_programa_cnc.html" class="no-ch">1.1.1. Estructura de un programa CNC</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2. G Funciones preparatorias</a></li>
+         <li><a href="113_ejes_y_coordenadas_del_torno.html" class="no-ch">1.1.3. Ejes y coordenadas del torno.</a></li>
+         <li><a href="114_programacin_de_cotas_en_torno.html" class="no-ch">1.1.4. Programación de cotas en torno.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5. F avance de hta y S giro del cabezal</a></li>
+         <li><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="no-ch">1.1.6. T Selección de hta y sus dimensiones.</a></li>
+         <li><a href="117_informacin_geomtrica_y_tecnolgica.html" class="no-ch">1.1.7. Información geométrica y tecnológica</a></li>
+         <li><a href="118_cambio_de_herramienta_y_proceso_de_mecanizado.html" class="no-ch">1.1.8. Cambio de herramienta y proceso de mecanizado</a></li>
+      </ul>
+      </li>
+      <li><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="daddy">1.2. Revisar y modificar datos de un PGM</a>
+      <ul class="other-section">
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores.</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2. Modificar T, F, S de un programa.</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3. Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_funciones_auxiliares.html" class="daddy">1.3. Funciones auxiliares</a>
+      <ul class="other-section">
+         <li><a href="131_m_del_programa_y_de_mquina.html" class="no-ch">1.3.1. M del programa y de máquina</a></li>
+         <li><a href="132_m_del_cabezal.html" class="no-ch">1.3.2. M del cabezal.</a></li>
+         <li><a href="133_posicin_de_la_herramienta_y_sentido_de_giro.html" class="no-ch">1.3.3. Posición de la herramienta y sentido de giro</a></li>
+      </ul>
+      </li>
+      <li><a href="14_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.4. Sistemas de referencia y coordenadas</a>
+      <ul class="other-section">
+         <li><a href="141_puntos_de_referencia_del_torno.html" class="no-ch">1.4.1. Puntos de referencia del torno.</a></li>
+         <li><a href="142_establecimiento_de_orgenes_pieza.html" class="no-ch">1.4.2. Establecimiento de orígenes pieza.</a></li>
+         <li><a href="143_tablas_de_orgenes.html" class="no-ch">1.4.3. Tablas de orígenes.</a></li>
+         <li><a href="144_programacin_de_cotas.html" class="no-ch">1.4.4. Programación de cotas.</a></li>
+         <li><a href="145_cotas_absolutas_e_incrementales.html" class="no-ch">1.4.5. Cotas absolutas e incrementales.</a></li>
+         <li><a href="146_cotas_incrementales.html" class="no-ch">1.4.6. Cotas incrementales.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="15_movimientos_lineales.html" class="current-page-parent daddy">1.5. Movimientos lineales</a>
+      <ul>
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1. G00 de posicionamiento rápido.</a></li>
+         <li><a href="152_g01_de_trabajo.html" class="no-ch">1.5.2. G01 de trabajo.</a></li>
+         <li><a href="153_programacin_movimientos.html" class="no-ch">1.5.3. Programación movimientos.</a></li>
+         <li><a href="154_combinacin_de_movimientos.html" class="no-ch">1.5.4. Combinación de movimientos.</a></li>
+         <li><a href="155_programacin_con_coordenadas_mixtas.html" class="no-ch">1.5.5. Programación con coordenadas mixtas.</a></li>
+         <li><a href="156_sentido_positivo_del_ngulo.html" class="no-ch">1.5.6. Sentido positivo del ángulo</a></li>
+         <li id="active"><a href="157_resumen.html" class="active no-ch">1.5.7. Resumen</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6. Programación de arcos dado su centro</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_las_coordenadas_del_centro.html" class="no-ch">1.6.1. Calculo de las coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_en_arcos.html" class="no-ch">1.6.2. Programación incremental en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_simulacin_cnc.html" class="daddy">1.8. Simulación CNC</a>
+      <ul class="other-section">
+         <li><a href="181_a_pie_de_torno.html" class="no-ch">1.8.1. A pie de torno</a></li>
+         <li><a href="182_uso_de_simuladores.html" class="no-ch">1.8.2. Uso de simuladores</a></li>
+         <li><a href="183_deteccin_de_errres.html" class="no-ch">1.8.3. Detección de erróres.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2__funciones_adicionales_de_torno.html" class="daddy">2.  Funciones adicionales de torno</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_la_herramienta.html" class="daddy">2.1. Compensación del radio de la herramienta</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1. Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2. Errores frecuentes.</a></li>
+      </ul>
+      </li>
+      <li><a href="22__mecanizado_de_aristas.html" class="daddy">2.2.  Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_y_contorneado_en_aristas.html" class="no-ch">2.2.1. Parada exacta y contorneado en aristas.</a></li>
+         <li><a href="222_aristas_achaflanadas.html" class="no-ch">2.2.2. Aristas achaflanadas.</a></li>
+         <li><a href="223_radios_de_acuerdo.html" class="no-ch">2.2.3. Radios de acuerdo.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4. Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5. Errores frecuentes.</a></li>
+         <li><a href="226_mecanizado_de_aristas_en_cotas_mixtas.html" class="no-ch">2.2.6. Mecanizado de aristas en cotas mixtas.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7. Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_temporizacin.html" class="no-ch">2.3. Temporización.</a></li>
+   </ul>
+   </li>
+   <li><a href="3_programacin_de_ciclos_fijos_de_torno.html" class="daddy">3. Programación de ciclos fijos de torno</a>
+   <ul class="other-section">
+      <li><a href="31_los_ciclos_fijos_de_torno.html" class="daddy">3.1. Los ciclos fijos de torno.</a>
+      <ul class="other-section">
+         <li><a href="311_parmetros_y_funcionamiento_comunes.html" class="no-ch">3.1.1. Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_ciclo_fijo_de_taladrado_axial.html" class="daddy">3.2. Ciclo fijo de taladrado axial.</a>
+      <ul class="other-section">
+         <li><a href="321_programacin.html" class="no-ch">3.2.1. Programación.</a></li>
+         <li><a href="322_funcionamiento.html" class="no-ch">3.2.2. Funcionamiento.</a></li>
+         <li><a href="323_consideraciones_sobre_el_ciclo.html" class="no-ch">3.2.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="324_predesbaste_secuenciando_taladrados.html" class="no-ch">3.2.4. Pre-desbaste secuenciando taladrados.</a></li>
+         <li><a href="325_taladrados_mediante_broca_de_placa.html" class="no-ch">3.2.5. Taladrados mediante broca de placa.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_desbaste_de_perfiles_por_torneados.html" class="daddy">3.3. Desbaste de perfiles por torneados.</a>
+      <ul class="other-section">
+         <li><a href="331_programacin.html" class="no-ch">3.3.1. Programación.</a></li>
+         <li><a href="332__funcionamiento.html" class="no-ch">3.3.2.  Funcionamiento.</a></li>
+         <li><a href="333_consideraciones_sobre_el_ciclo.html" class="no-ch">3.3.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="334_sintaxis_de_programacin_de_perfiles.html" class="no-ch">3.3.4 Sintaxis de programación de perfiles.</a></li>
+         <li><a href="335_perfiles_exteriores_y_montonos.html" class="no-ch">3.3.5. Perfiles exteriores y monótonos.</a></li>
+         <li><a href="336_perfiles_interiores_y_montonos.html" class="no-ch">3.3.6. Perfiles interiores y monótonos.</a></li>
+         <li><a href="337_perfiles_exteriores_con_cuellos.html" class="no-ch">3.3.7. Perfiles exteriores con cuellos.</a></li>
+         <li><a href="338_perfiles_interiores_con_cuellos.html" class="no-ch">3.3.8. Perfiles interiores con cuellos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_desbaste_de_perfiles_por_refrentados.html" class="daddy">3.4. Desbaste de perfiles por refrentados.</a>
+      <ul class="other-section">
+         <li><a href="341_programacin.html" class="no-ch">3.4.1. Programación.</a></li>
+         <li><a href="342_funcionamiento.html" class="no-ch">3.4.2. Funcionamiento.</a></li>
+         <li><a href="343_consideraciones_sobre_el_ciclo.html" class="no-ch">3.4.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="344_sintaxis_de_programacin_de_perfiles.html" class="no-ch">3.4.4. Sintaxis de programación de perfiles.</a></li>
+         <li><a href="345_perfiles_exteriores_y_montonos.html" class="no-ch">3.4.5. Perfiles exteriores y monótonos.</a></li>
+         <li><a href="346_perfiles_interiores_y_montonos.html" class="no-ch">3.4.6. Perfiles interiores y monótonos.</a></li>
+         <li><a href="347_perfiles_exteriores_con_cuellos.html" class="no-ch">3.4.7. Perfiles exteriores con cuellos.</a></li>
+         <li><a href="348_perfiles_interiores_con_cuellos.html" class="no-ch">3.4.8. Perfiles interiores con cuellos.</a></li>
+      </ul>
+      </li>
+      <li><a href="35_ciclo_fijo_de_roscado_axial_con_macho.html" class="daddy">3.5. Ciclo fijo de roscado axial con macho.</a>
+      <ul class="other-section">
+         <li><a href="351_programacin.html" class="no-ch">3.5.1. Programación.</a></li>
+         <li><a href="352_funcionamiento.html" class="no-ch">3.5.2. Funcionamiento.</a></li>
+         <li><a href="353_consideraciones_sobre_el_ciclo.html" class="no-ch">3.5.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="354_roscado_axial__agujeros_previos.html" class="no-ch">3.5.4. Roscado axial - Agujeros previos.</a></li>
+         <li><a href="355_roscado_rgido.html" class="no-ch">3.5.5. Roscado rígido.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_ciclo_fijo_de_ranurado_radial.html" class="daddy">3.6. Ciclo fijo de ranurado radial.</a>
+      <ul class="other-section">
+         <li><a href="361_programacin.html" class="no-ch">3.6.1 Programación.</a></li>
+         <li><a href="362_funcionamiento.html" class="no-ch">3.6.2. Funcionamiento.</a></li>
+         <li><a href="363_consideraciones_sobre_el_ciclo.html" class="no-ch">3.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="364_ranurado_exterior.html" class="no-ch">3.6.4. Ranurado exterior.</a></li>
+         <li><a href="365_ranurado_interior.html" class="no-ch">3.6.5 Ranurado interior.</a></li>
+         <li><a href="366_disposiciones_de_ranuras_casos.html" class="no-ch">3.6.6. Disposiciones de ranuras, casos.</a></li>
+         <li><a href="367_acabado_de_ranuras_radiales.html" class="no-ch">3.6.7. Acabado de ranuras radiales.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_ciclo_fijo_de_ranurado_frontales.html" class="daddy">3.7. Ciclo fijo de ranurado frontales.</a>
+      <ul class="other-section">
+         <li><a href="371_programacin.html" class="no-ch">3.7.1. Programación.</a></li>
+         <li><a href="372_funcionamiento.html" class="no-ch">3.7.2. Funcionamiento.</a></li>
+         <li><a href="373_consideraciones_sobre_el_ciclo.html" class="no-ch">3.7.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="374_acabado_de_ranuras_frontales.html" class="no-ch">3.7.4. Acabado de ranuras frontales.</a></li>
+      </ul>
+      </li>
+      <li><a href="38_ciclo_fijo_de_roscado_longitudinal.html" class="daddy">3.8. Ciclo fijo de roscado longitudinal</a>
+      <ul class="other-section">
+         <li><a href="381_programacin.html" class="no-ch">3.8.1. Programación.</a></li>
+         <li><a href="382_funcionamiento.html" class="no-ch">3.8.2. Funcionamiento.</a></li>
+         <li><a href="383_consideraciones_sobre_el_ciclo.html" class="no-ch">3.8.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="384_roscas_a_derechas_y_a_izquierdas.html" class="no-ch">3.8.4. Roscas a derechas y a izquierdas.</a></li>
+         <li><a href="385_roscas_cilndricas_exteriores.html" class="no-ch">3.8.5. Roscas cilíndricas exteriores.</a></li>
+         <li><a href="386_roscas_cilndricas_interiores.html" class="no-ch">3.8.6. Roscas cilíndricas interiores.</a></li>
+         <li><a href="387__roscas_cnicas.html" class="no-ch">3.8.7  Roscas cónicas.</a></li>
+      </ul>
+      </li>
+      <li><a href="39__secuencia_de_operaciones_en_torno.html" class="daddy">3.9.  Secuencia de operaciones en torno.</a>
+      <ul class="other-section">
+         <li><a href="391_dobles_atadas.html" class="no-ch">3.9.1. Dobles atadas.</a></li>
+         <li><a href="392_resumen.html" class="no-ch">3.9.2. Resumen.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexolicencias_de_recursos.html" class="no-ch">Anexo.-Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="156_sentido_positivo_del_ngulo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_programacin_de_arcos_dado_su_centro.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.5.7. Resumen</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id135">
+<div class="iDevice emphasis0">
+<div id="ta135_77" class="block iDevice_content">
+En los siguientes casos indica cuál es el bloque de programación que
+corresponde con la descripción de la operación de mecanizado a realizar
+si se dispone de las siguientes herramientas en la torreta del torno
+CNC.
+<p>
+<br />
+Prueba las diferentes opciones, hasta obtener la solución correcta.
+</p>
+<p>
+T01D01 herramientas de desbaste interior.<br />
+T02D02 herramientas de roscado exterior.<br />
+T03 D03 herramientas de roscado interior.<br />
+T04 D04 herramientas de ranurado exterior.<br />
+T05 D05 herramientas de ranurado interior.<br />
+T06 D06 herramientas de acabado exterior.<br />
+T07 D07 broca de placas de metal duro.<br />
+T08 D08 herramientas de desbaste exterior.<br />
+T09 D09 herramientas de acabado interior.<br />
+T10 D10 herramientas de ranurado frontal.  
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id134">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-134_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion134_63" class="block question iDevice_content">
+Caso 1: Especificaciones.<br />
+<p>
+Se desea programar la operación de acabado de un perfil exterior bajo las siguientes condiciones:
+</p>
+<p>
+Velocidad de corte 200 m/min. <br />
+Avance F0.2 mm/rev. <br />
+Se usa como refrigerante aceite de corte. <br />
+Para hacer el mecanizado el cabezal gira hacia la izquierda. 
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_66" class="sr-av"><a href="#answer-134_66">Opción 1</a></label><input type="radio" name="option134_63" id="i134_66" class="exe-radio-option exe-radio-option-0-5-134_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_66"><div id="taans134_66" class="block iDevice_content">
+N10 G97 G96 F0.2 S200 T08D08 M04
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_110" class="sr-av"><a href="#answer-134_110">Opción 2</a></label><input type="radio" name="option134_63" id="i134_110" class="exe-radio-option exe-radio-option-1-5-134_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_110"><div id="taans134_110" class="block iDevice_content">
+N20 G95 G96 S200 F0.2 T08D08 M03 M08<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_113" class="sr-av"><a href="#answer-134_113">Opción 3</a></label><input type="radio" name="option134_63" id="i134_113" class="exe-radio-option exe-radio-option-2-5-134_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_113"><div id="taans134_113" class="block iDevice_content">
+N30 G94 G97 F0.2 S200 T08D08 M04 M08 <br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_119" class="sr-av"><a href="#answer-134_119">Opción 4</a></label><input type="radio" name="option134_63" id="i134_119" class="exe-radio-option exe-radio-option-3-5-134_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_119"><div id="taans134_119" class="block iDevice_content">
+N40 G96 F0.2 S200 T06D06 M04 M08
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_122" class="sr-av"><a href="#answer-134_122">Opción 5</a></label><input type="radio" name="option134_63" id="i134_122" class="exe-radio-option exe-radio-option-4-5-134_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_122"><div id="taans134_122" class="block iDevice_content">
+<span name="G01choice5">N50 G95 G96 S200 T06D06 M04 M08</span><span name="G01choice5"><br />
+</span>
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b134_63" class="feedback js-hidden">
+<div id="taf134_66" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa1b134_63" class="feedback js-hidden">
+<div id="taf134_110" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa2b134_63" class="feedback js-hidden">
+<div id="taf134_113" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa3b134_63" class="feedback js-hidden">
+<div id="taf134_119" class=" iDevice_content">
+
+<p>
+<b>
+Respuesta correcta</b>
+</p>
+<p>
+&nbsp;
+</p>
+
+</div>
+</section>
+<section id="sa4b134_63" class="feedback js-hidden">
+<div id="taf134_122" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-134_66">Incorrecto</a><span> (<a href="#sa0b134_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_110">Incorrecto</a><span> (<a href="#sa1b134_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_113">Incorrecto</a><span> (<a href="#sa2b134_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_119">Opción correcta</a><span> (<a href="#sa3b134_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_122">Incorrecto</a><span> (<a href="#sa4b134_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<br/><section class="question">
+<form name="multi-choice-form-134_125" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion134_125" class="block question iDevice_content">
+Caso 2: Especificaciones.
+<p>
+Se desea mecanizar una rosca interior M25. <br />
+Para seleccionar la plaquita de roscar adecuada se consulta un catálogo, obteniendo que la velocidad de corte es Vc=50 m/minuto, además el fabricante de la plaquita de roscar recomienda no usar refrigerante. <br />
+El cabezal para el roscado debe girar hacia la derecha. <br />
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_128" class="sr-av"><a href="#answer-134_128">Opción 1</a></label><input type="radio" name="option134_125" id="i134_128" class="exe-radio-option exe-radio-option-0-5-134_125-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_128"><div id="taans134_128" class="block iDevice_content">
+N10 G96 S50 T03D03 M03
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_131" class="sr-av"><a href="#answer-134_131">Opción 2</a></label><input type="radio" name="option134_125" id="i134_131" class="exe-radio-option exe-radio-option-1-5-134_125-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_131"><div id="taans134_131" class="block iDevice_content">
+N20 G97 S50 T01D01 M03<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_134" class="sr-av"><a href="#answer-134_134">Opción 3</a></label><input type="radio" name="option134_125" id="i134_134" class="exe-radio-option exe-radio-option-2-5-134_125-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_134"><div id="taans134_134" class="block iDevice_content">
+N30 G97 S636 T03D03 M03M09<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_137" class="sr-av"><a href="#answer-134_137">Opción 4</a></label><input type="radio" name="option134_125" id="i134_137" class="exe-radio-option exe-radio-option-3-5-134_125-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_137"><div id="taans134_137" class="block iDevice_content">
+N40 G96 S636 T03 D03 M08<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_140" class="sr-av"><a href="#answer-134_140">Opción 5</a></label><input type="radio" name="option134_125" id="i134_140" class="exe-radio-option exe-radio-option-4-5-134_125-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_140"><div id="taans134_140" class="block iDevice_content">
+<span name="G02choice5">N50 G97 S636 T03 D03 M04</span><span name="G02choice5"><br />
+</span>
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b134_125" class="feedback js-hidden">
+<div id="taf134_128" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa1b134_125" class="feedback js-hidden">
+<div id="taf134_131" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa2b134_125" class="feedback js-hidden">
+<div id="taf134_134" class=" iDevice_content">
+<b>Respuesta correcta</b>
+
+</div>
+</section>
+<section id="sa3b134_125" class="feedback js-hidden">
+<div id="taf134_137" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa4b134_125" class="feedback js-hidden">
+<div id="taf134_140" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-134_128">Incorrecto</a><span> (<a href="#sa0b134_125">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_131">Incorrecto</a><span> (<a href="#sa1b134_125">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_134">Opción correcta</a><span> (<a href="#sa2b134_125">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_137">Incorrecto</a><span> (<a href="#sa3b134_125">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_140">Incorrecto</a><span> (<a href="#sa4b134_125">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<br/><section class="question">
+<form name="multi-choice-form-134_78" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion134_78" class="block question iDevice_content">
+Caso 3: Especificaciones.
+<p>
+Se procede a taladrar una pieza con una broca de placas de metal duro. 
+</p>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_81" class="sr-av"><a href="#answer-134_81">Opción 1</a></label><input type="radio" name="option134_78" id="i134_81" class="exe-radio-option exe-radio-option-0-5-134_78-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_81"><div id="taans134_81" class="block iDevice_content">
+N10 G96 S3500 T04 D04 M03 M08<br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_84" class="sr-av"><a href="#answer-134_84">Opción 2</a></label><input type="radio" name="option134_78" id="i134_84" class="exe-radio-option exe-radio-option-1-5-134_78-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_84"><div id="taans134_84" class="block iDevice_content">
+N20 G97 F0.13 S1200 T07 D07 M04 M08
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_87" class="sr-av"><a href="#answer-134_87">Opción 3</a></label><input type="radio" name="option134_78" id="i134_87" class="exe-radio-option exe-radio-option-2-5-134_78-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_87"><div id="taans134_87" class="block iDevice_content">
+N30 G94 G97 F0.2 S1200 T01D01 M04 
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_90" class="sr-av"><a href="#answer-134_90">Opción 4</a></label><input type="radio" name="option134_78" id="i134_90" class="exe-radio-option exe-radio-option-3-5-134_78-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_90"><div id="taans134_90" class="block iDevice_content">
+N40 G96 S1200 T07 D07; M04
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i134_93" class="sr-av"><a href="#answer-134_93">Opción 5</a></label><input type="radio" name="option134_78" id="i134_93" class="exe-radio-option exe-radio-option-4-5-134_78-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-134_93"><div id="taans134_93" class="block iDevice_content">
+N50 T07D07 N60 G97 F0.1 S850 M03<br />
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b134_78" class="feedback js-hidden">
+<div id="taf134_81" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa1b134_78" class="feedback js-hidden">
+<div id="taf134_84" class=" iDevice_content">
+
+<p>
+<b>
+Respuesta correcta:</b>
+</p>
+<p>
+Los taladrados siempre se realizan a r.p.m. constantes, que se programa con un G97. <br />
+Según lista de herramientas la broca corresponde a la herramienta T07D07. <br />
+El giro del cabezal cuando se realiza el taladrado es siempre hacia la izquierda. Observa en la imagen que en el filo de plaquita (en negro) debe incidir el material a cortar. En los taladrados y según el convenio adoptado para el sentido de giro de cabezal (M03 a derechas 0602-017.JPG) se concluye que el sentido de giro correcto corresponde a un M04. <br />
+El uso de refrigerante para taladrados con brocas de acero rápido es recomendable, por lo tanto se activa refrigerante con M08. <br />
+</p>
+
+</div>
+</section>
+<section id="sa2b134_78" class="feedback js-hidden">
+<div id="taf134_87" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa3b134_78" class="feedback js-hidden">
+<div id="taf134_90" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+<section id="sa4b134_78" class="feedback js-hidden">
+<div id="taf134_93" class=" iDevice_content">
+Respuesta incorrecta
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-134_81">Incorrecto</a><span> (<a href="#sa0b134_78">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_84">Opción correcta</a><span> (<a href="#sa1b134_78">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_87">Incorrecto</a><span> (<a href="#sa2b134_78">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_90">Incorrecto</a><span> (<a href="#sa3b134_78">Retroalimentación</a>)</span></li>
+<li><a href="#answer-134_93">Incorrecto</a><span> (<a href="#sa4b134_78">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EjercicioresueltofpdIdevice em_iDevice" id="id137">
+<div class="iDevice emphasis_ejercicioresueltofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Ejercicio resuelto</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section id="ta137_70" class="block story iDevice_content">
+
+<p>
+&nbsp;
+</p>
+<div class="elemento_centrado">
+<div>
+<a href="MCN02_CONT_R082_Resumen_G00_G01.gif" title="Plano de una pieza"><img src="MCN02_CONT_R082_Resumen_G00_G01_mini.gif" class="imagen_ampliable" alt="Dibujo de una pieza de torno con su correspondiente acotación lineal." title="Plano de una pieza" height="137" width="200" /></a> <img src="MCN02_CONT_R083_Representacion_Resumen_G00_G01_mini.gif" alt="Representación en perspectiva de una pieza de torno." title="Representación 3D" height="127" width="200" />
+</div>
+</div>
+<p>
+&nbsp;
+</p>
+<table style="height: 75px" class="tabla" align="center" border="1" cellpadding="0" cellspacing="0" width="765">
+	<tbody>
+		<tr style="height: 5px">
+			<td align="right" valign="top" width="52">
+			<div align="center">
+			</div>
+			<p align="center">
+			OP Nº
+			</p>
+			</td>
+			<td align="right" valign="top" width="113">
+			<div align="center">
+			</div>
+			<p align="center">
+			Denominación
+			</p>
+			</td>
+			<td align="right" valign="top" width="57">
+			<div align="center">
+			</div>
+			<p align="center">
+			HTA
+			</p>
+			</td>
+			<td colspan="2" align="right" valign="top" width="85">
+			<div align="center">
+			</div>
+			<p align="center">
+			V. Corte 
+			</p>
+			</td>
+			<td colspan="2" align="right" valign="top" width="113">
+			<div align="center">
+			</div>
+			<p align="center">
+			Avance 
+			</p>
+			</td>
+			<td valign="top" width="161">
+			<div align="center">
+			</div>
+			<p align="center">
+			Observaciones
+			</p>
+			</td>
+		</tr>
+		<tr style="height: 5px">
+			<td align="center" valign="top" width="52">
+			<p>
+			1
+			</p>
+			</td>
+			<td align="center" valign="top" width="113">
+			<p>
+			Refrentado
+			</p>
+			</td>
+			<td align="center" valign="top" width="57">
+			<p>
+			T01D01
+			</p>
+			</td>
+			<td align="center" valign="top" width="38">
+			<p>
+			200
+			</p>
+			</td>
+			<td align="left" valign="top" width="47">
+			<p>
+			m/min.
+			</p>
+			</td>
+			<td align="right" valign="top" width="47">
+			<p>
+			0.2
+			</p>
+			</td>
+			<td align="left" valign="top" width="66">
+			<p>
+			mm/rev.
+			</p>
+			</td>
+			<td valign="top" width="161">
+			<p>
+			&nbsp;
+			</p>
+			</td>
+		</tr>
+		<tr style="height: 5px">
+			<td align="center" valign="top" width="52">
+			<p>
+			2
+			</p>
+			</td>
+			<td align="center" valign="top" width="113">
+			<p>
+			Desbaste
+			</p>
+			</td>
+			<td align="center" valign="top" width="57">
+			<p>
+			T01D01
+			</p>
+			</td>
+			<td align="center" valign="top" width="38">
+			<p>
+			200
+			</p>
+			</td>
+			<td align="left" valign="top" width="47">
+			<p>
+			m/min.
+			</p>
+			</td>
+			<td align="right" valign="top" width="47">
+			<p>
+			0.2
+			</p>
+			</td>
+			<td align="left" valign="top" width="66">
+			<p>
+			mm/rev.
+			</p>
+			</td>
+			<td valign="top" width="161">
+			<p>
+			&nbsp;
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+&nbsp;
+</p>
+
+</section>
+<section id="taquesQuestion0b137" class="block iDevice_content">
+
+<p>
+Realiza el programa CNC de esta pieza, usando para ello las funciones vistas hasta a hora.
+</p>
+<p>
+Material en bruto: Barra de aluminio Ø30 x L51 mm
+</p>
+
+</section>
+<form name="feedback-form-quesFeedback0b137" action="#" onsubmit="return false" class="feedback-form">
+<div class="block iDevice_buttons feedback-button js-required">
+<p><script type="text/javascript">var feedbackquesFeedback0b137text = "Mostrar retroalimentación";</script><input type="button" name="toggle-feedback-quesFeedback0b137" value="Mostrar retroalimentación" class="feedbackbutton feedback-toggler" /></p>
+</div>
+<section id="feedback-quesFeedback0b137" class="feedback js-feedback js-hidden">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+<table class="tabla" border="0">
+	<tbody>
+		<tr>
+			<td><b> FAGOR</b></td>
+			<td><b>FANUC <br />
+			</b>
+			</td>
+		</tr>
+		<tr>
+			<td> N20 G54<br />
+			N30 G95 G96 F0.2 S200 T1 D1 M3<br />
+			N40 G00 X35 Z0<br />
+			N50 G01 X-1<br />
+			N60 G00 X10 Z2<br />
+			N70 G01 Z-10<br />
+			N80 X22 Z-20<br />
+			N90 Z-35<br />
+			N100 X30 Z-40<br />
+			N110 G00 X25 Z100<br />
+			N120 M30</td>
+			<td> N20 G54<br />
+			N30 G95 G96 F0.2 S200 T0101 M3<br />
+			N40 G00 X35 Z0<br />
+			N50 G01 X-1<br />
+			N60 G00 X10 Z2<br />
+			N70 G01 Z-10<br />
+			N80 X22 Z-20<br />
+			N90 Z-35<br />
+			N100 X30 Z-40<br />
+			N110 G00 X25 Z100<br />
+			N120 M30</td>
+		</tr>
+	</tbody>
+</table>
+</section>
+</form>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="156_sentido_positivo_del_ngulo.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="16_programacin_de_arcos_dado_su_centro.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

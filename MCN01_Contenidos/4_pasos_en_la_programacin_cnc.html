@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>4. Pasos en la programación CNC | MEC_MCN01 Progrmacion CNC y CAM </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-13"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MEC_MCN01 Progrmacion CNC y CAM</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN01 Programación CNC y CAM</a></li>
+   <li><a href="1_mquinas_herramienta_dotadas_de_cnc.html" class="daddy">1. Máquinas herramienta dotadas de CNC</a>
+   <ul class="other-section">
+      <li><a href="11_qu_es_el_cnc.html" class="no-ch">1.1. ¿Qué es el CNC?</a></li>
+      <li><a href="12_ventajas_de_uso_del_cnc.html" class="no-ch">1.2. Ventajas de uso del CNC</a></li>
+      <li><a href="13_tipos_de_mquinas_con_cnc.html" class="no-ch">1.3. Tipos de máquinas con CNC</a></li>
+   </ul>
+   </li>
+   <li><a href="2_clasificacin_de_los_ejes_en_maqhta.html" class="daddy">2. Clasificación de los ejes en Maq-Hta</a>
+   <ul class="other-section">
+      <li><a href="21_nomenclatura.html" class="no-ch">2.1. Nomenclatura</a></li>
+      <li><a href="22_tipos_de_control_de_ejes.html" class="no-ch">2.2. Tipos de control de ejes</a></li>
+   </ul>
+   </li>
+   <li><a href="3_mtodos_de_generacin_de_programas.html" class="daddy">3. Métodos de generación de programas</a>
+   <ul class="other-section">
+      <li><a href="31_programacin_a_pie_de_mquina.html" class="no-ch">3.1. Programación a pie de máquina</a></li>
+      <li><a href="32_programacin_conversacional_y_cam.html" class="no-ch">3.2. Programación conversacional y CAM</a></li>
+      <li><a href="33_sistemas_cam.html" class="no-ch">3.3. Sistemas CAM</a></li>
+   </ul>
+   </li>
+   <li id="active"><a href="4_pasos_en_la_programacin_cnc.html" class="active no-ch">4. Pasos en la programación CNC</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo.- Licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="33_sistemas_cam.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_licencias_de_recursos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">4. Pasos en la programación CNC</h1></header>
+<article class="iDevice_wrapper CasopracticofpdIdevice em_iDevice" id="id75">
+<div class="iDevice emphasis_casopracticofpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Caso práctico</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta75_66" class="block iDevice_content">
+<img src="MCN01_CONT_R040_IKER_mini.jpg" alt="Se aprecia una foto en primera plana de Iker vestido con una camiseta de color marrón lisa. Tiene el pelo castaño con algunas mechas rubias un poco largo por la parte trasera y barba de 2-3 días." title="Iker" style="margin-right: 20px" align="left" height="200" width="133" /><img src="MCN01_CONT_R04_Tono_mini.JPG" style="margin-left: 20px" alt="TOÑO operario, joven sonriente que luce una bata verde para el desempeño de sus tareas." title="Toño - Operario" align="right" height="200" width="148" /> Iker tiene un amigo que trabaja en una empresa de fabricación mecánica, y le ha invitado a ver como se trabaja en su empresa.<br />
+Iker: Hola Toño, voy a empezar un ciclo de formación de grado medio en fabricación mecánica, y si no te importa, me gustaría que me enseñaras como se trabaja en tu empresa.<br />
+Toño: Aquí tenemos varios tornos y centros de mecanizado de diferentes controles, Fagor, Fanuc...<br />
+Iker: Veo que tenéis diferentes piezas, unas simples y otras muy complicadas, ¿como las programáis?<br />
+Toño: Aquí tenemos los programas CAD-CAM para programar las piezas complicadas, y habitualmente, las piezas simples se programan a pie de máquina.<br />
+Iker: ¿Qué pasos se suelen dar?<br />
+Toño: Bueno, se empieza por una correcta interpretación del plano para generar el programa CNC correspondiente, luego se introduce en el control de la maquina y se simula, finalmente se procede a la puesta a punto de la maquina...mejor que des una vuelta por la empresa para que lo veas.<br />
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id44">
+<div class="iDevice emphasis0">
+<div id="ta44_77" class="block iDevice_content">
+<p>
+A modo general el proceso a seguir es: 
+</p>
+<p>
+Planificación del proceso:<br />
+</p>
+<p>
+1. Analizar el plano de la pieza; tolerancias, rugosidades.<br />
+2. Decidir el proceso de mecanizado; herramientas,  condiciones de corte y tipo de amarre pieza. <br />
+</p>
+<p>
+El programa de C.N.C:
+</p>
+<p>
+3. Introducir el programa en el control.<br />
+4. Simular el mecanizado.<br />
+</p>
+<p>
+Preparación del torno:
+</p>
+<p>
+5. Montar las herramientas en la torreta del torno.<br />
+6. Hacer el reglaje de los <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Correctores%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Correctores%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Correctores&quot; (Se abre en una nueva ventana)">correctores</a> de las herramientas.<br />
+7. Amarrar la pieza, tomar el origen pieza y mecanizar.<br />
+</p>
+<p>
+Comprobación y reajustes:<br />
+</p>
+<p>
+8. Realizar la medición de la pieza en las cotas criticas. Introducir las <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Desgaste%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Desgaste%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Desgaste&quot; (Se abre en una nueva ventana)">desgastes</a> si es necesario.<br />
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id48">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta48_50" class="block iDevice_content">
+
+<p>
+Para  ampliar tus conocimientos sobre CNC, las maneras de programación  y los diferentes procesos usados en el mecanizado, puedes acceder a este enlace.
+</p>
+<p align="center">
+<a href="http://www.monografias.com/trabajos14/manufaccomput/manufaccomput.shtml" style="display: inline" class="html" title="Introducción al Control Numérico Computarizado ( CNC )">Introducción al CNC</a> 
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper SeleccionmultiplefpdIdevice em_iDevice" id="id69">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<div id="actitity-69_58">
+<form name="multi-select-form-69_58" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion69_58" class="block question iDevice_content">
+¿Cuando se debe usar un CAM?
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_580" class="sr-av"><a href="#answer-69_61">Opción 1</a></label><input type="checkbox" id="op69_580" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_61"><div id="taans69_61" class="block iDevice_content">
+a) En cualquier caso es mejor.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_580" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_581" class="sr-av"><a href="#answer-69_102">Opción 2</a></label><input type="checkbox" id="op69_581" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_102"><div id="taans69_102" class="block iDevice_content">
+b) Cuando se dispone de un ordenador a pie de torno CNC
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_581" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_582" class="sr-av"><a href="#answer-69_104">Opción 3</a></label><input type="checkbox" id="op69_582" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_104"><div id="taans69_104" class="block iDevice_content">
+c) Cuando la geometría de las piezas es muy complicada
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_582" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_583" class="sr-av"><a href="#answer-69_106">Opción 4</a></label><input type="checkbox" id="op69_583" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_106"><div id="taans69_106" class="block iDevice_content">
+d) Cuando se utilizan muchas herramientas.
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_583" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-4-69_58" /> 
+</p>
+</div>
+<section id="f69_58" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-69_61" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-69_102" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-69_104" class="right">Correcto</a></li>
+<li><a href="#answer-69_106" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+<br/><section class="question">
+<div id="actitity-69_95">
+<form name="multi-select-form-69_95" action="#" class="activity-form multi-select-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion69_95" class="block question iDevice_content">
+¿Qué método de general programas necesita un sofware?
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_950" class="sr-av"><a href="#answer-69_98">Opción 1</a></label><input type="checkbox" id="op69_950" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_98"><div id="taans69_98" class="block iDevice_content">
+a) Programación a pie de máquina
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_950" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_951" class="sr-av"><a href="#answer-69_108">Opción 2</a></label><input type="checkbox" id="op69_951" value="True" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_108"><div id="taans69_108" class="block iDevice_content">
+b) Programación mediante CAM
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_951" style="display:none"></section>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="op69_952" class="sr-av"><a href="#answer-69_110">Opción 3</a></label><input type="checkbox" id="op69_952" value="False" />
+</p>
+<div class="iDevice_answer-content" id="answer-69_110"><div id="taans69_110" class="block iDevice_content">
+c) Programación conversacional 
+
+</div>
+</div>
+<section class="iDevice_answer-feedback feedback" id="feedback-69_952" style="display:none"></section>
+</section>
+</section>
+<div class="block iDevice_buttons feedback-button js-required">
+<p>
+<input type="button" name="submitSelect" class="feedbackbutton multi-select-feedback-toggler" value="Mostrar retroalimentación" id="multi-select-feedback-toggler-3-69_95" /> 
+</p>
+</div>
+<section id="f69_95" class="js-hidden js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-69_98" class="wrong">Incorrecto</a></li>
+<li><a href="#answer-69_108" class="right">Correcto</a></li>
+<li><a href="#answer-69_110" class="wrong">Incorrecto</a></li>
+</ol>
+</section>
+</div>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="33_sistemas_cam.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="anexo_licencias_de_recursos.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

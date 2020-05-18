@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>3.3.2.  Funcionamiento. | MCN02 PROGRAMACION DE TORNO CNC </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-93"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN02 PROGRAMACION DE TORNO CNC</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MEC_MCN02 Programación de torno CNC</a></li>
+   <li><a href="1_programacin_bsica.html" class="daddy">1. Programación básica</a>
+   <ul class="other-section">
+      <li><a href="11_introduccin_a_la_programacin_cnc.html" class="daddy">1.1. Introducción a la programación CNC</a>
+      <ul class="other-section">
+         <li><a href="111_estructura_de_un_programa_cnc.html" class="no-ch">1.1.1. Estructura de un programa CNC</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2. G Funciones preparatorias</a></li>
+         <li><a href="113_ejes_y_coordenadas_del_torno.html" class="no-ch">1.1.3. Ejes y coordenadas del torno.</a></li>
+         <li><a href="114_programacin_de_cotas_en_torno.html" class="no-ch">1.1.4. Programación de cotas en torno.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5. F avance de hta y S giro del cabezal</a></li>
+         <li><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="no-ch">1.1.6. T Selección de hta y sus dimensiones.</a></li>
+         <li><a href="117_informacin_geomtrica_y_tecnolgica.html" class="no-ch">1.1.7. Información geométrica y tecnológica</a></li>
+         <li><a href="118_cambio_de_herramienta_y_proceso_de_mecanizado.html" class="no-ch">1.1.8. Cambio de herramienta y proceso de mecanizado</a></li>
+      </ul>
+      </li>
+      <li><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="daddy">1.2. Revisar y modificar datos de un PGM</a>
+      <ul class="other-section">
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores.</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2. Modificar T, F, S de un programa.</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3. Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_funciones_auxiliares.html" class="daddy">1.3. Funciones auxiliares</a>
+      <ul class="other-section">
+         <li><a href="131_m_del_programa_y_de_mquina.html" class="no-ch">1.3.1. M del programa y de máquina</a></li>
+         <li><a href="132_m_del_cabezal.html" class="no-ch">1.3.2. M del cabezal.</a></li>
+         <li><a href="133_posicin_de_la_herramienta_y_sentido_de_giro.html" class="no-ch">1.3.3. Posición de la herramienta y sentido de giro</a></li>
+      </ul>
+      </li>
+      <li><a href="14_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.4. Sistemas de referencia y coordenadas</a>
+      <ul class="other-section">
+         <li><a href="141_puntos_de_referencia_del_torno.html" class="no-ch">1.4.1. Puntos de referencia del torno.</a></li>
+         <li><a href="142_establecimiento_de_orgenes_pieza.html" class="no-ch">1.4.2. Establecimiento de orígenes pieza.</a></li>
+         <li><a href="143_tablas_de_orgenes.html" class="no-ch">1.4.3. Tablas de orígenes.</a></li>
+         <li><a href="144_programacin_de_cotas.html" class="no-ch">1.4.4. Programación de cotas.</a></li>
+         <li><a href="145_cotas_absolutas_e_incrementales.html" class="no-ch">1.4.5. Cotas absolutas e incrementales.</a></li>
+         <li><a href="146_cotas_incrementales.html" class="no-ch">1.4.6. Cotas incrementales.</a></li>
+      </ul>
+      </li>
+      <li><a href="15_movimientos_lineales.html" class="daddy">1.5. Movimientos lineales</a>
+      <ul class="other-section">
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1. G00 de posicionamiento rápido.</a></li>
+         <li><a href="152_g01_de_trabajo.html" class="no-ch">1.5.2. G01 de trabajo.</a></li>
+         <li><a href="153_programacin_movimientos.html" class="no-ch">1.5.3. Programación movimientos.</a></li>
+         <li><a href="154_combinacin_de_movimientos.html" class="no-ch">1.5.4. Combinación de movimientos.</a></li>
+         <li><a href="155_programacin_con_coordenadas_mixtas.html" class="no-ch">1.5.5. Programación con coordenadas mixtas.</a></li>
+         <li><a href="156_sentido_positivo_del_ngulo.html" class="no-ch">1.5.6. Sentido positivo del ángulo</a></li>
+         <li><a href="157_resumen.html" class="no-ch">1.5.7. Resumen</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6. Programación de arcos dado su centro</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_las_coordenadas_del_centro.html" class="no-ch">1.6.1. Calculo de las coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_en_arcos.html" class="no-ch">1.6.2. Programación incremental en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_simulacin_cnc.html" class="daddy">1.8. Simulación CNC</a>
+      <ul class="other-section">
+         <li><a href="181_a_pie_de_torno.html" class="no-ch">1.8.1. A pie de torno</a></li>
+         <li><a href="182_uso_de_simuladores.html" class="no-ch">1.8.2. Uso de simuladores</a></li>
+         <li><a href="183_deteccin_de_errres.html" class="no-ch">1.8.3. Detección de erróres.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="2__funciones_adicionales_de_torno.html" class="daddy">2.  Funciones adicionales de torno</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_la_herramienta.html" class="daddy">2.1. Compensación del radio de la herramienta</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1. Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2. Errores frecuentes.</a></li>
+      </ul>
+      </li>
+      <li><a href="22__mecanizado_de_aristas.html" class="daddy">2.2.  Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_y_contorneado_en_aristas.html" class="no-ch">2.2.1. Parada exacta y contorneado en aristas.</a></li>
+         <li><a href="222_aristas_achaflanadas.html" class="no-ch">2.2.2. Aristas achaflanadas.</a></li>
+         <li><a href="223_radios_de_acuerdo.html" class="no-ch">2.2.3. Radios de acuerdo.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4. Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5. Errores frecuentes.</a></li>
+         <li><a href="226_mecanizado_de_aristas_en_cotas_mixtas.html" class="no-ch">2.2.6. Mecanizado de aristas en cotas mixtas.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7. Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="23_temporizacin.html" class="no-ch">2.3. Temporización.</a></li>
+   </ul>
+   </li>
+   <li class="current-page-parent"><a href="3_programacin_de_ciclos_fijos_de_torno.html" class="current-page-parent daddy">3. Programación de ciclos fijos de torno</a>
+   <ul>
+      <li><a href="31_los_ciclos_fijos_de_torno.html" class="daddy">3.1. Los ciclos fijos de torno.</a>
+      <ul class="other-section">
+         <li><a href="311_parmetros_y_funcionamiento_comunes.html" class="no-ch">3.1.1. Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="32_ciclo_fijo_de_taladrado_axial.html" class="daddy">3.2. Ciclo fijo de taladrado axial.</a>
+      <ul class="other-section">
+         <li><a href="321_programacin.html" class="no-ch">3.2.1. Programación.</a></li>
+         <li><a href="322_funcionamiento.html" class="no-ch">3.2.2. Funcionamiento.</a></li>
+         <li><a href="323_consideraciones_sobre_el_ciclo.html" class="no-ch">3.2.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="324_predesbaste_secuenciando_taladrados.html" class="no-ch">3.2.4. Pre-desbaste secuenciando taladrados.</a></li>
+         <li><a href="325_taladrados_mediante_broca_de_placa.html" class="no-ch">3.2.5. Taladrados mediante broca de placa.</a></li>
+      </ul>
+      </li>
+      <li class="current-page-parent"><a href="33_desbaste_de_perfiles_por_torneados.html" class="current-page-parent daddy">3.3. Desbaste de perfiles por torneados.</a>
+      <ul>
+         <li><a href="331_programacin.html" class="no-ch">3.3.1. Programación.</a></li>
+         <li id="active"><a href="332__funcionamiento.html" class="active no-ch">3.3.2.  Funcionamiento.</a></li>
+         <li><a href="333_consideraciones_sobre_el_ciclo.html" class="no-ch">3.3.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="334_sintaxis_de_programacin_de_perfiles.html" class="no-ch">3.3.4 Sintaxis de programación de perfiles.</a></li>
+         <li><a href="335_perfiles_exteriores_y_montonos.html" class="no-ch">3.3.5. Perfiles exteriores y monótonos.</a></li>
+         <li><a href="336_perfiles_interiores_y_montonos.html" class="no-ch">3.3.6. Perfiles interiores y monótonos.</a></li>
+         <li><a href="337_perfiles_exteriores_con_cuellos.html" class="no-ch">3.3.7. Perfiles exteriores con cuellos.</a></li>
+         <li><a href="338_perfiles_interiores_con_cuellos.html" class="no-ch">3.3.8. Perfiles interiores con cuellos.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_desbaste_de_perfiles_por_refrentados.html" class="daddy">3.4. Desbaste de perfiles por refrentados.</a>
+      <ul class="other-section">
+         <li><a href="341_programacin.html" class="no-ch">3.4.1. Programación.</a></li>
+         <li><a href="342_funcionamiento.html" class="no-ch">3.4.2. Funcionamiento.</a></li>
+         <li><a href="343_consideraciones_sobre_el_ciclo.html" class="no-ch">3.4.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="344_sintaxis_de_programacin_de_perfiles.html" class="no-ch">3.4.4. Sintaxis de programación de perfiles.</a></li>
+         <li><a href="345_perfiles_exteriores_y_montonos.html" class="no-ch">3.4.5. Perfiles exteriores y monótonos.</a></li>
+         <li><a href="346_perfiles_interiores_y_montonos.html" class="no-ch">3.4.6. Perfiles interiores y monótonos.</a></li>
+         <li><a href="347_perfiles_exteriores_con_cuellos.html" class="no-ch">3.4.7. Perfiles exteriores con cuellos.</a></li>
+         <li><a href="348_perfiles_interiores_con_cuellos.html" class="no-ch">3.4.8. Perfiles interiores con cuellos.</a></li>
+      </ul>
+      </li>
+      <li><a href="35_ciclo_fijo_de_roscado_axial_con_macho.html" class="daddy">3.5. Ciclo fijo de roscado axial con macho.</a>
+      <ul class="other-section">
+         <li><a href="351_programacin.html" class="no-ch">3.5.1. Programación.</a></li>
+         <li><a href="352_funcionamiento.html" class="no-ch">3.5.2. Funcionamiento.</a></li>
+         <li><a href="353_consideraciones_sobre_el_ciclo.html" class="no-ch">3.5.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="354_roscado_axial__agujeros_previos.html" class="no-ch">3.5.4. Roscado axial - Agujeros previos.</a></li>
+         <li><a href="355_roscado_rgido.html" class="no-ch">3.5.5. Roscado rígido.</a></li>
+      </ul>
+      </li>
+      <li><a href="36_ciclo_fijo_de_ranurado_radial.html" class="daddy">3.6. Ciclo fijo de ranurado radial.</a>
+      <ul class="other-section">
+         <li><a href="361_programacin.html" class="no-ch">3.6.1 Programación.</a></li>
+         <li><a href="362_funcionamiento.html" class="no-ch">3.6.2. Funcionamiento.</a></li>
+         <li><a href="363_consideraciones_sobre_el_ciclo.html" class="no-ch">3.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="364_ranurado_exterior.html" class="no-ch">3.6.4. Ranurado exterior.</a></li>
+         <li><a href="365_ranurado_interior.html" class="no-ch">3.6.5 Ranurado interior.</a></li>
+         <li><a href="366_disposiciones_de_ranuras_casos.html" class="no-ch">3.6.6. Disposiciones de ranuras, casos.</a></li>
+         <li><a href="367_acabado_de_ranuras_radiales.html" class="no-ch">3.6.7. Acabado de ranuras radiales.</a></li>
+      </ul>
+      </li>
+      <li><a href="37_ciclo_fijo_de_ranurado_frontales.html" class="daddy">3.7. Ciclo fijo de ranurado frontales.</a>
+      <ul class="other-section">
+         <li><a href="371_programacin.html" class="no-ch">3.7.1. Programación.</a></li>
+         <li><a href="372_funcionamiento.html" class="no-ch">3.7.2. Funcionamiento.</a></li>
+         <li><a href="373_consideraciones_sobre_el_ciclo.html" class="no-ch">3.7.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="374_acabado_de_ranuras_frontales.html" class="no-ch">3.7.4. Acabado de ranuras frontales.</a></li>
+      </ul>
+      </li>
+      <li><a href="38_ciclo_fijo_de_roscado_longitudinal.html" class="daddy">3.8. Ciclo fijo de roscado longitudinal</a>
+      <ul class="other-section">
+         <li><a href="381_programacin.html" class="no-ch">3.8.1. Programación.</a></li>
+         <li><a href="382_funcionamiento.html" class="no-ch">3.8.2. Funcionamiento.</a></li>
+         <li><a href="383_consideraciones_sobre_el_ciclo.html" class="no-ch">3.8.3. Consideraciones sobre el ciclo.</a></li>
+         <li><a href="384_roscas_a_derechas_y_a_izquierdas.html" class="no-ch">3.8.4. Roscas a derechas y a izquierdas.</a></li>
+         <li><a href="385_roscas_cilndricas_exteriores.html" class="no-ch">3.8.5. Roscas cilíndricas exteriores.</a></li>
+         <li><a href="386_roscas_cilndricas_interiores.html" class="no-ch">3.8.6. Roscas cilíndricas interiores.</a></li>
+         <li><a href="387__roscas_cnicas.html" class="no-ch">3.8.7  Roscas cónicas.</a></li>
+      </ul>
+      </li>
+      <li><a href="39__secuencia_de_operaciones_en_torno.html" class="daddy">3.9.  Secuencia de operaciones en torno.</a>
+      <ul class="other-section">
+         <li><a href="391_dobles_atadas.html" class="no-ch">3.9.1. Dobles atadas.</a></li>
+         <li><a href="392_resumen.html" class="no-ch">3.9.2. Resumen.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="anexolicencias_de_recursos.html" class="no-ch">Anexo.-Licencias de recursos.</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="331_programacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="333_consideraciones_sobre_el_ciclo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">3.3.2.  Funcionamiento.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id193">
+<div class="iDevice emphasis0">
+<div id="ta193_77" class="block iDevice_content">
+<u><b>Funcionamiento básico del ciclo fijo G68.</b></u>
+<p>
+<br />
+<i><b>Las pasadas de mecanizado:</b></i>
+</p>
+<p>
+Una vez calculadas las pasadas de desbastado necesarias se mecaniza el nuevo perfil resultante.<br />
+El mecanizado se ejecuta manteniendo el trabajo en arista viva (G07) o arista matada (G05) que se encuentra seleccionado al llamar al ciclo. 
+</p>
+<a href="MCN02_CONT_R0149_G68_Funcionamiento_TipoHerremienta.jjpg.jpg" title="El valle en G68 y el tipo de herramienta"><img src="MCN02_CONT_R0149_G68_Funcionamiento_TipoHerremienta_mini.jpg" alt="En la imagen puedes apreciar el dibujo de media pieza para el torno con un valle y una herramienta situada justo en este valle." title="El valle en G68 y el tipo de herramienta" style="margin-right: 20px" class="imagen_ampliable" align="left" height="127" width="200" /></a> Tras analizar el perfil programado y en
+función de la herramienta utilizada, se ejecutará dicho perfil o el
+más próximo al mismo si no es posible ejecutar el programado. En
+aquellos casos que no se pueda mecanizar el perfil programado
+(valles) con la herramienta seleccionada, se mostrará un mensaje al
+principio de la ejecución del ciclo. El operario podrá detener la ejecución y seleccionar la herramienta apropiada. Si no lo hace, se calcula un nuevo perfil en las zonas que no son accesibles para la herramienta seleccionada y se mecaniza todo lo que sea posible. El mensaje se muestra durante todo el mecanizado.
+<div class="separador">
+</div>
+<p>
+<i><b><br />
+Mecanizado de canales:</b></i>
+</p>
+<p>
+<i><b></b></i>Si al ejecutar una de las pasadas de desbaste se detecta la existencia de un canal, el CNC continua la ejecución del resto del perfil, sin tener en cuenta dicho canal. El número de canales que puede disponer un perfil es ilimitado.Una vez finalizado el perfil sobrante, comienza la ejecución de los canales detectados.
+</p>
+<div class="elemento_izquierda">
+<div class="titulo">
+1º Desbaste del perfil 
+</div>
+<div>
+<a href="MCN02_CONT_R0150_G68_DesbastePerfil.jpg" title="G68 y el desbaste del perfil"><img src="MCN02_CONT_R0150_G68_DesbastePerfil_mini.jpg" class="imagen_ampliable" alt="En la imagen puedes apreciar el dibujo de media pieza para el torno con un valle y una herramienta situada justo en  el punto de inicio del ciclo. Puedes ver las distintas pasadas para desbastar el primero el perfil sin el valle." title="G68 y el desbaste del perfil" height="142" width="200" /></a> <br />
+</div>
+</div>
+<div class="elemento_izquierda">
+<div class="titulo">
+2º Desbaste del canal
+</div>
+<div>
+<a href="MCN02_CONT_R0151_G68_DesbasteCanal.jpg" title="G68 y el desbaste del canal"><img src="MCN02_CONT_R0151_G68_DesbasteCanal_mini.jpg" class="imagen_ampliable" alt="En la imagen puedes apreciar dos dibujos de media pieza para el torno con un valle y una herramienta situada justo en  el punto de inicio del ciclo. Puedes ver las distintas pasadas en color rojo para desbastar el valle después de desbastar el perfil." title="G68 y el desbaste del canal" height="115" width="200" /></a> <br />
+</div>
+<br />
+</div>
+<div class="elemento_izquierda">
+<div class="titulo">
+<br />
+</div>
+<div>
+<br />
+</div>
+<br />
+</div>
+<br />
+<p>
+&nbsp;
+</p>
+<i><b></b></i>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+<p>
+Para ello se regresará en G00 al punto en que se interrumpió el mecanizado del perfil (1). 
+</p>
+<p>
+<a href="MCN02_CONT_R0152_G68_Canal_Secuencia_Desbasta.jpg" title="Mecanizado de canales"><img src="MCN02_CONT_R0152_G68_Canal_Secuencia_Desbasta_mini.jpg" alt="En esta imagen puedes apreciar las pasadas que realiza el ciclo fijo de desbastado en el eje X, en los canales, puedes preciar el la secuencia 1-2-3-4-5." title="Mecanizado de canales" style="margin-right: 20px" class="imagen_ampliable" align="left" height="62" width="200" /></a> Desde aquí se seguirá en G01 el contorno programado, manteniendo la demasía de acabado, hasta alcanzar la profundidad de pasada &quot;C&quot; seleccionada. Tramo 1-2.<br />
+La nueva pasada de desbaste se realiza de la siguiente forma:
+</p>
+<div class="separador">
+</div>
+<ul>
+	<li><a href="MCN02_CONT_R0153_G68_CanalInterno.jpg" title="Mecanizado de canales internos"><img src="MCN02_CONT_R0153_G68_CanalInterno_mini.jpg" alt="En esta imagen puedes apreciar las pasadas que realiza el ciclo fijo de desbastado en el eje X , se trata de una pieza con varios canales de distinto nivel. Puedes apreciar que se hace en primero los canales externos y luego los internos." title="Mecanizado de canales internos" style="margin-left: 20px" class="imagen_ampliable" align="right" height="115" width="200" /></a> El desplazamiento &quot;2-3&quot; se realiza en G01 al avance programado (F).</li>
+	<li>Cuando se ha programado el parámetro &quot;D&quot; el desplazamiento &quot;3-4&quot; se realiza en avance rápido (G00), pero si no se ha programado &quot;D&quot; el desplazamiento &quot;3-4&quot; se efectúa siguiendo el contorno programado y en G01 al avance programado (F).</li>
+	<li>El desplazamiento de retroceso &quot;4-5&quot; se realiza en avance rápido (G00).</li>
+	<li>Si al ejecutarse un canal se detectan canales internos al mismo, se sigue el mismo procedimiento explicado con anterioridad.
+	<div class="separador">
+	</div>
+	</li>
+</ul>
+<p>
+<i><b>La pasada final de desbaste.</b></i><br />
+<a href="MCN02_CONT_R0154_G68_Avance_F_H.jpg" title="Los avances F y H"><img src="MCN02_CONT_R0154_G68_Avance_F_H_mini.jpg" alt="En esta imagen puedes apreciar las pasadas que realiza el ciclo fijo de desbastado en el eje X , se trata de una pieza con varios canales de distinto nivel. Puedes apreciar los movimientos de la herramienta tanto en desbaste como en retirada a la posición inicial después de las pasadas de semiacabado y el acabado. " title="Los avances F y H" style="margin-right: 20px" class="imagen_ampliable" align="left" height="122" width="200" /></a> Cuando &quot;F&quot; tiene valor, el ciclo ejecutará una pasada final de desbaste que consistirá en realizar una pasada paralela al perfil, manteniendo el sobrematerial indicado en &quot;L&quot; / &quot;M&quot; y al avance indicado en ese parámetro &quot;F&quot;. Cuando &quot;F&quot; es 0, no se ejecutará esta pasada (nuestro caso).Cuando &quot;H&quot; tiene valor, el ciclo ejecutará una pasada de acabado que consistirá en realizar una pasada del perfil con la compensación de radio de herramienta y al avance indicado en ese parámetro &quot;H&quot;. Este perfil podrá ser de uno de los siguientes casos:
+</p>
+<ul>
+	<li>El perfil programado. </li>
+	<li>Un perfil próximo al programado, en el caso de que haya zonas inaccesibles para la herramienta seleccionada. </li>
+</ul>
+<p>
+Al finalizar, la herramienta siempre retrocede al punto de llamada al ciclo, es decir, al punto de posicionamiento fuera del material del bloque anterior al ciclo.
+</p>
+<p>
+&nbsp;
+</p>
+<i><b></b></i>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper RecomendacionfpdIdevice em_iDevice" id="id297">
+<div class="iDevice emphasis_recomendacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Recomendación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta297_53" class="block iDevice_content">
+<p>
+En esta animación puedes pulsar las diferentes opciones para ampliar tus conocimientos acerca del funcionamiento de G68.
+</p>
+<div class="elemento_centrado">
+<div align="center">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0" width="855" height="551">
+	<param name="width" value="855" />
+	<param name="height" value="551" />
+	<param name="play" value="false" />
+	<param name="scale" value="exactfit" />
+	<param name="src" value="MCN02_CONT_R0155_G68_Funcionamiento.swf" />
+	<embed type="application/x-shockwave-flash" width="855" height="551" play="false" scale="exactfit" src="MCN02_CONT_R0155_G68_Funcionamiento.swf"></embed>
+</object>
+</div>
+<a href="MCN02_CONT_R0155_G68_Funcionamiento_Desc.html" class="credenciales" title="Resumen textual alternativo&lt;">Resumen textual alternativo</a>
+</div>
+<p>
+&nbsp;
+</p>
+<p>
+&nbsp;
+</p>
+
+
+</div>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="331_programacin.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="333_consideraciones_sobre_el_ciclo.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

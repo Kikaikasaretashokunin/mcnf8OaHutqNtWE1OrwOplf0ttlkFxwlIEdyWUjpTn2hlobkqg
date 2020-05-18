@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.1 Estructura de un programa CNC. | MCN03 Programación de Fresadora </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-3"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN03 Programación de Fresadora</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MCN03 Programación de fresadora CNC - Caso práctico.</a></li>
+   <li class="current-page-parent"><a href="1_programacin_bsica_fresadora_cnc__caso_prctico.html" class="current-page-parent daddy">1 Programación básica fresadora CNC - Caso práctico.</a>
+   <ul>
+      <li class="current-page-parent"><a href="11_introduccin_a_la_programacin_cnc.html" class="current-page-parent daddy">1.1 Introducción a la programación CNC.</a>
+      <ul>
+         <li id="active"><a href="111_estructura_de_un_programa_cnc.html" class="active no-ch">1.1.1 Estructura de un programa CNC.</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2 G Funciones preparatorias.</a></li>
+         <li><a href="113_ejes_y_coordenadas_de_la_fresadora.html" class="no-ch">1.1.3 Ejes y coordenadas de la fresadora.</a></li>
+         <li><a href="114_programacin_de_cotas_de_fresadora.html" class="no-ch">1.1.4 Programación de cotas de fresadora.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5 F Avance de Hta. y S Giro del cabezal.</a></li>
+         <li><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="no-ch">1.1.6 T Selección de Hta. y sus dimensiones.</a></li>
+         <li><a href="117_funciones_auxiliares_m_del_programa.html" class="no-ch">1.1.7 Funciones auxiliares: M del programa.</a></li>
+         <li><a href="118_funciones_auxiliares_m_del_cabezal.html" class="no-ch">1.1.8 Funciones auxiliares: M del cabezal.</a></li>
+         <li><a href="119_funciones_auxiliares_m_de_mquina.html" class="no-ch">1.1.9 Funciones auxiliares: M de máquina.</a></li>
+      </ul>
+      </li>
+      <li><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="daddy">1.2 Revisar y modificar datos de un PGM</a>
+      <ul class="other-section">
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2 Modificar T, F, S de un programa</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3 Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.3 Sistemas de referencia y coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="131_puntos_de_referencia_de_la_fresadora.html" class="no-ch">1.3.1 Puntos de referencia de la fresadora.</a></li>
+         <li><a href="132_establecimiento_de_orgenes_pieza.html" class="no-ch">1.3.2 Establecimiento de orígenes pieza.</a></li>
+         <li><a href="133_tabla_de_orgenes.html" class="no-ch">1.3.3 Tabla de orígenes.</a></li>
+      </ul>
+      </li>
+      <li><a href="14_programacin_de_cotas.html" class="daddy">1.4 Programación de cotas.</a>
+      <ul class="other-section">
+         <li><a href="141_cotas_absolutas.html" class="no-ch">1.4.1 Cotas absolutas.</a></li>
+         <li><a href="142_cotas_incrementales.html" class="no-ch">1.4.2 Cotas incrementales.</a></li>
+         <li><a href="143_coordenadas_polares.html" class="no-ch">1.4.3 Coordenadas polares.</a></li>
+         <li><a href="144_programacin_de_coordenadas_polares.html" class="no-ch">1.4.4 Programación de coordenadas polares.</a></li>
+         <li><a href="145_establecer_el_origen_polar.html" class="no-ch">1.4.5 Establecer el origen polar.</a></li>
+         <li><a href="146_coordenadas_polares_absolutas.html" class="no-ch">1.4.6 Coordenadas polares absolutas.</a></li>
+         <li><a href="147_coordenadas_polares_incrementales.html" class="no-ch">1.4.7 Coordenadas polares incrementales.</a></li>
+      </ul>
+      </li>
+      <li><a href="15_programacin_de_movimiento_lineales.html" class="daddy">1.5 Programación de movimiento lineales.</a>
+      <ul class="other-section">
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1 G00 de posicionamiento rápido</a></li>
+         <li><a href="152_g01_movimiento_de_trabajo.html" class="no-ch">1.5.2 G01 movimiento de trabajo.</a></li>
+         <li><a href="153_movimientos_en_cotas_cartesianas.html" class="no-ch">1.5.3 Movimientos en cotas cartesianas.</a></li>
+         <li><a href="154_movimientos_en_cotas_polares.html" class="no-ch">1.5.4 Movimientos en cotas polares.</a></li>
+         <li><a href="155_combinacin_de_movimientos_y_cotas.html" class="no-ch">1.5.5 Combinación de movimientos y cotas.</a></li>
+         <li><a href="156_resumen.html" class="no-ch">1.5.6 Resumen.</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6 Programación de arcos dado su centro.</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_coordenadas_del_centro.html" class="no-ch">1.6.1 Calculo de coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_de_arcos.html" class="no-ch">1.6.2 Programación incremental de arcos.</a></li>
+         <li><a href="163_programacin_de_crculos_completos.html" class="no-ch">1.6.3 Programación de círculos completos.</a></li>
+         <li><a href="164_programacin_mediante_el_ngulo.html" class="no-ch">1.6.4 Programación mediante el ángulo.</a></li>
+         <li><a href="165_consideracin_sobre_el_origen_polar.html" class="no-ch">1.6.5 Consideración sobre el origen polar.</a></li>
+         <li><a href="166_programacin_de_arcos_en_polares.html" class="no-ch">1.6.6 Programación de arcos en polares.</a></li>
+         <li><a href="167_traslado_del_origen_polar.html" class="no-ch">1.6.7 Traslado del origen polar.</a></li>
+         <li><a href="168_programacin_incremental_en_polares.html" class="no-ch">1.6.8 Programación incremental en polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio.</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_interpolacines_helicoidales.html" class="daddy">1.8 Interpolaciónes helicoidales.</a>
+      <ul class="other-section">
+         <li><a href="181_con_programacin_de_centro.html" class="no-ch">1.8.1 Con programación de centro.</a></li>
+         <li><a href="182_con_ngulo_y_programacin_de_centro.html" class="no-ch">1.8.2 Con ángulo y programación de centro.</a></li>
+         <li><a href="183_en_polares.html" class="no-ch">1.8.3 En polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="19_resumen_todo_tipo_de_movimientos.html" class="no-ch">1.9 Resumen. Todo tipo de movimientos.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_funciones_adicionales_en_fresadora__caso_prctico.html" class="daddy">2 Funciones adicionales en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_herramienta.html" class="daddy">2.1 Compensación del radio de herramienta.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1 Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2 Errores frecuentes.</a></li>
+         <li><a href="213_modificacin_del_radios_de_herramienta_para_obtener_creces.html" class="no-ch">2.1.3 Modificación del radios de herramienta. para obtener creces.</a></li>
+         <li><a href="214_correcciones_de_radio_de_herramienta_o_desgaste_segn_medidas_obtenidas.html" class="no-ch">2.1.4 Correcciones de radio de herramienta, o desgaste según medidas obtenidas.</a></li>
+         <li><a href="215_compensacin_de_la_longitud_de_herramienta.html" class="no-ch">2.1.5 Compensación de la longitud de herramienta.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_mecanizado_de_aristas.html" class="daddy">2.2 Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_o_contorneado_en_aristas.html" class="no-ch">2.2.1 Parada exacta o contorneado en aristas.</a></li>
+         <li><a href="222_radios_de_acuerdo.html" class="no-ch">2.2.2 Radios de acuerdo.</a></li>
+         <li><a href="223_aristas_achaflanadas.html" class="no-ch">2.2.3 Aristas achaflanadas.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4 Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5 Errores frecuentes.</a></li>
+         <li><a href="226_programacin_de_aristas_en_polares.html" class="no-ch">2.2.6 Programación de aristas en polares.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7 Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="24_programacin_de_repeticiones.html" class="daddy">2.4 Programación de repeticiones.</a>
+      <ul class="other-section">
+         <li><a href="241_identificar_los_bloques_a_repetir.html" class="no-ch">2.4.1 Identificar los bloques a repetir.</a></li>
+         <li><a href="242_mecanizado_de_perfiles_en_pasadas.html" class="no-ch">2.4.2 Mecanizado de perfiles en pasadas.</a></li>
+         <li><a href="243_mecanizar_perfiles_en_diferentes_posiciones.html" class="no-ch">2.4.3 Mecanizar perfiles en diferentes posiciones.</a></li>
+         <li><a href="244_uso_en_emparrillados.html" class="no-ch">2.4.4 Uso en emparrillados.</a></li>
+      </ul>
+      </li>
+      <li><a href="25_subrutinas.html" class="daddy">2.5 Subrutinas.</a>
+      <ul class="other-section">
+         <li><a href="251_mecanizar_las_formas_desde_diferentes_programas.html" class="no-ch">2.5.1 Mecanizar las formas desde diferentes programas.</a></li>
+         <li><a href="252_uso_en_operaciones_frecuentes_de_mecanizado.html" class="no-ch">2.5.2 Uso en operaciones frecuentes de mecanizado.</a></li>
+      </ul>
+      </li>
+      <li><a href="26_resumen.html" class="no-ch">2.6 Resumen.</a></li>
+      <li><a href="27_temporizacin.html" class="no-ch">2.7 Temporización.</a></li>
+      <li><a href="28_simulacin_de_pgm.html" class="daddy">2.8 Simulación de PGM.</a>
+      <ul class="other-section">
+         <li><a href="281_deteccin_de_errores.html" class="no-ch">2.8.1 Detección de errores.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_trasformacin_de_coordenadas__caso_prctico.html" class="daddy">3 Trasformación de coordenadas - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="31_tipos_de_trasformacin_de_coordenadas.html" class="no-ch">3.1 Tipos de trasformación de coordenadas.</a></li>
+      <li><a href="32_traslados_programables_de_origen_pieza.html" class="daddy">3.2 Traslados programables de origen pieza.</a>
+      <ul class="other-section">
+         <li><a href="321_ceros_pieza_versus_traslados_de_origen.html" class="no-ch">3.2.1 Ceros pieza versus traslados de origen.</a></li>
+         <li><a href="322_uso_en_emparrillados.html" class="no-ch">3.2.2 Uso en emparrillados.</a></li>
+         <li><a href="323_repetir_formas_en_diferente_posicin.html" class="no-ch">3.2.3 Repetir formas en diferente posición.</a></li>
+         <li><a href="324_traslado_de_origen_y_origen_polar.html" class="no-ch">3.2.4 Traslado de origen y origen polar.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_giro_de_coordenadas.html" class="daddy">3.3 Giro de coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="331_giro_previo_segn_la_orientacin_del_perfil.html" class="no-ch">3.3.1 Giro previo según la orientación del perfil.</a></li>
+         <li><a href="332_repetir_formas_cerradas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.2 Repetir formas cerradas giradas con respecto a otra de partida.</a></li>
+         <li><a href="333_repetir_formas_abiertas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.3 Repetir formas abiertas giradas con respecto a otra de partida.</a></li>
+         <li><a href="334_giro_de_coordenadas_en_polares.html" class="no-ch">3.3.4 Giro de coordenadas en polares.</a></li>
+         <li><a href="335_combinacin_de_traslado_de_origen_y_giro_de_coordenadas.html" class="no-ch">3.3.5 Combinación de traslado de origen y giro de coordenadas.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_conclusin.html" class="no-ch">3.4 Conclusión.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_ciclos_fijos_de_agujeros_en_fresadora__caso_prctico.html" class="daddy">4 Ciclos fijos de agujeros en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="41_los_ciclos_fijos_en_fresadora.html" class="daddy">4.1 Los ciclos fijos en fresadora.</a>
+      <ul class="other-section">
+         <li><a href="411_definir_el_ciclo_y_su_zona_de_influencia.html" class="no-ch">4.1.1 Definir el ciclo y su zona de influencia.</a></li>
+         <li><a href="412_consideraciones_generales.html" class="no-ch">4.1.2 Consideraciones generales.</a></li>
+         <li><a href="413_parmetros_y_funcionamiento_comunes.html" class="no-ch">4.1.3 Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="42_ciclo_de_taladrado_simple.html" class="daddy">4.2 Ciclo de taladrado simple.</a>
+      <ul class="other-section">
+         <li><a href="421_programacin.html" class="no-ch">4.2.1 Programación.</a></li>
+         <li><a href="422_funcionamiento.html" class="no-ch">4.2.2 Funcionamiento.</a></li>
+         <li><a href="423_consideraciones_sobre_el_ciclo.html" class="no-ch">4.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="424_uso_en_punteados_y_taladrados_cortos.html" class="no-ch">4.2.4 Uso en punteados y taladrados cortos.</a></li>
+      </ul>
+      </li>
+      <li><a href="43_ciclo_de_avellanado.html" class="daddy">4.3 Ciclo de avellanado.</a>
+      <ul class="other-section">
+         <li><a href="431_programacin.html" class="no-ch">4.3.1 Programación.</a></li>
+         <li><a href="432_funcionamiento.html" class="no-ch">4.3.2 Funcionamiento.</a></li>
+         <li><a href="433_consideraciones_sobre_el_ciclo.html" class="no-ch">4.3.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="434_uso_en_avellanados_y_biselados.html" class="no-ch">4.3.4 Uso en avellanados y biselados.</a></li>
+      </ul>
+      </li>
+      <li><a href="44_taladrado_profundo.html" class="daddy">4.4 Taladrado profundo.</a>
+      <ul class="other-section">
+         <li><a href="441_programacin.html" class="no-ch">4.4.1 Programación.</a></li>
+         <li><a href="442_funcionamiento.html" class="no-ch">4.4.2 Funcionamiento.</a></li>
+         <li><a href="443_consideraciones_sobre_el_ciclo.html" class="no-ch">4.4.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="444_retroceso_para_rotura_de_viruta.html" class="no-ch">4.4.4 Retroceso para rotura de viruta.</a></li>
+         <li><a href="445_retroceso_total_de_la_broca.html" class="no-ch">4.4.5 Retroceso total de la broca.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_escariado__mandrinado.html" class="daddy">4.5 Escariado / Mandrinado</a>
+      <ul class="other-section">
+         <li><a href="451_programacin.html" class="no-ch">4.5.1 Programación.</a></li>
+         <li><a href="452_funcionamiento.html" class="no-ch">4.5.2 Funcionamiento.</a></li>
+         <li><a href="453_consideraciones_sobre_el_ciclo.html" class="no-ch">4.5.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="454_pretaladrado_previo_al_escariado.html" class="no-ch">4.5.4 Pre-taladrado previo al escariado.</a></li>
+         <li><a href="455_escariados_ciegos_y_pasantes.html" class="no-ch">4.5.5 Escariados ciegos y pasantes.</a></li>
+      </ul>
+      </li>
+      <li><a href="46_mandrinado_con_retirada_de_herramienta_en_el_fondo_del_agujero.html" class="daddy">4.6 Mandrinado con retirada de herramienta en el fondo del agujero.</a>
+      <ul class="other-section">
+         <li><a href="461_programacin.html" class="no-ch">4.6.1 Programación.</a></li>
+         <li><a href="462_funcionamiento.html" class="no-ch">4.6.2 Funcionamiento.</a></li>
+         <li><a href="463_consideraciones_sobre_el_ciclo.html" class="no-ch">4.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="464_pretaladrado_previo_al_mandrinado.html" class="no-ch">4.6.4 Pre-taladrado previo al mandrinado.</a></li>
+         <li><a href="465_mandrinado_con_fondo_tolerancia_de_perpendicularidad.html" class="no-ch">4.6.5 Mandrinado con fondo tolerancia de perpendicularidad.</a></li>
+      </ul>
+      </li>
+      <li><a href="47_roscado_con_macho_flexible_y_rgido.html" class="daddy">4.7 Roscado con macho flexible y rígido.</a>
+      <ul class="other-section">
+         <li><a href="471_programacin.html" class="no-ch">4.7.1 Programación.</a></li>
+         <li><a href="472_funcionamiento.html" class="no-ch">4.7.2 Funcionamiento.</a></li>
+         <li><a href="473_consideraciones_sobre_el_ciclo.html" class="no-ch">4.7.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="474_pretaladrado_previo_al_roscado.html" class="no-ch">4.7.4 Pre-taladrado previo al roscado.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_ciclos_fijos_de_fresado__caso_prctico.html" class="daddy">5 Ciclos fijos de fresado - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="51_cajera_rectangular.html" class="daddy">5.1 Cajera rectangular.</a>
+      <ul class="other-section">
+         <li><a href="511_programacin.html" class="no-ch">5.1.1 Programación.</a></li>
+         <li><a href="512_funcionamiento.html" class="no-ch">5.1.2 Funcionamiento.</a></li>
+         <li><a href="513_consideraciones_sobre_el_ciclo.html" class="no-ch">5.1.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="514_uso_de_cajera_cuadrada_como_desbaste.html" class="no-ch">5.1.4 Uso de cajera cuadrada como desbaste.</a></li>
+      </ul>
+      </li>
+      <li><a href="52_cajera_redonda.html" class="daddy">5.2 Cajera redonda.</a>
+      <ul class="other-section">
+         <li><a href="521_programacin.html" class="no-ch">5.2.1 Programación.</a></li>
+         <li><a href="522_funcionamiento.html" class="no-ch">5.2.2 Funcionamiento.</a></li>
+         <li><a href="523_consideraciones_sobre_el_ciclo.html" class="no-ch">5.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="524_uso_de_cajera_redonda_como_desbaste.html" class="no-ch">5.2.4 Uso de cajera redonda como desbaste.</a></li>
+         <li><a href="525_uso_de_cajera_redonda_como_desbaste_de_agujeros_a_mandrinar.html" class="no-ch">5.2.5 Uso de cajera redonda como desbaste de agujeros a mandrinar.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_resumen_de_los_ciclos_fijos.html" class="no-ch">6 Resumen de los ciclos fijos.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="11_introduccin_a_la_programacin_cnc.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_g_funciones_preparatorias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.1 Estructura de un programa CNC.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id9">
+<div class="iDevice emphasis0">
+<div id="ta9_77" class="block iDevice_content">
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">Cada <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Programa%20CNC%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Programa%20CNC%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Programa CNC&quot; (Se abre en una nueva ventana)">programa CNC</a> en la memoria
+del control se identifica por un número dado por el programador. Este
+número es necesario cuando queremos <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Simular%20%28MEC_MCN03%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Simular%20(MEC_MCN03)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Simular&quot; (Se abre en una nueva ventana)">simular </a> el programa en el monitor de la fresadora, modificarlo o ejecutarlo.</span> Cada fabricante del control identifica
+el programa por una numero alfanumérico. 
+</div>
+<p style="margin-bottom: 0cm">
+&nbsp;
+</p>
+<table align="left" border="0" class="tabla" style="border: 0pt solid #000000">
+	<tbody>
+		<tr>
+			<td><span style="font-size: x-small; font-family: helvetica"> </span><br />
+			</td>
+			<td><span style="font-size: x-small; font-family: helvetica"> </span><span style="font-size: x-small; font-family: helvetica">Fagor 8055</span></td>
+			<td><span style="font-size: x-small; font-family: helvetica">Fanuc OT </span></td>
+		</tr>
+		<tr>
+			<td align="center">
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">Nombre del programa </span>
+			</p>
+			</td>
+			<td align="center">
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">P seguido de un maximo de 6 cifras</span>
+			</p>
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">Ej: P625890</span>
+			</p>
+			</td>
+			<td align="center">
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">O seguido de un máximo de 4 cifras ( 6 por opcional ) </span>
+			</p>
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">Ej: O6258 (O625890 por opción)<br />
+			</span>
+			</p>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<p>
+&nbsp;
+</p>
+<div align="justify">
+</div>
+<div class="elemento_izquierda">
+<div>
+<a href="MCN03_CONT_R08_Pantalla1.png" title="Pantalla CNC Fagor"><img align="left" alt="Pantalla de CNC que muestra un programa compuesto por varias lineas llamados bloques, cada bloque contiene ordenes tecnológicos y geométricos." class="imagen_ampliable" height="172" src="MCN03_CONT_R08_Pantalla1_mini.png" style="margin-right: 20px" title="Pantalla de CNC Fagor" width="200" /></a>  
+</div>
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">El programa esta compuesto por líneas
+llamadas bloques. Cada bloque contiene la información necesaria para
+realizar una operación, bien sea un movimiento de los ejes de la
+máquina, o una operación auxiliar. </span>
+</div>
+<p>
+<span style="font-size: x-small; font-family: helvetica">La ejecución o la simulación de los bloques de un programa CNC se realiza
+de manera secuencial, desde el primer bloque hacia abajo. Estos bloques se componen de comandos o funciones, cada
+función se identifica por una letra seguida de un número de 1 ó 2
+cifras. La letra identifica el tipo de función (También se llama
+dirección).</span>
+</p>
+<p>
+<span style="font-size: x-small"><strong>N80 G00 X30 Y10 Z0 F300 S3000 T03 D03 M03; Bloque de Fagor</strong></span>
+</p>
+<p>
+<span style="font-size: x-small"><strong>N80 G00 X30 Y10 Z0 F300 S3000 T0303 M03 (Bloque de Fanuc)</strong></span>
+</p>
+<p>
+<span style="font-size: x-small; font-family: helvetica">Ejemplo de un bloque de programación de CNC, en el se distingue, por un lado, el orden de la información geométrica relacionada con los movimientos de la herramienta, perfil de la pieza a mecanizar,... y, por otro, la información tecnológica relacionada con las velocidades de corte, formas de las herramientas,... Así mismo aparecen diferentes letras que se corresponden con funciones de programación, que se estudiarán más adelante. <br />
+<span style="font-family: helvetica">En
+la imagen de arriba puedes observar  los bloques que componen un programa CNC en la pantalla de
+una fresadora de la marca (Fagor).</span><br />
+En el modo ejecución, el control lee el programa bloque a bloque según se han escrito, interpreta el código escrito, chequea los errores y si no encuentra error ejecuta el movimiento u la orden en la máquina.</span><br />
+Normalmente el control CNC procesa la información de un programa CNC más rápido de lo que la máquina ejecuta las ordenes, por ello en programas cortos el control ya ha procesado todo el programa CNC cuando la máquina sólo ha hecho los primeros movimientos.
+</p>
+<p>
+El la siguiente tabla, se analiza el formato de una línea de programa:<br />
+<strong></strong>
+</p>
+<p>
+<strong>N80 G00 X30 Y10 Z0 F300 S3000 T03 D03 M03</strong>
+</p>
+<table align="center" border="0" cellpadding="5" cellspacing="0" class="tabla" style="background-color: #fafafa" width="638">
+	<tbody>
+		<tr style="background-color: #ffffff">
+			<td colspan="2" style="background-color: #ffffff">
+			<div align="center">
+			<strong><span style="font-size: x-small">Orden</span></strong>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 154px"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">Información 
+			Geométrica</span></strong>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 212px"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">Información 
+			Tecnológica</span></strong>
+			</div>
+			</td>
+		</tr>
+		<tr style="background-color: #fafafa">
+			<td colspan="2" style="background-color: #ffffff"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>N80</strong></span>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 154px"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>G00 X30 Y10 Z0</strong></span>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 212px"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>F300 S3000 T03 D03 M03</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">N</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<span style="font-size: x-small; font-family: helvetica"><br />
+			</span></td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica"><em>Indica el número 
+			del bloque (es optativo indicarlo).</em></span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">G</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Geométrica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Funciones preparatorias, 
+			indica el cómo se ejecuta una operación.</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">X, 
+			Y, Z</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Geométrica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Coordenadas para 
+			definir las cotas según los ejes.</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">F</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Tecnológica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Velocidad de avance.</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">S</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Tecnológica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Velocidad de giro 
+			del cabezal. </span><span style="font-size: x-small; font-family: helvetica">También función 
+			realacionada con el ángulo de posicionamiento 
+			del cabezal</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">T</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Tecnológica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Número de 
+			identificación de la herramienta.</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">D</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Tecnológica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Número de 
+			identificación del corrector de la herramienta.</span></td>
+		</tr>
+		<tr>
+			<td class="txt_base" width="41"> 
+			<div align="center">
+			<strong><span style="font-size: x-small">M</span></strong>
+			</div>
+			</td>
+			<td class="txt_base" width="191"> 
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">Información Tecnológica</span>
+			</div>
+			</td>
+			<td class="txt_base" colspan="2"><span style="font-size: x-small; font-family: helvetica">Funciones auxiliares 
+			del funcionamiento de la máquina.</span></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+&nbsp;
+</p>
+<table border="0" class="tabla">
+	<tbody>
+		<tr>
+			<td colspan="2">
+			<div align="justify">
+			</div>
+			<br />
+			<p>
+			&nbsp;
+			</p>
+			<p>
+			<a href="MCN03_CONT_R008_Pantalla1.jpg" title="Pantalla CNC"><br />
+			</a>  
+			</p>
+			<span style="font-size: x-small; font-family: helvetica"><strong>
+			</strong></span> 
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">Los bloques contienen informaciones como:<br />
+			</span>
+			</p>
+			<ul>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				Qué herramienta se selecciona para cada operación.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				Forma de desplazamiento de la herramienta.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				Velocidad de avance y giro de la herramienta.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				Activar funciones de la máquina...</span></li>
+			</ul>
+			</td>
+			<td>
+			<p>
+			<span style="font-size: x-small; font-family: helvetica">Las direcciones o funciónes  más usuales son :</span><br />
+			</p>
+			<ul>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				F	Avance.</span></li>
+				<li>
+				<div align="left">
+				<span style="font-size: x-small; font-family: helvetica">
+				G	Función de trayectoria.</span>
+				</div>
+				</li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				I, K	Parámetro de arco / factor de escala.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				M	Función de conexión / función adicional.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				N	Número de bloque, de 1 a 9999.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				R	Radio del arcos / redondeo de aristas.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				S	Velocidad del husillo.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				T	Llamada de herramienta.</span></li>
+				<li><span style="font-size: x-small; font-family: helvetica">
+				X, Z	Coordenadas de posición.</span> </li>
+			</ul>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+<br />
+<table border="0" class="tabla">
+	<tbody>
+		<tr>
+			<td rowspan="3"> <span style="font-size: x-small; font-family: helvetica"><strong>Formato de bloque</strong></span></td>
+			<td align="center"> <span style="font-size: x-small; font-family: helvetica">Información</span></td>
+			<td align="center"> <span style="font-size: x-small; font-family: helvetica"> 
+			1 Nº</span></td>
+			<td align="center"><span style="font-size: x-small; font-family: helvetica"> 2 Geométrica</span></td>
+			<td align="center"><span style="font-size: x-small; font-family: helvetica">
+			3 Tecnológica 
+			</span></td>
+			<td align="center"><span style="font-size: x-small; font-family: helvetica"> 4 Comentario</span></td>
+		</tr>
+		<tr style="background-color: #ffffff">
+			<td align="center"> <span style="font-size: x-small; font-family: helvetica">Fagor 8055</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			N8010</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			G00X33Y20Z10</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			F80S1200T01D01M3</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> ;Fagor 8055</span></td>
+		</tr>
+		<tr align="left" style="background-color: #ffffff">
+			<td align="center"> <span style="font-size: x-small; font-family: helvetica"> FanucOT</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			N8010</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			G00X33ZY20Z10</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> 
+			F80S1200T01011M3</span></td>
+			<td style="background-color: #ffffff"><span style="font-size: x-small; font-family: helvetica; color: #000000"> ( Fanuc OT)</span></td>
+		</tr>
+	</tbody>
+</table>
+<p>
+&nbsp;
+</p>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper OrientacionesalumnadofpdIdevice em_iDevice" id="id42">
+<div class="iDevice emphasis_orientacionesfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Orientaciones Alumnado</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta42_75" class="block iDevice_content">
+<font face="helvetica" size="2">Al contario que Fanuc OT en Fagor 8055 el orden N G X Z F S T D M es
+obligatorio, en ámbos el número de bloque siempre va al inicio.
+</font>
+<p align="justify">
+<font face="helvetica" size="2">El número de bloque (N) no es necesario programar, los bloques
+pueden ir sin numerar, cuando se numeran tampoco es necesario que vayan
+en orden creciente. Los números de bloque van desde N hasta N9999
+</font>
+</p>
+<p>
+<font face="helvetica" size="2"><b>Información geométrica:</b></font> 
+</p>
+<ul>
+	<li><font face="helvetica" size="2">G Función preparatoria que usan las cotas </font></li>
+	<li><font face="helvetica" size="2">XYZ Coordenadas de los ejes</font></li>
+</ul>
+<p>
+<font face="helvetica" size="2"><b>Información tecnológica:</b></font>
+</p>
+<ul>
+	<li><font face="helvetica" size="2">F Velocidad de avance de la htas. sobre la pieza</font></li>
+	<li><font face="helvetica" size="2">G las funciones preparatorias de maquina.   </font></li>
+	<li><font face="helvetica" size="2">S Velocidad de giro de la herramienta de corte</font></li>
+	<li><font face="helvetica" size="2">T Posición de la htas</font></li>
+	<li><font face="helvetica" size="2">M Funciones auxiliares del torno.</font> </li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id67">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-67_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion67_63" class="block question iDevice_content">
+<b><font size="2">Indica en cada caso cuál es el bloque correcto.</font></b> 
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_66" class="sr-av"><a href="#answer-67_66">Opción 1</a></label><input type="radio" name="option67_63" id="i67_66" class="exe-radio-option exe-radio-option-0-3-67_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_66"><div id="taans67_66" class="block iDevice_content">
+<font size="2">a) G01 Z20 X-20</font><br />
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_78" class="sr-av"><a href="#answer-67_78">Opción 2</a></label><input type="radio" name="option67_63" id="i67_78" class="exe-radio-option exe-radio-option-1-3-67_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_78"><div id="taans67_78" class="block iDevice_content">
+<font size="2">b) N20 Y20 G01 X-20</font>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_81" class="sr-av"><a href="#answer-67_81">Opción 3</a></label><input type="radio" name="option67_63" id="i67_81" class="exe-radio-option exe-radio-option-2-3-67_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_81"><div id="taans67_81" class="block iDevice_content">
+<font size="2"><span name="G01choice3">
+c) N20 G01 X-20</span></font>
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b67_63" class="feedback js-hidden">
+<div id="taf67_66" class=" iDevice_content">
+Incorrecto.
+
+</div>
+</section>
+<section id="sa1b67_63" class="feedback js-hidden">
+<div id="taf67_78" class=" iDevice_content">
+Incorrecto.
+
+</div>
+</section>
+<section id="sa2b67_63" class="feedback js-hidden">
+<div id="taf67_81" class=" iDevice_content">
+<font size="2">La solución correcta es c) N20 G01 X-20; ; ya que sigue el orden correcto: N G X Y Z F S T D M ; Comentarios<br />
+El 1º caso intercambia el orden entre X Y, y el 2º además introduce entre X e Y la función G01.</font>
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-67_66">Incorrecto</a><span> (<a href="#sa0b67_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-67_78">Incorrecto</a><span> (<a href="#sa1b67_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-67_81">Opción correcta</a><span> (<a href="#sa2b67_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+<br/><section class="question">
+<form name="multi-choice-form-67_113" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion67_113" class="block question iDevice_content">
+<b><font size="2">¿Cuál de las siguientes estructuras de un bloque es la correcta en Fagor?</font></b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_116" class="sr-av"><a href="#answer-67_116">Opción 1</a></label><input type="radio" name="option67_113" id="i67_116" class="exe-radio-option exe-radio-option-0-3-67_113-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_116"><div id="taans67_116" class="block iDevice_content">
+<font size="2">a) N_G_X_T_F_M_S_Z_D_Y</font>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_119" class="sr-av"><a href="#answer-67_119">Opción 2</a></label><input type="radio" name="option67_113" id="i67_119" class="exe-radio-option exe-radio-option-1-3-67_113-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_119"><div id="taans67_119" class="block iDevice_content">
+<span style="font-family: 'Arial','sans-serif'" lang="FR"><font size="2">b) N_G_X_Y_Z_F_S_T_D_M_</font><o:p></o:p></span>
+
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i67_122" class="sr-av"><a href="#answer-67_122">Opción 3</a></label><input type="radio" name="option67_113" id="i67_122" class="exe-radio-option exe-radio-option-2-3-67_113-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-67_122"><div id="taans67_122" class="block iDevice_content">
+<font size="2">c) N_Y_X_D_Z_G_M_T_F_S_</font>
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b67_113" class="feedback js-hidden">
+<div id="taf67_116" class=" iDevice_content">
+<font size="2">Incorrecto.</font>
+
+</div>
+</section>
+<section id="sa1b67_113" class="feedback js-hidden">
+<div id="taf67_119" class=" iDevice_content">
+<p>
+Correcto <font size="2">ya que sigue el orden correcto: N G X Y Z F S T D M ; Comentarios (En Fagor).</font>
+</p>
+<p>
+&nbsp;
+</p>
+<font size="2"></font>
+
+</div>
+</section>
+<section id="sa2b67_113" class="feedback js-hidden">
+<div id="taf67_122" class=" iDevice_content">
+Incorrecto
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-67_116">Incorrecto</a><span> (<a href="#sa0b67_113">Retroalimentación</a>)</span></li>
+<li><a href="#answer-67_119">Opción correcta</a><span> (<a href="#sa1b67_113">Retroalimentación</a>)</span></li>
+<li><a href="#answer-67_122">Incorrecto</a><span> (<a href="#sa2b67_113">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="11_introduccin_a_la_programacin_cnc.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="112_g_funciones_preparatorias.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>

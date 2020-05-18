@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="es">
+<head>
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<link rel="stylesheet" type="text/css" href="nav.css" />
+<meta http-equiv="content-type" content="text/html;  charset=utf-8" />
+<title>1.1.6 T Selección de Hta. y sus dimensiones. | MCN03 Programación de Fresadora </title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="IMH" />
+<meta name="generator" content="eXeLearning 2.5 - exelearning.net" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-web-site" id="exe-node-8"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<p id="skipNav"><a href="#main" class="sr-av">Saltar la navegación</a></p>
+<header id="header" ><div id="headerContent">MCN03 Programación de Fresadora</div></header>
+<nav id="siteNav">
+<ul>
+   <li><a href="index.html" class="daddy main-node">MCN03 Programación de fresadora CNC - Caso práctico.</a></li>
+   <li class="current-page-parent"><a href="1_programacin_bsica_fresadora_cnc__caso_prctico.html" class="current-page-parent daddy">1 Programación básica fresadora CNC - Caso práctico.</a>
+   <ul>
+      <li class="current-page-parent"><a href="11_introduccin_a_la_programacin_cnc.html" class="current-page-parent daddy">1.1 Introducción a la programación CNC.</a>
+      <ul>
+         <li><a href="111_estructura_de_un_programa_cnc.html" class="no-ch">1.1.1 Estructura de un programa CNC.</a></li>
+         <li><a href="112_g_funciones_preparatorias.html" class="no-ch">1.1.2 G Funciones preparatorias.</a></li>
+         <li><a href="113_ejes_y_coordenadas_de_la_fresadora.html" class="no-ch">1.1.3 Ejes y coordenadas de la fresadora.</a></li>
+         <li><a href="114_programacin_de_cotas_de_fresadora.html" class="no-ch">1.1.4 Programación de cotas de fresadora.</a></li>
+         <li><a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="no-ch">1.1.5 F Avance de Hta. y S Giro del cabezal.</a></li>
+         <li id="active"><a href="116_t_seleccin_de_hta_y_sus_dimensiones.html" class="active no-ch">1.1.6 T Selección de Hta. y sus dimensiones.</a></li>
+         <li><a href="117_funciones_auxiliares_m_del_programa.html" class="no-ch">1.1.7 Funciones auxiliares: M del programa.</a></li>
+         <li><a href="118_funciones_auxiliares_m_del_cabezal.html" class="no-ch">1.1.8 Funciones auxiliares: M del cabezal.</a></li>
+         <li><a href="119_funciones_auxiliares_m_de_mquina.html" class="no-ch">1.1.9 Funciones auxiliares: M de máquina.</a></li>
+      </ul>
+      </li>
+      <li><a href="12_revisar_y_modificar_datos_de_un_pgm.html" class="daddy">1.2 Revisar y modificar datos de un PGM</a>
+      <ul class="other-section">
+         <li><a href="121_modificar_la_tabla_de_correctores.html" class="no-ch">1.2.1 Modificar la tabla de correctores</a></li>
+         <li><a href="122_modificar_t_f_s_de_un_programa.html" class="no-ch">1.2.2 Modificar T, F, S de un programa</a></li>
+         <li><a href="123_guardar_un_pgm_en_otro_directorio.html" class="no-ch">1.2.3 Guardar un PGM en otro directorio</a></li>
+      </ul>
+      </li>
+      <li><a href="13_sistemas_de_referencia_y_coordenadas.html" class="daddy">1.3 Sistemas de referencia y coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="131_puntos_de_referencia_de_la_fresadora.html" class="no-ch">1.3.1 Puntos de referencia de la fresadora.</a></li>
+         <li><a href="132_establecimiento_de_orgenes_pieza.html" class="no-ch">1.3.2 Establecimiento de orígenes pieza.</a></li>
+         <li><a href="133_tabla_de_orgenes.html" class="no-ch">1.3.3 Tabla de orígenes.</a></li>
+      </ul>
+      </li>
+      <li><a href="14_programacin_de_cotas.html" class="daddy">1.4 Programación de cotas.</a>
+      <ul class="other-section">
+         <li><a href="141_cotas_absolutas.html" class="no-ch">1.4.1 Cotas absolutas.</a></li>
+         <li><a href="142_cotas_incrementales.html" class="no-ch">1.4.2 Cotas incrementales.</a></li>
+         <li><a href="143_coordenadas_polares.html" class="no-ch">1.4.3 Coordenadas polares.</a></li>
+         <li><a href="144_programacin_de_coordenadas_polares.html" class="no-ch">1.4.4 Programación de coordenadas polares.</a></li>
+         <li><a href="145_establecer_el_origen_polar.html" class="no-ch">1.4.5 Establecer el origen polar.</a></li>
+         <li><a href="146_coordenadas_polares_absolutas.html" class="no-ch">1.4.6 Coordenadas polares absolutas.</a></li>
+         <li><a href="147_coordenadas_polares_incrementales.html" class="no-ch">1.4.7 Coordenadas polares incrementales.</a></li>
+      </ul>
+      </li>
+      <li><a href="15_programacin_de_movimiento_lineales.html" class="daddy">1.5 Programación de movimiento lineales.</a>
+      <ul class="other-section">
+         <li><a href="151_g00_de_posicionamiento_rpido.html" class="no-ch">1.5.1 G00 de posicionamiento rápido</a></li>
+         <li><a href="152_g01_movimiento_de_trabajo.html" class="no-ch">1.5.2 G01 movimiento de trabajo.</a></li>
+         <li><a href="153_movimientos_en_cotas_cartesianas.html" class="no-ch">1.5.3 Movimientos en cotas cartesianas.</a></li>
+         <li><a href="154_movimientos_en_cotas_polares.html" class="no-ch">1.5.4 Movimientos en cotas polares.</a></li>
+         <li><a href="155_combinacin_de_movimientos_y_cotas.html" class="no-ch">1.5.5 Combinación de movimientos y cotas.</a></li>
+         <li><a href="156_resumen.html" class="no-ch">1.5.6 Resumen.</a></li>
+      </ul>
+      </li>
+      <li><a href="16_programacin_de_arcos_dado_su_centro.html" class="daddy">1.6 Programación de arcos dado su centro.</a>
+      <ul class="other-section">
+         <li><a href="161_calculo_de_coordenadas_del_centro.html" class="no-ch">1.6.1 Calculo de coordenadas del centro.</a></li>
+         <li><a href="162_programacin_incremental_de_arcos.html" class="no-ch">1.6.2 Programación incremental de arcos.</a></li>
+         <li><a href="163_programacin_de_crculos_completos.html" class="no-ch">1.6.3 Programación de círculos completos.</a></li>
+         <li><a href="164_programacin_mediante_el_ngulo.html" class="no-ch">1.6.4 Programación mediante el ángulo.</a></li>
+         <li><a href="165_consideracin_sobre_el_origen_polar.html" class="no-ch">1.6.5 Consideración sobre el origen polar.</a></li>
+         <li><a href="166_programacin_de_arcos_en_polares.html" class="no-ch">1.6.6 Programación de arcos en polares.</a></li>
+         <li><a href="167_traslado_del_origen_polar.html" class="no-ch">1.6.7 Traslado del origen polar.</a></li>
+         <li><a href="168_programacin_incremental_en_polares.html" class="no-ch">1.6.8 Programación incremental en polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="17_programacin_de_arcos_por_su_radio.html" class="daddy">1.7 Programación de arcos por su radio.</a>
+      <ul class="other-section">
+         <li><a href="171_valor_de_r_positivo.html" class="no-ch">1.7.1 Valor de R positivo.</a></li>
+         <li><a href="172_valor_de_r_negativo.html" class="no-ch">1.7.2 Valor de R negativo.</a></li>
+      </ul>
+      </li>
+      <li><a href="18_interpolacines_helicoidales.html" class="daddy">1.8 Interpolaciónes helicoidales.</a>
+      <ul class="other-section">
+         <li><a href="181_con_programacin_de_centro.html" class="no-ch">1.8.1 Con programación de centro.</a></li>
+         <li><a href="182_con_ngulo_y_programacin_de_centro.html" class="no-ch">1.8.2 Con ángulo y programación de centro.</a></li>
+         <li><a href="183_en_polares.html" class="no-ch">1.8.3 En polares.</a></li>
+      </ul>
+      </li>
+      <li><a href="19_resumen_todo_tipo_de_movimientos.html" class="no-ch">1.9 Resumen. Todo tipo de movimientos.</a></li>
+   </ul>
+   </li>
+   <li><a href="2_funciones_adicionales_en_fresadora__caso_prctico.html" class="daddy">2 Funciones adicionales en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="21_compensacin_del_radio_de_herramienta.html" class="daddy">2.1 Compensación del radio de herramienta.</a>
+      <ul class="other-section">
+         <li><a href="211_operaciones_con_compensacin.html" class="no-ch">2.1.1 Operaciones con compensación.</a></li>
+         <li><a href="212_errores_frecuentes.html" class="no-ch">2.1.2 Errores frecuentes.</a></li>
+         <li><a href="213_modificacin_del_radios_de_herramienta_para_obtener_creces.html" class="no-ch">2.1.3 Modificación del radios de herramienta. para obtener creces.</a></li>
+         <li><a href="214_correcciones_de_radio_de_herramienta_o_desgaste_segn_medidas_obtenidas.html" class="no-ch">2.1.4 Correcciones de radio de herramienta, o desgaste según medidas obtenidas.</a></li>
+         <li><a href="215_compensacin_de_la_longitud_de_herramienta.html" class="no-ch">2.1.5 Compensación de la longitud de herramienta.</a></li>
+      </ul>
+      </li>
+      <li><a href="22_mecanizado_de_aristas.html" class="daddy">2.2 Mecanizado de aristas.</a>
+      <ul class="other-section">
+         <li><a href="221_parada_exacta_o_contorneado_en_aristas.html" class="no-ch">2.2.1 Parada exacta o contorneado en aristas.</a></li>
+         <li><a href="222_radios_de_acuerdo.html" class="no-ch">2.2.2 Radios de acuerdo.</a></li>
+         <li><a href="223_aristas_achaflanadas.html" class="no-ch">2.2.3 Aristas achaflanadas.</a></li>
+         <li><a href="224_combinacin_de_aristas_y_chaflanes.html" class="no-ch">2.2.4 Combinación de aristas y chaflanes.</a></li>
+         <li><a href="225_errores_frecuentes.html" class="no-ch">2.2.5 Errores frecuentes.</a></li>
+         <li><a href="226_programacin_de_aristas_en_polares.html" class="no-ch">2.2.6 Programación de aristas en polares.</a></li>
+         <li><a href="227_chaflanes_y_redondeos_en_arcos.html" class="no-ch">2.2.7 Chaflanes y redondeos en arcos.</a></li>
+      </ul>
+      </li>
+      <li><a href="24_programacin_de_repeticiones.html" class="daddy">2.4 Programación de repeticiones.</a>
+      <ul class="other-section">
+         <li><a href="241_identificar_los_bloques_a_repetir.html" class="no-ch">2.4.1 Identificar los bloques a repetir.</a></li>
+         <li><a href="242_mecanizado_de_perfiles_en_pasadas.html" class="no-ch">2.4.2 Mecanizado de perfiles en pasadas.</a></li>
+         <li><a href="243_mecanizar_perfiles_en_diferentes_posiciones.html" class="no-ch">2.4.3 Mecanizar perfiles en diferentes posiciones.</a></li>
+         <li><a href="244_uso_en_emparrillados.html" class="no-ch">2.4.4 Uso en emparrillados.</a></li>
+      </ul>
+      </li>
+      <li><a href="25_subrutinas.html" class="daddy">2.5 Subrutinas.</a>
+      <ul class="other-section">
+         <li><a href="251_mecanizar_las_formas_desde_diferentes_programas.html" class="no-ch">2.5.1 Mecanizar las formas desde diferentes programas.</a></li>
+         <li><a href="252_uso_en_operaciones_frecuentes_de_mecanizado.html" class="no-ch">2.5.2 Uso en operaciones frecuentes de mecanizado.</a></li>
+      </ul>
+      </li>
+      <li><a href="26_resumen.html" class="no-ch">2.6 Resumen.</a></li>
+      <li><a href="27_temporizacin.html" class="no-ch">2.7 Temporización.</a></li>
+      <li><a href="28_simulacin_de_pgm.html" class="daddy">2.8 Simulación de PGM.</a>
+      <ul class="other-section">
+         <li><a href="281_deteccin_de_errores.html" class="no-ch">2.8.1 Detección de errores.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="3_trasformacin_de_coordenadas__caso_prctico.html" class="daddy">3 Trasformación de coordenadas - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="31_tipos_de_trasformacin_de_coordenadas.html" class="no-ch">3.1 Tipos de trasformación de coordenadas.</a></li>
+      <li><a href="32_traslados_programables_de_origen_pieza.html" class="daddy">3.2 Traslados programables de origen pieza.</a>
+      <ul class="other-section">
+         <li><a href="321_ceros_pieza_versus_traslados_de_origen.html" class="no-ch">3.2.1 Ceros pieza versus traslados de origen.</a></li>
+         <li><a href="322_uso_en_emparrillados.html" class="no-ch">3.2.2 Uso en emparrillados.</a></li>
+         <li><a href="323_repetir_formas_en_diferente_posicin.html" class="no-ch">3.2.3 Repetir formas en diferente posición.</a></li>
+         <li><a href="324_traslado_de_origen_y_origen_polar.html" class="no-ch">3.2.4 Traslado de origen y origen polar.</a></li>
+      </ul>
+      </li>
+      <li><a href="33_giro_de_coordenadas.html" class="daddy">3.3 Giro de coordenadas.</a>
+      <ul class="other-section">
+         <li><a href="331_giro_previo_segn_la_orientacin_del_perfil.html" class="no-ch">3.3.1 Giro previo según la orientación del perfil.</a></li>
+         <li><a href="332_repetir_formas_cerradas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.2 Repetir formas cerradas giradas con respecto a otra de partida.</a></li>
+         <li><a href="333_repetir_formas_abiertas_giradas_con_respecto_a_otra_de_partida.html" class="no-ch">3.3.3 Repetir formas abiertas giradas con respecto a otra de partida.</a></li>
+         <li><a href="334_giro_de_coordenadas_en_polares.html" class="no-ch">3.3.4 Giro de coordenadas en polares.</a></li>
+         <li><a href="335_combinacin_de_traslado_de_origen_y_giro_de_coordenadas.html" class="no-ch">3.3.5 Combinación de traslado de origen y giro de coordenadas.</a></li>
+      </ul>
+      </li>
+      <li><a href="34_conclusin.html" class="no-ch">3.4 Conclusión.</a></li>
+   </ul>
+   </li>
+   <li><a href="4_ciclos_fijos_de_agujeros_en_fresadora__caso_prctico.html" class="daddy">4 Ciclos fijos de agujeros en fresadora - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="41_los_ciclos_fijos_en_fresadora.html" class="daddy">4.1 Los ciclos fijos en fresadora.</a>
+      <ul class="other-section">
+         <li><a href="411_definir_el_ciclo_y_su_zona_de_influencia.html" class="no-ch">4.1.1 Definir el ciclo y su zona de influencia.</a></li>
+         <li><a href="412_consideraciones_generales.html" class="no-ch">4.1.2 Consideraciones generales.</a></li>
+         <li><a href="413_parmetros_y_funcionamiento_comunes.html" class="no-ch">4.1.3 Parámetros y funcionamiento comunes.</a></li>
+      </ul>
+      </li>
+      <li><a href="42_ciclo_de_taladrado_simple.html" class="daddy">4.2 Ciclo de taladrado simple.</a>
+      <ul class="other-section">
+         <li><a href="421_programacin.html" class="no-ch">4.2.1 Programación.</a></li>
+         <li><a href="422_funcionamiento.html" class="no-ch">4.2.2 Funcionamiento.</a></li>
+         <li><a href="423_consideraciones_sobre_el_ciclo.html" class="no-ch">4.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="424_uso_en_punteados_y_taladrados_cortos.html" class="no-ch">4.2.4 Uso en punteados y taladrados cortos.</a></li>
+      </ul>
+      </li>
+      <li><a href="43_ciclo_de_avellanado.html" class="daddy">4.3 Ciclo de avellanado.</a>
+      <ul class="other-section">
+         <li><a href="431_programacin.html" class="no-ch">4.3.1 Programación.</a></li>
+         <li><a href="432_funcionamiento.html" class="no-ch">4.3.2 Funcionamiento.</a></li>
+         <li><a href="433_consideraciones_sobre_el_ciclo.html" class="no-ch">4.3.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="434_uso_en_avellanados_y_biselados.html" class="no-ch">4.3.4 Uso en avellanados y biselados.</a></li>
+      </ul>
+      </li>
+      <li><a href="44_taladrado_profundo.html" class="daddy">4.4 Taladrado profundo.</a>
+      <ul class="other-section">
+         <li><a href="441_programacin.html" class="no-ch">4.4.1 Programación.</a></li>
+         <li><a href="442_funcionamiento.html" class="no-ch">4.4.2 Funcionamiento.</a></li>
+         <li><a href="443_consideraciones_sobre_el_ciclo.html" class="no-ch">4.4.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="444_retroceso_para_rotura_de_viruta.html" class="no-ch">4.4.4 Retroceso para rotura de viruta.</a></li>
+         <li><a href="445_retroceso_total_de_la_broca.html" class="no-ch">4.4.5 Retroceso total de la broca.</a></li>
+      </ul>
+      </li>
+      <li><a href="45_escariado__mandrinado.html" class="daddy">4.5 Escariado / Mandrinado</a>
+      <ul class="other-section">
+         <li><a href="451_programacin.html" class="no-ch">4.5.1 Programación.</a></li>
+         <li><a href="452_funcionamiento.html" class="no-ch">4.5.2 Funcionamiento.</a></li>
+         <li><a href="453_consideraciones_sobre_el_ciclo.html" class="no-ch">4.5.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="454_pretaladrado_previo_al_escariado.html" class="no-ch">4.5.4 Pre-taladrado previo al escariado.</a></li>
+         <li><a href="455_escariados_ciegos_y_pasantes.html" class="no-ch">4.5.5 Escariados ciegos y pasantes.</a></li>
+      </ul>
+      </li>
+      <li><a href="46_mandrinado_con_retirada_de_herramienta_en_el_fondo_del_agujero.html" class="daddy">4.6 Mandrinado con retirada de herramienta en el fondo del agujero.</a>
+      <ul class="other-section">
+         <li><a href="461_programacin.html" class="no-ch">4.6.1 Programación.</a></li>
+         <li><a href="462_funcionamiento.html" class="no-ch">4.6.2 Funcionamiento.</a></li>
+         <li><a href="463_consideraciones_sobre_el_ciclo.html" class="no-ch">4.6.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="464_pretaladrado_previo_al_mandrinado.html" class="no-ch">4.6.4 Pre-taladrado previo al mandrinado.</a></li>
+         <li><a href="465_mandrinado_con_fondo_tolerancia_de_perpendicularidad.html" class="no-ch">4.6.5 Mandrinado con fondo tolerancia de perpendicularidad.</a></li>
+      </ul>
+      </li>
+      <li><a href="47_roscado_con_macho_flexible_y_rgido.html" class="daddy">4.7 Roscado con macho flexible y rígido.</a>
+      <ul class="other-section">
+         <li><a href="471_programacin.html" class="no-ch">4.7.1 Programación.</a></li>
+         <li><a href="472_funcionamiento.html" class="no-ch">4.7.2 Funcionamiento.</a></li>
+         <li><a href="473_consideraciones_sobre_el_ciclo.html" class="no-ch">4.7.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="474_pretaladrado_previo_al_roscado.html" class="no-ch">4.7.4 Pre-taladrado previo al roscado.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="5_ciclos_fijos_de_fresado__caso_prctico.html" class="daddy">5 Ciclos fijos de fresado - Caso práctico</a>
+   <ul class="other-section">
+      <li><a href="51_cajera_rectangular.html" class="daddy">5.1 Cajera rectangular.</a>
+      <ul class="other-section">
+         <li><a href="511_programacin.html" class="no-ch">5.1.1 Programación.</a></li>
+         <li><a href="512_funcionamiento.html" class="no-ch">5.1.2 Funcionamiento.</a></li>
+         <li><a href="513_consideraciones_sobre_el_ciclo.html" class="no-ch">5.1.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="514_uso_de_cajera_cuadrada_como_desbaste.html" class="no-ch">5.1.4 Uso de cajera cuadrada como desbaste.</a></li>
+      </ul>
+      </li>
+      <li><a href="52_cajera_redonda.html" class="daddy">5.2 Cajera redonda.</a>
+      <ul class="other-section">
+         <li><a href="521_programacin.html" class="no-ch">5.2.1 Programación.</a></li>
+         <li><a href="522_funcionamiento.html" class="no-ch">5.2.2 Funcionamiento.</a></li>
+         <li><a href="523_consideraciones_sobre_el_ciclo.html" class="no-ch">5.2.3 Consideraciones sobre el ciclo.</a></li>
+         <li><a href="524_uso_de_cajera_redonda_como_desbaste.html" class="no-ch">5.2.4 Uso de cajera redonda como desbaste.</a></li>
+         <li><a href="525_uso_de_cajera_redonda_como_desbaste_de_agujeros_a_mandrinar.html" class="no-ch">5.2.5 Uso de cajera redonda como desbaste de agujeros a mandrinar.</a></li>
+      </ul>
+      </li>
+   </ul>
+   </li>
+   <li><a href="6_resumen_de_los_ciclos_fijos.html" class="no-ch">6 Resumen de los ciclos fijos.</a></li>
+   <li><a href="anexo_licencias_de_recursos.html" class="no-ch">Anexo licencias de recursos</a></li>
+</ul>
+</nav>
+<div id='topPagination'>
+<nav class="pagination noprt">
+<a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="117_funciones_auxiliares_m_del_programa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+<div id="main-wrapper">
+<section id="main">
+<header id="nodeDecoration"><h1 id="nodeTitle">1.1.6 T Selección de Hta. y sus dimensiones.</h1></header>
+<article class="iDevice_wrapper FreeTextfpdIdevice" id="id27">
+<div class="iDevice emphasis0">
+<div id="ta27_77" class="block iDevice_content">
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<p>
+<u><strong><span style="font-size: x-small; font-family: helvetica">Función T: Selección de herramienta.</span></strong></u> 
+</p>
+<u><strong><span style="font-size: x-small; font-family: helvetica"></span></strong></u>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="justify">
+<a href="MCN03_CONT_R018_Almacen.jpg" title="Almacén automático de herramientas"><img align="right" alt="Almacén Automático de herramientas de una fresadora, hay 12 diferentes tipos de fresas colocadas cada una en su posición . Se aprecia el husillo haciendo  el cambio de la herramienta. Es un almacén de color rosa." class="imagen_ampliable" height="151" src="MCN03_CONT_R018_Almacen_mini.jpg" style="margin-left: 15px" title="Almacén automático de herramientas" width="200" /></a>
+</div>
+</div>
+<div class="texto_izquierda" style="text-align: center">
+<div align="justify">
+</div>
+<div align="justify">
+<img align="left" alt="Almacén manual de las herramientas dispuestas en un bastidor,de color azul de dos  niveles donde el cambio de herramienta es manual, varias herramientas con sus suportes están colocadas verticalmente cada una en su agujero." height="141" src="MCN03_CONT_R017_Almacen1_mini.jpg" style="margin-right: 20px" title="Almacen manual" width="200" /><span style="font-size: x-small; font-family: helvetica">Las herramientas en                                  la fresadora CNC se encuentran situadas en un almacen o carrusel de herramientas (en                                  estos casos la fresadora toma el nombre de centro                                  de mecanizado) donde el cambio de herramienta                                  es totalmente automático (imagen de derecha) o bien fuera de la máquina dispuestas                                  en un bastidor, donde el cambio de herramienta                                  es manual (imagen de izquierda).</span><br />
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">En el centro de mecanizado, el cambio se realiza                                  de varias formas según la máquina;                                  puede haber un brazo que realiza el cambio...                                  Cada alojamiento (posición) del almacén                                  o carrusel está numerado, de tal forma                                  que tendremos que poner cada herramienta en                                  el alojamiento que le corresponde (para eso                                  tendrán que coincidir el nº de T                                  que le hemos puesto a la herramienta en el programa                                  de control numérico con la numeración                                  de los alojamientos).</span><br />
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">Cuando el cambio es manual (en los casos de                                  que las herramientas estén fuera de la                                  máquina dispuestas en un bastidor), será                                  suficiente que le pongamos a la máquina                                  la herramienta que toque (fijándonos                                  en el nº de T que ponga en el programa                                  de control numérico y que coincida con                                  el nº de T que le hemos puesto a la herramienta).</span>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">
+<div class="separador">
+</div>
+<div class="separador">
+</div>
+</span>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="center">
+<strong><span style="font-size: x-small; font-family: helvetica">
+<div class="separador">
+</div>
+<div class="separador">
+</div>
+Almacén de herramientas
+<div class="separador">
+</div>
+</span></strong>
+</div>
+</div>
+<div align="center" class="texto_centrado">
+</div>
+<div align="center" class="texto_centrado">
+<div class="elemento_centrado">
+<div>
+<object type="application/x-shockwave-flash" data="MCN03_CONT_R033_fresadoraalmacen.swf" width="535" height="453">
+	<param name="width" value="535" />
+	<param name="height" value="453" />
+	<param name="play" value="false" />
+	<param name="scale" value="exactfit" />
+	<param name="src" value="MCN03_CONT_R033_fresadoraalmacen.swf" />
+	<param name="movie" value="MCN03_CONT_R033_fresadoraalmacen.swf" />
+</object>
+</div>
+<a class="credenciales" href="MCN03_CONT_R019_1_fresadoraalmacen.html" title="Almacén de herramientas">Resumen textual alternativo
+<div class="separador">
+</div>
+</a>
+</div>
+</div>
+<div align="center" class="texto_centrado">
+</div>
+<div align="left" class="texto_izquierda">
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">
+<div class="separador">
+</div>
+</span>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">La selección de la herramienta se realiza mediante las dos cifras y
+puede tener un valor comprendido entre 0 y 99. Este valor se emplea
+para identificar la herramienta en el programa y en el almacén de
+herramientas.</span>
+</div>
+<div align="justify">
+</div>
+<div align="left" class="texto_izquierda">
+<span style="font-size: x-small; font-family: helvetica">
+El formato de la función T:<strong> T[nº de herramienta]</strong></span>
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">Cuando el control ejecuta esta función, el CNC asume como herramienta
+activa la T que hemos programado. Hace falta programar <em><strong>M06 </strong></em>que se
+ejecute el cambio de herramienta.</span>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="left" class="texto_izquierda">
+<u><strong><span style="font-size: x-small; font-family: helvetica">Función D: Selección de los correctores de la herramienta.</span></strong></u>
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="justify">
+</div>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+</div>
+<span style="font-size: x-small; font-family: helvetica"> </span>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="left">
+</div>
+<a class="credenciales" title="Resumen textual alternativo&lt;" target="_self"></a>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="justify">
+<a href="MCN03_CONT_R019_Dim_herramienta.png" title="Tabla de correctores"><img align="left" alt="En la imagen puedes ver una pantalla del control tipo Fagor que muestra la tabla de correctores y dimensiones de varias  herramientas. En esta tabla hay 5 columnas con los encabezados: CORR/RADIO/LONGITUD/CORRECCION R/CORRECCION L" class="imagen_ampliable" height="148" src="MCN03_CONT_R019_Dim_herramienta_mini.png" style="margin-right: 20px" title="Tabla de correctores en Fagor 8055" width="200" /></a>
+</div>
+</div>
+<span style="font-size: x-small; font-family: helvetica">El <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Correctores%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Correctores%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Correctores&quot; (Se abre en una nueva ventana)">corrector</a>  D de una herramienta
+indica la posición de la herramienta en la tabla de correctores. Esta
+dirección consta también de 2 cifras de 1 a 99, mediante las cuales se
+selecciona su posición en la tabla de correctores del control numérico
+donde están almacenados los datos de las dimensiones; forma y radio de
+las herramientas así como la posibilidad de modificar los errores de
+<a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Calibrar%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Calibrar%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Calibrar&quot; (Se abre en una nueva ventana)">reglaje</a> o <a class="glosario" href="../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Desgaste%20%28MEC_MCN01%29" onclick="window.open('../../../../../mod/glossary/showentry.php?displayformat=dictionary&amp;concept=Desgaste%20(MEC_MCN01)','','scrollbars=yes,width=600,height=250');return false;" title="Ver la definición de &quot;Desgaste&quot; (Se abre en una nueva ventana)">desgaste</a>  de las mismas. En la imagen puedes ver una pantalla del control tipo Fagor que muestra la tabla de correctores y dimensiones de herramienta.</span><span style="font-size: x-small; font-family: helvetica"><br />
+</span>
+<div align="justify">
+<div class="elemento_derecha">
+<div align="justify">
+</div>
+</div>
+</div>
+<div align="justify">
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">
+En otros apartados se explicara como tomar los correctores y introducirlos en las tablas de correctores.</span><span style="font-size: x-small; font-family: helvetica"><br />
+</span>
+<span style="font-size: x-small; font-family: helvetica">
+</span>
+</div>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">
+Su programación es: T01 D01 (Selecciona la herramienta 1 y asume las dimensiones del corrector 1).</span>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="justify">
+</div>
+</div>
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica">
+Los numeros de T y D no tienen porque coincidir, pero parece lógico
+asignar a cada herramienta el mismo número del corrector D.</span><span style="font-size: x-small; font-family: helvetica"> También es frecuente indicar ambas funciones en el mismo bloque, por ejemplo:</span>
+<p align="justify">
+<span style="font-size: x-small; font-family: helvetica">N20 G94 G97 F400 S2000 T02 D02 M03<br />
+N30 M06</span><br />
+<u><strong><span style="font-size: x-small; font-family: helvetica">Las dimensiones de la herramienta</span></strong></u> 
+</p>
+<p align="justify">
+<span style="font-size: x-small; font-family: helvetica">La herramienta posee unas dimensiones,
+que han de ser consideradas a la hora de programar y mecanizar. Estas
+dimensiones son el radio de la herramienta y su</span><span style="font-size: x-small; font-family: helvetica"> longitud.</span> 
+<span style="font-size: x-small; font-family: helvetica">Las dimensiones de la herramienta son: </span><span style="font-size: x-small; font-family: helvetica"></span>
+</p>
+<em><strong><span style="font-size: x-small; font-family: helvetica">R Radio.<br />
+L Longitud. 
+</span></strong></em>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<em><strong><span style="font-size: x-small; font-family: helvetica">
+I  Desgaste de radio.
+</span></strong></em>
+</div>
+<div align="justify">
+<em><strong><span style="font-size: x-small; font-family: helvetica">
+K Desgaste en la longitud.</span></strong></em>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="left" class="texto_izquierda">
+<span style="font-size: x-small; font-family: helvetica"> </span>
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+<span style="font-size: x-small; font-family: helvetica">En cada registro (observe en la imagen de arriba que el registro correspondiente al 
+corrector D007 está seleccionado con la barra amarilla) se guardan los 
+siguientes valores: </span>
+</div>
+<div align="left" class="texto_izquierda">
+<table align="center" bgcolor="#fafafa" border="0" cellpadding="5" cellspacing="0" width="638">
+	<tbody>
+		<tr bgcolor="#eeeeee">
+			<td style="background-color: #ffffff">
+			<div align="center" class="inicio Estilo1">
+			<strong><span style="font-size: x-small; font-family: helvetica">
+			Columna
+			</span></strong>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 377px">
+			<div align="center" class="inicio Estilo1">
+			<strong><span style="font-size: x-small; font-family: helvetica">
+			Significado
+			</span></strong>
+			</div>
+			</td>
+			<td style="background-color: #ffffff; width: 102px">
+			<div align="center" class="inicio Estilo1">
+			<strong><span style="font-size: x-small; font-family: helvetica">
+			Valor en la barra 
+			resaltada
+			</span></strong>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">
+			1ª
+			</span>
+			</div>
+			</td>
+			<td bgcolor="#ffffff" class="txt_base" width="377"><span style="font-size: x-small; font-family: helvetica">Nº de corrector.</span></td>
+			<td bgcolor="#ffffff" class="txt_base" width="102">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>D007</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">
+			2ª
+			</span>
+			</div>
+			</td>
+			<td bgcolor="#ffffff" class="txt_base" width="377"><span style="font-size: x-small; font-family: helvetica">Valor del radio de la 
+			herramienta.</span></td>
+			<td bgcolor="#ffffff" class="txt_base" width="102">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>R5.0000</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">
+			3ª
+			</span>
+			</div>
+			</td>
+			<td bgcolor="#ffffff" class="txt_base" width="377"><span style="font-size: x-small; font-family: helvetica">Valor de la longitud de la 
+			herramienta.</span></td>
+			<td bgcolor="#ffffff" class="txt_base" width="102">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>L-10.4640</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">
+			4ª
+			</span>
+			</div>
+			</td>
+			<td bgcolor="#ffffff" class="txt_base" width="377"><span style="font-size: x-small; font-family: helvetica">Corrector en radio o desgaste de la 
+			herramienta en R.</span></td>
+			<td bgcolor="#ffffff" class="txt_base" width="102">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>I0</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica">
+			5ª
+			</span>
+			</div>
+			</td>
+			<td bgcolor="#ffffff" class="txt_base" width="377"><span style="font-size: x-small; font-family: helvetica">Corrector en longitud o desgaste de 
+			la herramienta en L.</span></td>
+			<td bgcolor="#ffffff" class="txt_base" width="102">
+			<div align="center">
+			<span style="font-size: x-small; font-family: helvetica"><strong>K0</strong></span>
+			</div>
+			</td>
+		</tr>
+		<tr>
+			<td bgcolor="#ffffff" class="txt_base" colspan="3">
+			<div align="left">
+			<span style="font-size: x-small; font-family: helvetica">
+			Los correctores I y K son valores que corrigen las distancias en 
+			X, Y y Z de los correctores R y L respectivamente. Se suelen usar para compensar 
+			los desgastes que sufre la herramienta durante el mecanizado.
+			</span>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="justify">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+</div>
+<div align="left" class="texto_izquierda">
+<table border="0" cellpadding="0" cellspacing="5" class="txt_base" height="1" width="572">
+</table>
+</div>
+</div>
+</div>
+<div align="justify">
+<strong><span style="font-size: x-small; font-family: helvetica"> </span></strong>
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+</div>
+<div align="justify">
+<div class="elemento_derecha">
+<div align="justify">
+<span style="font-size: x-small; font-family: helvetica"><br />
+</span>
+</div>
+</div>
+</div>
+<div class="separador">
+</div>
+<div align="justify">
+<a href="MCN03_CONT_R019_2_longitud_hta.jpg" title="Longitud de la herramienta"><img align="right" alt="Detalle del husillo porta fresa en que se ve una herramienta y su dimensión y los puntos de referencia N , R y la anotación L1." class="imagen_ampliable" height="134" src="MCN03_CONT_R019_2_longitud_hta_mini.jpg" style="margin-left: 20px" title="Longitud de la herramienta" width="200" /></a>
+</div>
+<div align="justify" class="texto_izquierda">
+<div align="justify">
+<a href="MCN03_CONT_R020_longitud_htas.jpg" title="Dimension de herramientas"><img align="left" alt="Se aprecia en el dibujo varias herramientas de diferentes tamaños con sus respectivas mediciones de la longitud a partir del punto N que se encuentra en la base del husillo, se puede ver las palabras L1,L2,L3, L4." class="imagen_ampliable" height="136" src="MCN03_CONT_R020_longitud_htas_mini.jpg" style="margin-right: 20px" title="Dimension de las herramientas" width="200" /></a><span style="font-size: x-small; font-family: helvetica">Sin estas dimensiones los puntos finales de las interpolaciones
+programadas son alcanzadas por el punto de referencia N de la
+fresadora; que es donde se realiza el asiento del cono de la
+herramienta.</span><span style="font-size: x-small; font-family: helvetica">
+La
+posición de N dada por el programa CNC, es un punto de referencia
+fijado
+por el fabricante de la maquina, es decir que no se puede variar. La
+longitud L de la herramienta se calibra a partir de este punto N. La
+dirección D indica la posición de la tabla que almacena la longuitud de
+la herramienta. Cuando se trabaja con varias htas. se
+hace necesario medir la longitud de cada hta, ya que por
+general</span><span style="font-size: x-small; font-family: helvetica"> estas tienen diferentes longitudes.</span>
+</div>
+</div>
+
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper ParasabermasfpdIdevice em_iDevice" id="id29">
+<div class="iDevice emphasis_parasabermasfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Para saber más</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<div id="ta29_50" class="block iDevice_content">
+
+<div align="justify">
+<font face="helvetica" size="2">Las herramientas con las que va a trabajar el CNC pueden estar colocadas en un almacén en la máquina, dependiendo de si la máquina tiene o no almacén, el cambio se realizará de diferente forma:<br />
+</font>
+<ul>
+	<li><font face="helvetica" size="2">Si la máquina no dispone de almacén de herramientas, el cambio se realiza de forma manual (como en una máquina convencional).</font></li>
+	<li><font face="helvetica" size="2">Si la máquina dispone de almacén de herramientas, el CNC se encarga de realizar el cambio automáticamente. </font></li>
+</ul>
+</div>
+<p style="margin-bottom: 0cm">
+<font face="helvetica"><font size="2">Mas
+adelante, cuando estudiaremos las funciones de la compensación de la
+herramienta, se aclarara el concepto de la longitud de la
+herramienta. La calibración de herramientas es la operación
+mediante la cual definimos en el CNC las dimensiones de la
+herramienta, es muy importante hacer bien esta operación para que
+las piezas salgan con las dimensiones correctas, y para que al hacer
+un cambio de herramienta, se siga controlando el mismo punto.</font></font>
+</p>
+
+</div>
+</div>
+</div>
+</div>
+</article>
+<article class="iDevice_wrapper EleccionmultiplefpdIdevice em_iDevice" id="id78">
+<div class="iDevice emphasis_autoevaluacionfpd" >
+<header class="iDevice_header"><h1 class="iDeviceTitle">Autoevaluación</h1></header>
+<div class="iDevice_inner">
+<div class="iDevice_content_wrapper">
+<section class="question">
+<form name="multi-choice-form-78_63" action="#" onsubmit="return false" class="activity-form">
+<h1 class="js-sr-av">Pregunta</h1>
+<div id="taquestion78_63" class="block question iDevice_content">
+<b><font size="2">¿Qué nos indica el siguiente formato de la herramieta Txx Dxx, en el control FAGOR 8050-55?</font></b>
+
+</div>
+<section class="iDevice_answers">
+<h1 class="js-sr-av">Respuestas</h1>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i78_66" class="sr-av"><a href="#answer-78_66">Opción 1</a></label><input type="radio" name="option78_63" id="i78_66" class="exe-radio-option exe-radio-option-0-3-78_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-78_66"><div id="taans78_66" class="block iDevice_content">
+<font size="2">a) Corrector + Nº hta</font>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i78_129" class="sr-av"><a href="#answer-78_129">Opción 2</a></label><input type="radio" name="option78_63" id="i78_129" class="exe-radio-option exe-radio-option-1-3-78_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-78_129"><div id="taans78_129" class="block iDevice_content">
+<font size="2">b) Nº Hta. + Corrector</font>
+
+</div>
+</div>
+</section>
+<section class="iDevice_answer">
+<p class="iDevice_answer-field js-required">
+<label for="i78_132" class="sr-av"><a href="#answer-78_132">Opción 3</a></label><input type="radio" name="option78_63" id="i78_132" class="exe-radio-option exe-radio-option-2-3-78_63-multi"/>
+</p>
+<div class="iDevice_answer-content" id="answer-78_132"><div id="taans78_132" class="block iDevice_content">
+c) Corrector + Radio de hta.
+
+</div>
+</div>
+</section>
+</section>
+<section class="iDevice_feedbacks js-feedback">
+<h1 class="js-sr-av">Retroalimentación</h1>
+<section id="sa0b78_63" class="feedback js-hidden">
+<div id="taf78_66" class=" iDevice_content">
+Respuesta Incorrecta.
+
+</div>
+</section>
+<section id="sa1b78_63" class="feedback js-hidden">
+<div id="taf78_129" class=" iDevice_content">
+Respuesta Correcta  ya que  la  herramienta en Fagor  tiene  la siguiente sintaxis: Txx Dxx donde T ocupa la posición xx y su corrector es Dxx.<br />
+
+</div>
+</section>
+<section id="sa2b78_63" class="feedback js-hidden">
+<div id="taf78_132" class=" iDevice_content">
+Respuesta incorrecta.
+
+</div>
+</section>
+</section>
+</form>
+<section class="iDevice_solution feedback js-hidden">
+<h1>Solución</h1>
+<ol>
+<li><a href="#answer-78_66">Incorrecto</a><span> (<a href="#sa0b78_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-78_129">Opción correcta</a><span> (<a href="#sa1b78_63">Retroalimentación</a>)</span></li>
+<li><a href="#answer-78_132">Incorrecto</a><span> (<a href="#sa2b78_63">Retroalimentación</a>)</span></li>
+</ol>
+</section>
+</section>
+</div>
+</div>
+</div>
+</article>
+</section>
+</div>
+<div id='bottomPagination'>
+<nav class="pagination noprt">
+<a href="115_f_avance_de_hta_y_s_giro_del_cabezal.html" class="prev"><span><span>&laquo; </span>Anterior</span></a> <span class="sep">| </span><a href="117_funciones_auxiliares_m_del_programa.html" class="next"><span>Siguiente<span> &raquo;</span></span></a>
+</nav>
+</div>
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body></html>
